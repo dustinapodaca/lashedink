@@ -71,9 +71,20 @@ const LayoutNav = () => {
       <AnimatePresence>
         {isOpen && (
           <>
+            {/* Add this new motion.div for the dark background */}
             <motion.div
-              className="-z-10 rounded-b-lg p-10 px-6 h-screen"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              className="fixed inset-0 z-40 bg-black opacity-50 top-[5.5rem]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.8 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => toggleOpen()} // Close the menu when the background is clicked
+            />
+
+            {/* Update the motion.div wrapping your menu items */}
+            <motion.div
+              className="rounded-b-lg p-10 px-6 h-full z-50 fixed top-[4rem] left-0 right-0"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
               variants={{
                 open: {
                   y: 0,
