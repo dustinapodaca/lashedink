@@ -16,7 +16,7 @@ const LayoutNav = () => {
           {/* <h2 className="md:text-2xl text-2xl font-bold text-white drop-shadow-lg">
             Lashed.Ink
           </h2> */}
-          <img src={lashedBanner} alt="lashed.ink" className="w-44" />
+          <img src={lashedBanner} alt="lashed.ink" className="w-52" />
         </div>
         <button
           className="focus:outline-none pr-3 pt-1"
@@ -73,9 +73,9 @@ const LayoutNav = () => {
           <>
             {/* Add this new motion.div for the dark background */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black opacity-50 top-[5.5rem]"
+              className="fixed inset-0 z-40 bg-black opacity-50 top-[6rem]"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.8 }}
+              animate={{ opacity: 0.85 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={() => toggleOpen()} // Close the menu when the background is clicked
@@ -83,7 +83,7 @@ const LayoutNav = () => {
 
             {/* Update the motion.div wrapping your menu items */}
             <motion.div
-              className="rounded-b-lg p-10 px-6 h-full z-50 fixed top-[4rem] left-0 right-0"
+              className="rounded-b-lg p-10 px-6 h-full z-50 fixed top-[5rem] left-0 right-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
               variants={{
                 open: {

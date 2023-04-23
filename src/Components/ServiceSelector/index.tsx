@@ -28,25 +28,30 @@ type Image = {
 
 type CarouselProps = {
   images: Image[];
+  text: string;
 };
 
-const Carousel = ({images}: CarouselProps) => {
+const Carousel = ({images, text}: CarouselProps) => {
   let [index, setIndex] = useState(0);
 
   return (
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
-      <div className="h-full bg-black ">
-        <div className="mx-auto flex h-full max-w-7xl flex-col justify-center">
-          <div className="relative overflow-hidden">
+      <div className="h-full bg-black px-6 py-4">
+        <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
+          <div className="relative overflow-hidden rounded-xl">
             <motion.div animate={{ x: `-${index * 100}%` }} className="flex">
               {images.map((image) => (
                 <img
                   key={image.id}
                   src={image.src}
-                  className="aspect-[3/2] object-cover"
+                  className="aspect-[6/5] object-cover"
                 />
               ))}
             </motion.div>
+            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-cardo font-bold">
+              {text}
+            </p>
+
             <AnimatePresence initial={false}>
               {index > 0 && (
                 <motion.button
