@@ -32,7 +32,7 @@ const lashImages = [
 
 const Services = () => {
   return (
-    <div className="h-full bg-black px-4 pt-4">
+    <div className="h-full bg-black px-4 pt-4 mt-20">
       <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
         <h1 className="text-white text-4xl md:text-4xl font-extrabold text-center mb-3 mt-3">
           Services
