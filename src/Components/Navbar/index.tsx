@@ -16,7 +16,7 @@ const LayoutNav = () => {
   return (
     <>
       <nav
-        className="flex justify-between items-center px-4 pt-7 pb-6 z-50 w-screen top-0 border-b border-white"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 pt-7 pb-6 border-b border-white"
         style={{ backgroundColor: "rgba(0, 0, 0)" }}
       >
         <div className="flex flex-row justify-between">
