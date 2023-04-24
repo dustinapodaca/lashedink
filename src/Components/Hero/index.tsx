@@ -51,7 +51,7 @@ const HeroBanner = () => {
       </header>
 
       <section>
-        <div className="grid max-w-screen-xl px-10 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div className="grid max-w-screen-xl px-10 pb-8 md:pt-2 mx-auto lg:gap-8 xl:gap-0 lg:py-12 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="text-center md:text-start max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
               Where Your Eyes Get the Attention They Deserve

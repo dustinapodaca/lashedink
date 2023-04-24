@@ -32,9 +32,9 @@ const lashImages = [
 
 const Services = () => {
   return (
-    <div className="h-full bg-black px-6 py-4">
+    <div className="h-full bg-black px-4 pt-4 pb-3">
       <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
-        <h1 className="text-white text-4xl md:text-4xl font-poiret font-bold text-center mb-6 mt-4">
+        <h1 className="text-white text-4xl md:text-4xl font-extrabold text-center mb-6 mt-4">
           Services
         </h1>
         <div className="relative overflow-hidden rounded-xl">
