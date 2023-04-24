@@ -28,7 +28,7 @@ const HeroBanner = () => {
     <>
       <header>
         <div
-          className="relative overflow-hidden bg-black w-screen mb-10"
+          className="relative overflow-hidden bg-black w-screen mb-10 mt-20"
           style={{ height: "60vh" }}
         >
           <motion.div
