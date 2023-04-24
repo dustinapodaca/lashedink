@@ -1,10 +1,17 @@
 import { useRef } from "react";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
+import { Link } from "react-router-dom";
+
+
 import lashedBanner from '../../assets/images/lashedinkbannerblack.png';
 
 const LayoutNav = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
+
+  const handleClickLink = () => {
+    toggleOpen();
+  };
 
   return (
     <>
@@ -16,7 +23,7 @@ const LayoutNav = () => {
           {/* <h2 className="md:text-2xl text-2xl font-bold text-white drop-shadow-lg">
             Lashed.Ink
           </h2> */}
-          <img src={lashedBanner} alt="lashed.ink" className="w-52" />
+          <img src={lashedBanner} alt="lashed.ink" className="w-44" />
         </div>
         <button
           className="focus:outline-none pr-3 pt-1"
@@ -73,7 +80,7 @@ const LayoutNav = () => {
           <>
             {/* Add this new motion.div for the dark background */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black opacity-50 top-[6rem]"
+              className="fixed inset-0 z-40 bg-black opacity-50 top-[5.5rem]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.85 }}
               exit={{ opacity: 0 }}
@@ -141,14 +148,16 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <motion.button
-                  className="text-white md:text-md text-xl md:px-3 px-10 font-bold hover:drop-shadow-lg rounded-full"
-                  whileHover={{ scale: [null, 1.4, 1.3] }}
-                  transition={{ duration: 0.3 }}
-                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-                >
-                  Home
-                </motion.button>
+                <Link to="/" onClick={handleClickLink}>
+                  <motion.button
+                    className="text-white md:text-md text-xl md:px-3 px-10 font-bold hover:drop-shadow-lg rounded-full"
+                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    transition={{ duration: 0.3 }}
+                    // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                  >
+                    Home
+                  </motion.button>
+                </Link>
               </motion.nav>
               <motion.nav
                 className="flex justify-evenly pb-6 items-center w-full pt-3"
@@ -217,14 +226,16 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <motion.button
-                  className="text-white md:text-md text-xl md:px-3 px-10 font-bold hover:drop-shadow-lg rounded-full"
-                  whileHover={{ scale: [null, 1.4, 1.3] }}
-                  transition={{ duration: 0.3 }}
-                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-                >
-                  Services
-                </motion.button>
+                <Link to="/services" onClick={handleClickLink}>
+                  <motion.button
+                    className="text-white md:text-md text-xl md:px-3 px-10 font-bold hover:drop-shadow-lg rounded-full"
+                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    transition={{ duration: 0.3 }}
+                    // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                  >
+                    Services
+                  </motion.button>
+                </Link>
               </motion.nav>
               <motion.nav
                 className="flex justify-evenly pb-6 items-center w-full pt-3"
