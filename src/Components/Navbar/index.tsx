@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import lashedBanner from '../../assets/images/lashedinkbannerblack.png';
 
 const LayoutNav = () => {
-  const [screenSize, setScreenSize] = useState(window.innerWidth);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
@@ -17,20 +16,20 @@ const LayoutNav = () => {
   };
 
   const handleResize = () => {
-    setScreenSize(window.innerWidth);
-    if (screenSize < 1024) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
+    setIsMobile(window.innerWidth < 1024);
   };
 
-  window.addEventListener("resize", handleResize);
-  
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 pt-7 pb-6 border-b border-white"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 pt-7 pb-7 border-b border-white"
         style={{ backgroundColor: "rgba(0, 0, 0)" }}
       >
         <div className="flex flex-row justify-between">
@@ -41,52 +40,58 @@ const LayoutNav = () => {
         </div>
         {!isMobile ? (
           <div className="flex flex-row justify-between">
-            <Link to="/" onClick={handleClickLink}>
+            <Link to="/">
               <motion.button
-                className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-                whileHover={{ scale: [null, 1.4, 1.3] }}
+                className="text-white md:text-md text-2xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
                 transition={{ duration: 0.3 }}
                 // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
               >
                 Home
               </motion.button>
             </Link>
-            <Link to="/services" onClick={handleClickLink}>
+            <Link to="/services">
               <motion.button
-                className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-                whileHover={{ scale: [null, 1.4, 1.3] }}
+                className="text-white md:text-md text-2xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
                 transition={{ duration: 0.3 }}
                 // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
               >
                 Services
               </motion.button>
             </Link>
+            <Link to="/about">
+              <motion.button
+                className="text-white md:text-md text-2xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                About
+              </motion.button>
+            </Link>
+            <Link to="/contact">
+              <motion.button
+                className="text-white md:text-md text-2xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                Contact
+              </motion.button>
+            </Link>
+            <Link to="/faq">
+              <motion.button
+                className="text-white md:text-md text-2xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                FAQ
+              </motion.button>
+            </Link>
             <motion.button
-              className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-              whileHover={{ scale: [null, 1.4, 1.3] }}
-              transition={{ duration: 0.3 }}
-              // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-            >
-              About
-            </motion.button>
-            <motion.button
-              className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-              whileHover={{ scale: [null, 1.4, 1.3] }}
-              transition={{ duration: 0.3 }}
-              // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-            >
-              Contact
-            </motion.button>
-            <motion.button
-              className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-              whileHover={{ scale: [null, 1.4, 1.3] }}
-              transition={{ duration: 0.3 }}
-              // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-            >
-              FAQ
-            </motion.button>
-            <motion.button
-              className="mx-auto bg-white text-black py-2 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+              className="mx-auto bg-white text-black ml-3 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
               initial={{ backgroundColor: "white", color: "black" }}
               whileHover={{
                 backgroundColor: "pink",
