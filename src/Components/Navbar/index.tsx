@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { Link } from "react-router-dom";
 
-
 import lashedBanner from '../../assets/images/lashedinkbannerblack.png';
 
 const LayoutNav = () => {
@@ -12,6 +11,11 @@ const LayoutNav = () => {
   const containerRef = useRef(null);
 
   const handleClickLink = () => {
+    toggleOpen();
+  };
+
+  const toggleOpenBooking = () => {
+    window.open('https://square.site/book/ZD47SF4KTBRZS/lashed-ink-englewood-co', '_blank');
     toggleOpen();
   };
 
@@ -29,14 +33,14 @@ const LayoutNav = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-5 pl-8 py-8 border-b border-white"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-5 pl-8 py-8 border-b border-white shadow-lg"
         style={{ backgroundColor: "rgba(0, 0, 0)" }}
       >
         <div className="flex flex-row justify-between">
           {/* <h2 className="md:text-2xl text-2xl font-extrabold text-white drop-shadow-lg">
             Lashed.Ink
           </h2> */}
-          <img src={lashedBanner} alt="lashed.ink" className="w-44" />
+          <img src={lashedBanner} alt="lashed.ink" className="w-52" />
         </div>
         {!isMobile ? (
           <div className="flex flex-row justify-between">
@@ -91,16 +95,23 @@ const LayoutNav = () => {
               </motion.button>
             </Link>
             <motion.button
-              className="mx-auto bg-white text-black ml-3 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+              className="mx-auto bg-white text-black ml-8 mr-6 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
               initial={{ backgroundColor: "white", color: "black" }}
               whileHover={{
-                backgroundColor: "pink",
-                color: "white",
-                scale: 1.05,
-                transition: { duration: 0.2, ease: "easeInOut", delay: 0 },
+                // backgroundColor: "pink",
+                // color: "white",
+                scale: 1.15,
+                transition: {
+                  duration: 0.2,
+                  ease: "easeInOut",
+                  delay: 0,
+                  backgroundColor: "pink",
+                  color: "white",
+                },
               }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
+              onClick={() => toggleOpenBooking()}
             >
               Book Now
             </motion.button>
@@ -161,7 +172,7 @@ const LayoutNav = () => {
           <>
             {/* Add this new motion.div for the dark background */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black opacity-50 top-[5.5rem]"
+              className="fixed inset-0 z-40 bg-black opacity-50 top-[6.5rem]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.85 }}
               exit={{ opacity: 0 }}
@@ -424,16 +435,23 @@ const LayoutNav = () => {
                 exit="closed"
               >
                 <motion.button
-                  className="mx-auto bg-white text-black py-2 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
                   initial={{ backgroundColor: "white", color: "black" }}
                   whileHover={{
-                    backgroundColor: "pink",
-                    color: "white",
-                    scale: 1.05,
-                    transition: { duration: 0.2, ease: "easeInOut", delay: 0 },
+                    // backgroundColor: "pink",
+                    // color: "white",
+                    scale: 1.15,
+                    transition: {
+                      duration: 0.2,
+                      ease: "easeInOut",
+                      delay: 0,
+                      backgroundColor: "pink",
+                      color: "white",
+                    },
                   }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
+                  onClick={() => toggleOpenBooking()}
                 >
                   Book Now
                 </motion.button>

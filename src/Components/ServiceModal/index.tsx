@@ -1,3 +1,5 @@
+
+
 type textProps = {
   text: string;
 };
