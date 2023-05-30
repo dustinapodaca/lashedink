@@ -1,8 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect } from "react";
 
-import heroImg from "../../assets/images/hero3.png";
-import heroImg2 from "../../assets/images/hero2.png";
+import heroImg from "../../assets/images/hero2.png";
+import heroImg2 from "../../assets/images/hero1.png";
 
 const HeroBanner = () => {
   const { scrollY } = useScroll();
@@ -38,7 +38,7 @@ const HeroBanner = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.8)",
+              filter: "brightness(0.9)",
               y: yPos,
             }}
           />

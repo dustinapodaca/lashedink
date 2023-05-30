@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import lashedBanner from '../../assets/images/lashedinkbannerblack.png';
 
 const LayoutNav = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
 
@@ -13,10 +15,21 @@ const LayoutNav = () => {
     toggleOpen();
   };
 
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 1024);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 pt-7 pb-6 border-b border-white"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-5 pl-8 py-8 border-b border-white"
         style={{ backgroundColor: "rgba(0, 0, 0)" }}
       >
         <div className="flex flex-row justify-between">
@@ -25,54 +38,122 @@ const LayoutNav = () => {
           </h2> */}
           <img src={lashedBanner} alt="lashed.ink" className="w-44" />
         </div>
-        <button
-          className="focus:outline-none pr-3 pt-1"
-          onClick={() => toggleOpen()}
-        >
-          <motion.svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        {!isMobile ? (
+          <div className="flex flex-row justify-between">
+            <Link to="/">
+              <motion.button
+                className="text-white md:text-md text-xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                Home
+              </motion.button>
+            </Link>
+            <Link to="/services">
+              <motion.button
+                className="text-white md:text-md text-xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                Services
+              </motion.button>
+            </Link>
+            <Link to="/about">
+              <motion.button
+                className="text-white md:text-md text-xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                About
+              </motion.button>
+            </Link>
+            <Link to="/contact">
+              <motion.button
+                className="text-white md:text-md text-xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                Contact
+              </motion.button>
+            </Link>
+            <Link to="/faq">
+              <motion.button
+                className="text-white md:text-md text-xl md:px-3 px-10 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                FAQ
+              </motion.button>
+            </Link>
+            <motion.button
+              className="mx-auto bg-white text-black ml-3 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+              initial={{ backgroundColor: "white", color: "black" }}
+              whileHover={{
+                backgroundColor: "pink",
+                color: "white",
+                scale: 1.05,
+                transition: { duration: 0.2, ease: "easeInOut", delay: 0 },
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              Book Now
+            </motion.button>
+          </div>
+        ) : (
+          <button
+            className="focus:outline-none pr-3 pt-1"
+            onClick={() => toggleOpen()}
           >
-            <motion.path
-              d="M 2 2.5 L 20 2.5"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              variants={{
-                open: { d: "M 3 16.5 L 17 2.5" },
-              }}
-              animate={isOpen ? "open" : "closed"}
-              transition={{ duration: 0.2 }}
-            />
-            <motion.path
-              d="M 2 9.423 L 20 9.423"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              variants={{
-                closed: { opacity: 1 },
-                open: { opacity: 0 },
-              }}
-              animate={isOpen ? "open" : "closed"}
-              transition={{ duration: 0.2 }}
-            />
-            <motion.path
-              d="M 2 16.346 L 20 16.346"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              variants={{
-                open: { d: "M 3 2.5 L 17 16.346" },
-              }}
-              animate={isOpen ? "open" : "closed"}
-              transition={{ duration: 0.2 }}
-            />
-          </motion.svg>
-        </button>
-
+            <motion.svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                d="M 2 2.5 L 20 2.5"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                variants={{
+                  open: { d: "M 3 16.5 L 17 2.5" },
+                }}
+                animate={isOpen ? "open" : "closed"}
+                transition={{ duration: 0.2 }}
+              />
+              <motion.path
+                d="M 2 9.423 L 20 9.423"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                variants={{
+                  closed: { opacity: 1 },
+                  open: { opacity: 0 },
+                }}
+                animate={isOpen ? "open" : "closed"}
+                transition={{ duration: 0.2 }}
+              />
+              <motion.path
+                d="M 2 16.346 L 20 16.346"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                variants={{
+                  open: { d: "M 3 2.5 L 17 16.346" },
+                }}
+                animate={isOpen ? "open" : "closed"}
+                transition={{ duration: 0.2 }}
+              />
+            </motion.svg>
+          </button>
+        )}
         {/* <MenuToggle toggle={() => toggleOpen()} /> */}
       </nav>
       <AnimatePresence>
@@ -313,6 +394,55 @@ const LayoutNav = () => {
                   FAQ
                 </motion.button>
               </motion.nav>
+              <motion.nav
+                className="flex justify-evenly pb-6 items-center w-full pt-3"
+                variants={{
+                  open: {
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 150,
+                      damping: 20,
+                      delay: 0.3,
+                    },
+                  },
+                  closed: {
+                    y: "-70%",
+                    opacity: 0,
+                    transition: {
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 20,
+                    },
+                  },
+                }}
+                transition={{ duration: 0.3 }}
+                initial="closed"
+                animate={isOpen ? "open" : "closed"}
+                ref={containerRef}
+                exit="closed"
+              >
+                <motion.button
+                  className="mx-auto bg-white text-black py-2 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                  initial={{ backgroundColor: "white", color: "black" }}
+                  whileHover={{
+                    backgroundColor: "pink",
+                    color: "white",
+                    scale: 1.05,
+                    transition: { duration: 0.2, ease: "easeInOut", delay: 0 },
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Book Now
+                </motion.button>
+              </motion.nav>
+              {/* <div className="flex justify-center">
+                <button className="mx-auto bg-black text-white py-2 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2">
+                  Book Now
+                </button>
+              </div> */}
             </motion.div>
           </>
         )}
