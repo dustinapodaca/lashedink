@@ -17,6 +17,9 @@ import lash3 from '../../assets/images/lashes/lash3.jpg';
 import lash4 from '../../assets/images/lashes/lash4.jpg';
 import lash5 from '../../assets/images/lashes/lash5.jpg';
 
+import servicesHeader from "../../assets/images/img1lashed.png";
+import headerIcon from "../../assets/images/img3lashed.jpeg";
+
 const browImages = [
   { id: 1, src: brow1 },
   { id: 2, src: brow2 },
@@ -38,117 +41,56 @@ const Services = () => {
   return (
     <>
       <div className="h-full bg-black mt-24">
-        <div>
-          <div
-            className="bg-cover bg-center bg-zinc-900"
-            // style={{ backgroundImage: `url(${heroImg})` }}
-          >
-            <div className="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12">
-              <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl pt-8">
-                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto">
-                  <span className="relative inline-block">
-                    <svg
-                      viewBox="0 0 52 24"
-                      fill="currentColor"
-                      className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-pink-500 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                    >
-                      <defs>
-                        <pattern
-                          id="dc223fcc-6d72-4ebc-b4ef-abe121034d6e"
-                          x="0"
-                          y="0"
-                          width=".135"
-                          height=".30"
-                        >
-                          <circle cx="1" cy="1" r=".7" />
-                        </pattern>
-                      </defs>
-                      <rect
-                        fill="url(#dc223fcc-6d72-4ebc-b4ef-abe121034d6e)"
-                        width="52"
-                        height="24"
-                      />
-                    </svg>
-                    <span className="relative">Services</span>
-                  </span>{" "}
-                  Menu
-                </h2>
-                <p className="text-base text-white md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque rem aperiam, eaque ipsa quae.
-                </p>
-              </div>
-            </div>
+        <div
+          className="relative bg-zinc-900"
+          style={{
+            backgroundImage: `url(${servicesHeader})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-x-0 bottom-0">
+            <svg
+              viewBox="0 0 224 12"
+              fill="currentColor"
+              className="w-full -mb-1 text-black"
+              preserveAspectRatio="none"
+            >
+              <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z" />
+            </svg>
           </div>
-          <div className="relative px-4 sm:px-0">
-            <div className="absolute inset-0 bg-zinc-900 h-1/2" />
-            <div className="relative grid shadow-xl mx-auto overflow-hidden bg-zinc-800 divide-y rounded-lg sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
-              <div className="inline-block p-8 text-center rounded-lg">
-                <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-black">
-                  <svg
-                    className="w-10 h-10 text-pink-600"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    />
-                  </svg>
+          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="max-w-screen-sm sm:text-center sm:mx-auto">
+              <a
+                href="/"
+                aria-label="View"
+                className="inline-block mb-5 rounded-full sm:mx-auto"
+              >
+                <div className="flex items-center justify-center w-28 h-28 mb-4 rounded-full">
+                  <img
+                    src={headerIcon}
+                    alt="headerIcon"
+                    className="rounded-full"
+                  />
                 </div>
-                <p className="font-semibold text-xl tracking-wide text-gray-300">
-                  Classic
-                </p>
-              </div>
-              <div className="inline-block p-8 text-center">
-                <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-black">
-                  <svg
-                    className="w-10 h-10 text-pink-600"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    />
-                  </svg>
-                </div>
-                <p className="font-semibold text-xl tracking-wide text-gray-300">
-                  Hybrid
-                </p>
-              </div>
-              <div className="inline-block p-8 text-center">
-                <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-black">
-                  <svg
-                    className="w-10 h-10 text-pink-600"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    />
-                  </svg>
-                </div>
-                <p className="font-semibold text-xl tracking-wide text-gray-300">
-                  Volume
-                </p>
-              </div>
+              </a>
+              <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+                Services Menu
+              </h2>
+              <p className="text-base text-white mt-8 md:text-lg sm:px-4">
+                Experience a Fusion of Art and Beauty, where skilled hands and a
+                keen eye for detail combine to create a masterpiece that
+                enhances your individuality and elevates your confidence to new
+                heights.
+              </p>
+              <hr className="w-full my-8 border-gray-300" />
             </div>
           </div>
         </div>
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-4">
-            {/* <div className="flex items-center mb-5 md:mb-6 group lg:max-w-xl">
+            <div className="flex items-center group lg:max-w-xl">
               <a href="/" aria-label="Item" className="mr-3">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
                   <motion.svg
@@ -157,7 +99,11 @@ const Services = () => {
                     viewBox="0 0 52 52"
                     initial={{ rotate: 0 }}
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                   >
                     <circle
                       cx="26"
@@ -175,12 +121,10 @@ const Services = () => {
                 </div>
               </a>
               <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
-                <span className="inline-block mb-2 ml-2 text-white">
-                  Service Menu
-                </span>
-                <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-30 group-hover:scale-x-100" />
+                <span className="inline-block ml-2 text-white">Brows</span>
+                {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
               </h2>
-            </div> */}
+            </div>
             <p className="w-full text-zinc-500 lg:text-sm lg:max-w-md">
               Please be advised that we have a 24-hour cancellation policy. If
               you need to cancel or reschedule your appointment, please do so at
@@ -188,24 +132,186 @@ const Services = () => {
               charge of the scheduled service.
             </p>
           </div>
-          <div className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
+          <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
+            <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
+              <hr className="max-w-full my-8 border-gray-300 text-center" />
+            </p>
+            <p className="text-base text-gray-200 md:text-lg">
+              Eyebrows are such an important focal point that frame our face and
+              can drastically affect the way we look. For this reason it is
+              important we tailor each pair of eyebrows to the individual, their
+              face proportions and their desired look. Microblading, powder
+              brow, and combo brow are the three techniques/styles I offer for
+              semi-permanent eyebrow tattooing.
+            </p>
+          </div>
+          <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
             <div>
-              <ServiceCard images={browImages} text="Microblading" />
+              <ServiceCard
+                images={browImages}
+                descText=""
+                headlineText="Microblading"
+              />
             </div>
             <div>
-              <ServiceCard images={lashImages} text="Eyelashes" />
+              <ServiceCard
+                images={lashImages}
+                descText=""
+                headlineText="Powder/Ombré"
+              />
             </div>
             <div>
-              <ServiceCard images={browImages} text="Microblading" />
+              <ServiceCard
+                images={browImages}
+                descText=""
+                headlineText="Combo"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col w-full lg:justify-between lg:flex-row">
+            <div className="flex items-center group lg:max-w-xl">
+              <a href="/" aria-label="Item" className="mr-3">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-12 h-12 text-pink-500"
+                    viewBox="0 0 52 52"
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  >
+                    <circle
+                      cx="26"
+                      cy="26"
+                      r="25"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M26 3.82c-11.598 0-21.02 9.421-21.02 21 0 11.598 9.421 21 21.02 21 11.579 0 21-9.402 21-21 0-11.579-9.421-21-21-21zm0 38c-9.941 0-18-8.059-18-18s8.059-18 18-18c9.941 0 18 8.059 18 18s-8.059 18-18 18zm-7-18l3-5 3 5 5 3-5 3-3 5-3-5-5-3 5-3zm7 7h4v-2h-4v2z"
+                      fill="currentColor"
+                    />
+                  </motion.svg>
+                </div>
+              </a>
+              <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+                <span className="inline-block ml-2 text-white">
+                  Eyelash Extensions
+                </span>
+                {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
+              </h2>
+            </div>
+          </div>
+          <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
+            <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
+              <hr className="max-w-full my-8 border-gray-300 text-center" />
+            </p>
+            <p className="text-base text-gray-200 md:text-lg">
+              Eyelash extensions are a cosmetic procedure that involves
+              attaching synthetic eyelashes to your natural lashes to make them
+              appear longer and fuller. Your look can be customized according to
+              your preferences, eye shape, and natural lash health.
+            </p>
+          </div>
+          <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
+            <div>
+              <ServiceCard
+                images={browImages}
+                descText=""
+                headlineText="Microblading"
+              />
             </div>
             <div>
-              <ServiceCard images={lashImages} text="Eyelashes" />
+              <ServiceCard
+                images={lashImages}
+                descText=""
+                headlineText="Powder/Ombré"
+              />
             </div>
             <div>
-              <ServiceCard images={browImages} text="Microblading" />
+              <ServiceCard
+                images={browImages}
+                descText=""
+                headlineText="Combo"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col w-full lg:justify-between lg:flex-row">
+            <div className="flex items-center group lg:max-w-xl">
+              <a href="/" aria-label="Item" className="mr-3">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-12 h-12 text-pink-500"
+                    viewBox="0 0 52 52"
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  >
+                    <circle
+                      cx="26"
+                      cy="26"
+                      r="25"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M26 3.82c-11.598 0-21.02 9.421-21.02 21 0 11.598 9.421 21 21.02 21 11.579 0 21-9.402 21-21 0-11.579-9.421-21-21-21zm0 38c-9.941 0-18-8.059-18-18s8.059-18 18-18c9.941 0 18 8.059 18 18s-8.059 18-18 18zm-7-18l3-5 3 5 5 3-5 3-3 5-3-5-5-3 5-3zm7 7h4v-2h-4v2z"
+                      fill="currentColor"
+                    />
+                  </motion.svg>
+                </div>
+              </a>
+              <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+                <span className="inline-block ml-2 text-white">
+                  Other Services
+                </span>
+                {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
+              </h2>
+            </div>
+          </div>
+          <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
+            <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
+              <hr className="max-w-full my-8 border-gray-300 text-center" />
+            </p>
+            <p className="text-base text-gray-200 md:text-lg">
+              Eyelash extensions are a cosmetic procedure that involves
+              attaching synthetic eyelashes to your natural lashes to make them
+              appear longer and fuller. Your look can be customized according to
+              your preferences, eye shape, and natural lash health.
+            </p>
+          </div>
+          <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
+            <div>
+              <ServiceCard
+                images={browImages}
+                descText=""
+                headlineText="Microblading"
+              />
             </div>
             <div>
-              <ServiceCard images={lashImages} text="Eyelashes" />
+              <ServiceCard
+                images={lashImages}
+                descText=""
+                headlineText="Powder/Ombré"
+              />
+            </div>
+            <div>
+              <ServiceCard
+                images={browImages}
+                descText=""
+                headlineText="Combo"
+              />
             </div>
           </div>
         </div>
@@ -215,6 +321,203 @@ const Services = () => {
 };
 
 export default Services;
+
+
+
+
+      // <div className="h-full bg-black mt-24">
+      //   <div>
+      //     <div
+      //       className="bg-cover bg-center bg-zinc-900"
+      //       style={{ backgroundImage: `url(${heroImg})` }}
+      //     >
+      //       <div className="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      //         <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl pt-8">
+      //           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto">
+      //             <span className="relative inline-block">
+      //               <svg
+      //                 viewBox="0 0 52 24"
+      //                 fill="currentColor"
+      //                 className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-pink-500 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+      //               >
+      //                 <defs>
+      //                   <pattern
+      //                     id="dc223fcc-6d72-4ebc-b4ef-abe121034d6e"
+      //                     x="0"
+      //                     y="0"
+      //                     width=".135"
+      //                     height=".30"
+      //                   >
+      //                     <circle cx="1" cy="1" r=".7" />
+      //                   </pattern>
+      //                 </defs>
+      //                 <rect
+      //                   fill="url(#dc223fcc-6d72-4ebc-b4ef-abe121034d6e)"
+      //                   width="52"
+      //                   height="24"
+      //                 />
+      //               </svg>
+      //               <span className="relative">Services</span>
+      //             </span>{" "}
+      //             Menu
+      //           </h2>
+      //           <p className="text-base text-white md:text-lg">
+      //             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      //             accusantium doloremque rem aperiam, eaque ipsa quae.
+      //           </p>
+      //         </div>
+      //       </div>
+      //     </div>
+      //     <div className="relative px-4 sm:px-0">
+      //       <div className="absolute inset-0 h-1/2" />
+      //       <div className="relative grid shadow-xl mx-auto overflow-hidden bg-zinc-800 divide-y rounded-lg sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
+      //         <div className="inline-block p-8 text-center rounded-lg">
+      //           <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-black">
+      //             <svg
+      //               xmlns="http://www.w3.org/2000/svg"
+      //               className="w-7 h-7 text-pink-500"
+      //               viewBox="0 0 24 24"
+      //             >
+      //               <rect
+      //                 x="2"
+      //                 y="2"
+      //                 width="20"
+      //                 height="20"
+      //                 fill="none"
+      //                 stroke="currentColor"
+      //                 strokeWidth="2"
+      //               />
+      //             </svg>
+      //           </div>
+      //           <p className="font-semibold text-xl tracking-wide text-gray-300">
+      //             Classic
+      //           </p>
+      //         </div>
+      //         <div className="inline-block p-8 text-center">
+      //           <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-black">
+      //             <svg
+      //               xmlns="http://www.w3.org/2000/svg"
+      //               className="w-7 h-7 text-pink-500"
+      //               viewBox="0 0 24 24"
+      //             >
+      //               <polygon
+      //                 points="12 2 22 20 2 20"
+      //                 fill="none"
+      //                 stroke="currentColor"
+      //                 strokeWidth="2"
+      //               />
+      //             </svg>
+      //           </div>
+      //           <p className="font-semibold text-xl tracking-wide text-gray-300">
+      //             Hybrid
+      //           </p>
+      //         </div>
+      //         <div className="inline-block p-8 text-center">
+      //           <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-black">
+      //             <svg
+      //               xmlns="http://www.w3.org/2000/svg"
+      //               className="w-8 h-8 text-pink-500"
+      //               viewBox="0 0 24 24"
+      //             >
+      //               <circle
+      //                 cx="12"
+      //                 cy="12"
+      //                 r="10"
+      //                 fill="none"
+      //                 stroke="currentColor"
+      //                 strokeWidth="2"
+      //               />
+      //             </svg>
+      //           </div>
+      //           <p className="font-semibold text-xl tracking-wide text-gray-300">
+      //             Volume
+      //           </p>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </div>
+      //   <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      //     <div className="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-4">
+      //       {/* <div className="flex items-center mb-5 md:mb-6 group lg:max-w-xl">
+      //         <a href="/" aria-label="Item" className="mr-3">
+      //           <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
+      //             <motion.svg
+      //               xmlns="http://www.w3.org/2000/svg"
+      //               className="w-12 h-12 text-pink-500"
+      //               viewBox="0 0 52 52"
+      //               initial={{ rotate: 0 }}
+      //               animate={{ rotate: 360 }}
+      //               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+      //             >
+      //               <circle
+      //                 cx="26"
+      //                 cy="26"
+      //                 r="25"
+      //                 fill="none"
+      //                 stroke="currentColor"
+      //                 strokeWidth="2"
+      //               />
+      //               <path
+      //                 d="M26 3.82c-11.598 0-21.02 9.421-21.02 21 0 11.598 9.421 21 21.02 21 11.579 0 21-9.402 21-21 0-11.579-9.421-21-21-21zm0 38c-9.941 0-18-8.059-18-18s8.059-18 18-18c9.941 0 18 8.059 18 18s-8.059 18-18 18zm-7-18l3-5 3 5 5 3-5 3-3 5-3-5-5-3 5-3zm7 7h4v-2h-4v2z"
+      //                 fill="currentColor"
+      //               />
+      //             </motion.svg>
+      //           </div>
+      //         </a>
+      //         <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+      //           <span className="inline-block mb-2 ml-2 text-white">
+      //             Service Menu
+      //           </span>
+      //           <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-30 group-hover:scale-x-100" />
+      //         </h2>
+      //       </div> */}
+      //       <p className="w-full text-zinc-500 lg:text-sm lg:max-w-md">
+      //         Please be advised that we have a 24-hour cancellation policy. If
+      //         you need to cancel or reschedule your appointment, please do so at
+      //         least 24 hours in advance. Failure to do so will result in a 50%
+      //         charge of the scheduled service.
+      //       </p>
+      //     </div>
+      //     <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
+      //       <div>
+      //         <ServiceCard images={browImages} text="Microblading" />
+      //       </div>
+      //       <div>
+      //         <ServiceCard images={lashImages} text="Eyelashes" />
+      //       </div>
+      //       <div>
+      //         <ServiceCard images={browImages} text="Microblading" />
+      //       </div>
+      //       <div>
+      //         <ServiceCard images={lashImages} text="Eyelashes" />
+      //       </div>
+      //       <div>
+      //         <ServiceCard images={browImages} text="Microblading" />
+      //       </div>
+      //       <div>
+      //         <ServiceCard images={lashImages} text="Eyelashes" />
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
