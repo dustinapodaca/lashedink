@@ -47,7 +47,12 @@ const HeroBanner = () => {
             }}
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center">
-            <h1 className="font-poiret text-4xl md:text-6xl font-bold text-white text-center">
+            <h1
+              style={{
+                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",
+              }}
+              className="font-inherit text-3xl italic md:text-6xl font-extralight text-white text-center"
+            >
               Enhance Your Beauty
             </h1>
           </div>
@@ -67,12 +72,9 @@ const HeroBanner = () => {
               lashes, I am here to enhance your natural beauty and give you the
               confidence you deserve.
             </p>
-            <span className="block font-bold text-gray-500 dark:text-gray-300 text-2xl my-8 text-center md:text-start">
-              Let us take your beauty game to the next level!
-            </span>
             <div className="flex flex-row justify-center md:justify-start">
               <a
-                href="#"
+                href="/services"
                 className="bg-gray-700 inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
               >
                 Get started
@@ -95,7 +97,6 @@ const HeroBanner = () => {
               >
                 Book Now
               </a>
-
             </div>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex p-4">

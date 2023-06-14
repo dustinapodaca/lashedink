@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import placeholder from "../../assets/images/placeholder.jpeg";
+
 type ServiceModalProps = {
   text: string;
 };
@@ -100,84 +102,84 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ text }) => {
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>
                   <div>
                     <img
                       className="object-cover w-full h-56 rounded shadow-lg md:h-64 xl:h-80"
-                      src="https://flowbite.com/docs/images/examples/image-1@2x.jpg"
+                      src={placeholder}
                       alt=""
                     />
                   </div>

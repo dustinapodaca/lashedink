@@ -3,40 +3,48 @@ import React, { useState, useEffect } from "react";
 import ServiceCard from "../../Components/ServiceCard";
 import { motion } from "framer-motion";
 
-import heroImg from "../../assets/images/hero1.png";
-
-// import brow1 from '../../assets/images/brows/brow1.jpg';
-import brow1 from '../../assets/images/brows/brow3.jpg';
-import brow2 from '../../assets/images/brows/brow2.jpg';
-import brow3 from '../../assets/images/brows/brow6.jpg';
-import brow4 from '../../assets/images/brows/brow4.jpg';
-import brow5 from '../../assets/images/brows/brow5.jpg';
-
-// import lash1 from '../../assets/images/lashes/lash1.jpg';
-import lash2 from '../../assets/images/lashes/lash2.jpg';
-import lash3 from '../../assets/images/lashes/lash3.jpg';
-import lash4 from '../../assets/images/lashes/lash4.jpg';
-import lash5 from '../../assets/images/lashes/lash5.jpg';
+import { microbladeImages, powderImages, comboImages, darkLipImages, lipBlushImages, eyelashImages } from "../../Data/imagesData";
 
 import servicesHeader from "../../assets/images/img1lashed.png";
-import headerIcon from "../../assets/images/img3lashed.jpeg";
+import headerIcon from "../../assets/images/img4lashed.jpeg";
 
-const browImages = [
-  { id: 1, src: brow1 },
-  { id: 2, src: brow2 },
-  { id: 3, src: brow3 },
-  { id: 4, src: brow4 },
-  { id: 5, src: brow5 },
-  // { id: 6, src: brow6 },
-];
+import browIcon from "../../assets/images/img11lashed.jpeg";
+import lashIcon from "../../assets/images/img3lashed.jpeg";
+import lipIcon from "../../assets/images/img10lashed.jpeg";
 
-const lashImages = [
-  // { id: 1, src: lash1 },
-  { id: 2, src: lash4 },
-  { id: 3, src: lash3 },
-  { id: 4, src: lash5 },
-  { id: 5, src: lash2 },
-];
+// import heroImg from "../../assets/images/hero1.png";
+
+// // import brow1 from '../../assets/images/brows/brow1.jpg';
+// import brow1 from '../../assets/images/brows/brow3.jpg';
+// import brow2 from '../../assets/images/brows/brow2.jpg';
+// import brow3 from '../../assets/images/brows/brow6.jpg';
+// import brow4 from '../../assets/images/brows/brow4.jpg';
+// import brow5 from '../../assets/images/brows/brow5.jpg';
+
+// // import lash1 from '../../assets/images/lashes/lash1.jpg';
+// import lash2 from '../../assets/images/lashes/lash2.jpg';
+// import lash3 from '../../assets/images/lashes/lash3.jpg';
+// import lash4 from '../../assets/images/lashes/lash4.jpg';
+// import lash5 from '../../assets/images/lashes/lash5.jpg';
+
+
+
+// const browImages = [
+//   { id: 1, src: brow1 },
+//   { id: 2, src: brow2 },
+//   { id: 3, src: brow3 },
+//   { id: 4, src: brow4 },
+//   { id: 5, src: brow5 },
+//   // { id: 6, src: brow6 },
+// ];
+
+// const lashImages = [
+//   // { id: 1, src: lash1 },
+//   { id: 2, src: lash4 },
+//   { id: 3, src: lash3 },
+//   { id: 4, src: lash5 },
+//   { id: 5, src: lash2 },
+// ];
 
 const Services = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -126,7 +134,7 @@ const Services = () => {
             <div className="flex items-center group lg:max-w-xl">
               <a href="/" aria-label="Item" className="mr-3">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
-                  <motion.svg
+                  {/* <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-12 h-12 text-pink-500"
                     viewBox="0 0 52 52"
@@ -150,11 +158,14 @@ const Services = () => {
                       d="M26 3.82c-11.598 0-21.02 9.421-21.02 21 0 11.598 9.421 21 21.02 21 11.579 0 21-9.402 21-21 0-11.579-9.421-21-21-21zm0 38c-9.941 0-18-8.059-18-18s8.059-18 18-18c9.941 0 18 8.059 18 18s-8.059 18-18 18zm-7-18l3-5 3 5 5 3-5 3-3 5-3-5-5-3 5-3zm7 7h4v-2h-4v2z"
                       fill="currentColor"
                     />
-                  </motion.svg>
+                  </motion.svg> */}
+                  <img src={browIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
               <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
-                <span className="inline-block ml-2 text-white">Eyebrow Services</span>
+                <span className="inline-block ml-2 text-white">
+                  Eyebrow Services
+                </span>
                 {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
               </h2>
             </div>
@@ -181,21 +192,21 @@ const Services = () => {
           <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
             <div>
               <ServiceCard
-                images={browImages}
+                images={microbladeImages}
                 descText="Microblading is a technique that involves a handheld blade being used to implant pigment into the skin and create thin hair-like strokes to give the illusion of brow hairs. This will give the most natural look. It is best for clients who do not like the look of eyebrows filled in with makeup. The ideal candidate has even eyebrow hair patterns and normal to dry skin."
                 headlineText="Microblading"
               />
             </div>
             <div>
               <ServiceCard
-                images={lashImages}
+                images={powderImages}
                 descText="Powder brows also known as ombre brows involve using a machine to shade the brows and create a soft (or bold) powdered effect similar to how the eyebrows look when filled in with makeup. The result is a more defined finish as the entire area of the brow is shaded in. This technique is good for all skin types."
                 headlineText="Powder/Ombré"
               />
             </div>
             <div>
               <ServiceCard
-                images={browImages}
+                images={comboImages}
                 descText="Combo brows are a combination of microblading and powder brows. It offers the best of both worlds by combining the hair strokes of microblading and the shading of powder. This technique can be customized with more strokes and less shading to keep it more natural or few strokes and more shading to add more boldness."
                 headlineText="Combo"
               />
@@ -205,7 +216,7 @@ const Services = () => {
             <div className="flex items-center group lg:max-w-xl">
               <a href="/" aria-label="Item" className="mr-3">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
-                  <motion.svg
+                  {/* <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-12 h-12 text-pink-500"
                     viewBox="0 0 52 52"
@@ -229,7 +240,8 @@ const Services = () => {
                       d="M26 3.82c-11.598 0-21.02 9.421-21.02 21 0 11.598 9.421 21 21.02 21 11.579 0 21-9.402 21-21 0-11.579-9.421-21-21-21zm0 38c-9.941 0-18-8.059-18-18s8.059-18 18-18c9.941 0 18 8.059 18 18s-8.059 18-18 18zm-7-18l3-5 3 5 5 3-5 3-3 5-3-5-5-3 5-3zm7 7h4v-2h-4v2z"
                       fill="currentColor"
                     />
-                  </motion.svg>
+                  </motion.svg> */}
+                  <img src={lashIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
               <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
@@ -254,21 +266,21 @@ const Services = () => {
           <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
             <div>
               <ServiceCard
-                images={browImages}
+                images={eyelashImages}
                 descText="Classic eyelash extensions are your most natural option. With this set one single eyelash extension is applied to every healthy natural eyelash giving a softer, more understated look. This is perfect for clients who want to add a little bit of length and fullness to their natural lashes in place of mascara."
                 headlineText="Classic"
               />
             </div>
             <div>
               <ServiceCard
-                images={lashImages}
+                images={eyelashImages}
                 descText="Hybrid eyelash extensions combine both classic and volume techniques. This set involves a combination of classic lash extensions and volume fans to create a more textured look. With hybrid extensions you will get a fuller effect than classic lashes but not as much drama as volume extensions."
                 headlineText="Hybrid"
               />
             </div>
             <div>
               <ServiceCard
-                images={browImages}
+                images={eyelashImages}
                 descText="Volume eyelash extensions are the most full and dramatic type of extensions offered at Lashed.Ink. This technique involves applying multiple lash extensions to one natural lash, creating a fan and giving a fuller, fluffier look. This is ideal for the client who wants a more bold look and wants to ditch their strip lashes!"
                 headlineText="Volume"
               />
@@ -278,7 +290,7 @@ const Services = () => {
             <div className="flex items-center group lg:max-w-xl">
               <a href="/" aria-label="Item" className="mr-3">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
-                  <motion.svg
+                  {/* <motion.svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-12 h-12 text-pink-500"
                     viewBox="0 0 52 52"
@@ -302,7 +314,8 @@ const Services = () => {
                       d="M26 3.82c-11.598 0-21.02 9.421-21.02 21 0 11.598 9.421 21 21.02 21 11.579 0 21-9.402 21-21 0-11.579-9.421-21-21-21zm0 38c-9.941 0-18-8.059-18-18s8.059-18 18-18c9.941 0 18 8.059 18 18s-8.059 18-18 18zm-7-18l3-5 3 5 5 3-5 3-3 5-3-5-5-3 5-3zm7 7h4v-2h-4v2z"
                       fill="currentColor"
                     />
-                  </motion.svg>
+                  </motion.svg> */}
+                  <img src={lipIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
               <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
@@ -327,21 +340,21 @@ const Services = () => {
           <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
             <div>
               <ServiceCard
-                images={browImages}
+                images={eyelashImages}
                 descText=""
                 headlineText="Corrections"
               />
             </div>
             <div>
               <ServiceCard
-                images={lashImages}
+                images={lipBlushImages}
                 descText=""
                 headlineText="Lip Blush"
               />
             </div>
             <div>
               <ServiceCard
-                images={browImages}
+                images={darkLipImages}
                 descText=""
                 headlineText="Dark Lip Neutralization"
               />
