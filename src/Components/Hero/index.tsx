@@ -1,8 +1,12 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect } from "react";
 
-import heroImg from "../../assets/images/hero2.png";
-import heroImg2 from "../../assets/images/hero1.png";
+// import heroImg from "../../assets/images/hero2.png";
+// import heroImg2 from "../../assets/images/hero1.png";
+
+//testIMG
+import heroImg from "../../assets/images/img2lashed.jpeg";
+import heroImg2 from "../../assets/images/img4lashed.jpeg";
 
 const HeroBanner = () => {
   const { scrollY } = useScroll();
@@ -51,12 +55,12 @@ const HeroBanner = () => {
       </header>
 
       <section>
-        <div className="grid max-w-screen-xl px-10 pb-8 md:pt-2 mx-auto lg:gap-8 xl:gap-0 lg:py-12 lg:grid-cols-12">
+        <div className="grid max-w-screen-xl px-8 lg:px-1 pb-8 md:pt-2 mx-auto lg:gap-8 xl:gap-0 lg:py-12 lg:grid-cols-12">
           <div className="ml-0 md:ml-8 place-self-center lg:col-span-7">
             <h1 className="text-center md:text-start max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
               Where Your Eyes Get the Attention They Deserve
             </h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-200 indent-3">
+            <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-200 mt-4 indent-6 lg:indent-0">
               Welcome to my little corner of the beauty world! As a makeup
               artist and brow specialist, I am passionate about helping you look
               and feel your best. From perfectly arched eyebrows to glamorous

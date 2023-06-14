@@ -1,4 +1,5 @@
-import ServiceSelector from "../../Components/ServiceSelector";
+import React, { useState, useEffect } from "react";
+// import ServiceSelector from "../../Components/ServiceSelector";
 import ServiceCard from "../../Components/ServiceCard";
 import { motion } from "framer-motion";
 
@@ -38,6 +39,19 @@ const lashImages = [
 ];
 
 const Services = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 1024);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="h-full bg-black mt-24">
@@ -60,30 +74,49 @@ const Services = () => {
               <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z" />
             </svg>
           </div>
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="max-w-screen-sm sm:text-center sm:mx-auto">
+          <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="max-w-screen-sm text-center sm:mx-auto">
               <a
                 href="/"
                 aria-label="View"
                 className="inline-block mb-5 rounded-full sm:mx-auto"
               >
                 <div className="flex items-center justify-center w-28 h-28 mb-4 rounded-full">
-                  <img
-                    src={headerIcon}
-                    alt="headerIcon"
-                    className="rounded-full"
-                  />
+                  {!isMobile ? (
+                    <img
+                      src={headerIcon}
+                      alt="headerIcon"
+                      className="rounded-full mt-20 mb-16"
+                    />
+                  ) : (
+                    <img
+                      src={headerIcon}
+                      alt="headerIcon"
+                      className="rounded-full w-24 h-24 mt-72"
+                    />
+                  )}
                 </div>
               </a>
-              <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+              <h2 className="mb-4 py-2 font-sans text-center text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
                 Services Menu
               </h2>
-              <p className="text-base text-white mt-8 md:text-lg sm:px-4">
-                Experience a Fusion of Art and Beauty, where skilled hands and a
-                keen eye for detail combine to create a masterpiece that
-                enhances your individuality and elevates your confidence to new
-                heights.
-              </p>
+              {!isMobile ? (
+                <p className="text-base text-white mt-8 md:text-lg sm:px-4">
+                  Experience a Fusion of Art and Beauty, where skilled hands and
+                  a keen eye for detail combine to create a masterpiece that
+                  enhances your individuality and elevates your confidence to
+                  new heights.
+                </p>
+              ) : (
+                <>
+                  <p className=" bg-black text-center p-6 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4">
+                    Experience a Fusion of Art and Beauty, where skilled hands
+                    and a keen eye for detail combine to create a masterpiece
+                    that enhances your individuality and elevates your
+                    confidence to new heights.
+                  </p>
+                </>
+              )}
               <hr className="w-full my-8 border-gray-300" />
             </div>
           </div>
@@ -121,7 +154,7 @@ const Services = () => {
                 </div>
               </a>
               <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
-                <span className="inline-block ml-2 text-white">Brows</span>
+                <span className="inline-block ml-2 text-white">Eyebrow Services</span>
                 {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
               </h2>
             </div>
@@ -222,21 +255,21 @@ const Services = () => {
             <div>
               <ServiceCard
                 images={browImages}
-                descText=""
+                descText="Classic eyelash extensions are your most natural option. With this set one single eyelash extension is applied to every healthy natural eyelash giving a softer, more understated look. This is perfect for clients who want to add a little bit of length and fullness to their natural lashes in place of mascara."
                 headlineText="Classic"
               />
             </div>
             <div>
               <ServiceCard
                 images={lashImages}
-                descText=""
+                descText="Hybrid eyelash extensions combine both classic and volume techniques. This set involves a combination of classic lash extensions and volume fans to create a more textured look. With hybrid extensions you will get a fuller effect than classic lashes but not as much drama as volume extensions."
                 headlineText="Hybrid"
               />
             </div>
             <div>
               <ServiceCard
                 images={browImages}
-                descText=""
+                descText="Volume eyelash extensions are the most full and dramatic type of extensions offered at Lashed.Ink. This technique involves applying multiple lash extensions to one natural lash, creating a fan and giving a fuller, fluffier look. This is ideal for the client who wants a more bold look and wants to ditch their strip lashes!"
                 headlineText="Volume"
               />
             </div>
