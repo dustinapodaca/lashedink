@@ -125,7 +125,7 @@ const Services = () => {
                 {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
               </h2>
             </div>
-            <p className="w-full text-zinc-500 lg:text-sm lg:max-w-md">
+            <p className="w-full pt-4 text-zinc-500 italic text-sm lg:max-w-md">
               Please be advised that we have a 24-hour cancellation policy. If
               you need to cancel or reschedule your appointment, please do so at
               least 24 hours in advance. Failure to do so will result in a 50%
@@ -149,21 +149,21 @@ const Services = () => {
             <div>
               <ServiceCard
                 images={browImages}
-                descText=""
+                descText="Microblading is a technique that involves a handheld blade being used to implant pigment into the skin and create thin hair-like strokes to give the illusion of brow hairs. This will give the most natural look. It is best for clients who do not like the look of eyebrows filled in with makeup. The ideal candidate has even eyebrow hair patterns and normal to dry skin."
                 headlineText="Microblading"
               />
             </div>
             <div>
               <ServiceCard
                 images={lashImages}
-                descText=""
+                descText="Powder brows also known as ombre brows involve using a machine to shade the brows and create a soft (or bold) powdered effect similar to how the eyebrows look when filled in with makeup. The result is a more defined finish as the entire area of the brow is shaded in. This technique is good for all skin types."
                 headlineText="Powder/Ombré"
               />
             </div>
             <div>
               <ServiceCard
                 images={browImages}
-                descText=""
+                descText="Combo brows are a combination of microblading and powder brows. It offers the best of both worlds by combining the hair strokes of microblading and the shading of powder. This technique can be customized with more strokes and less shading to keep it more natural or few strokes and more shading to add more boldness."
                 headlineText="Combo"
               />
             </div>
@@ -223,21 +223,21 @@ const Services = () => {
               <ServiceCard
                 images={browImages}
                 descText=""
-                headlineText="Microblading"
+                headlineText="Classic"
               />
             </div>
             <div>
               <ServiceCard
                 images={lashImages}
                 descText=""
-                headlineText="Powder/Ombré"
+                headlineText="Hybrid"
               />
             </div>
             <div>
               <ServiceCard
                 images={browImages}
                 descText=""
-                headlineText="Combo"
+                headlineText="Volume"
               />
             </div>
           </div>
@@ -296,21 +296,21 @@ const Services = () => {
               <ServiceCard
                 images={browImages}
                 descText=""
-                headlineText="Microblading"
+                headlineText="Corrections"
               />
             </div>
             <div>
               <ServiceCard
                 images={lashImages}
                 descText=""
-                headlineText="Powder/Ombré"
+                headlineText="Lip Blush"
               />
             </div>
             <div>
               <ServiceCard
                 images={browImages}
                 descText=""
-                headlineText="Combo"
+                headlineText="Dark Lip Neutralization"
               />
             </div>
           </div>
