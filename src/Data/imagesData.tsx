@@ -2,7 +2,7 @@
 import microblade from "../assets/images/microblading.jpg";
 import powder from "../assets/images/powder.jpg";
 import combo from "../assets/images/combo.jpg";
-import darkLip from "../assets/images/darkLip.jpg";
+import darkLip from "../assets/images/darkLip.png";
 import lipBlush from "../assets/images/lipBlush.jpg";
 
 // import brow1 from "../assets/images/brows/brow3.jpg";
