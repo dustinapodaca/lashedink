@@ -105,16 +105,19 @@ const Services = () => {
                   )}
                 </div>
               </a>
-              <h2 className="mb-4 py-2 font-sans text-center text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+              <h2 className="mb-4 py-2 font-sans text-center font-bold tracking-tight text-white text-4xl sm:leading-none">
                 Services Menu
               </h2>
               {!isMobile ? (
-                <p className="text-base text-white mt-8 md:text-lg sm:px-4">
-                  Experience a Fusion of Art and Beauty, where skilled hands and
-                  a keen eye for detail combine to create a masterpiece that
-                  enhances your individuality and elevates your confidence to
-                  new heights.
-                </p>
+                <>
+                  <p className="text-base text-white mt-8 md:text-lg sm:px-4">
+                    Experience a Fusion of Art and Beauty, where skilled hands and
+                    a keen eye for detail combine to create a masterpiece that
+                    enhances your individuality and elevates your confidence to
+                    new heights.
+                  </p>
+                  <hr className="w-full my-8 border-gray-300" />
+                </>
               ) : (
                 <>
                   <p className=" bg-black text-center p-6 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4">
@@ -125,7 +128,6 @@ const Services = () => {
                   </p>
                 </>
               )}
-              <hr className="w-full my-8 border-gray-300" />
             </div>
           </div>
         </div>

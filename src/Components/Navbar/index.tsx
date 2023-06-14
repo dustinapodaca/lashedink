@@ -33,14 +33,14 @@ const LayoutNav = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-5 pl-8 py-8 border-b border-white shadow-lg"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 pl-5 py-8 border-b border-white shadow-lg"
         style={{ backgroundColor: "rgba(0, 0, 0)" }}
       >
         <div className="flex flex-row justify-between">
           {/* <h2 className="md:text-2xl text-2xl font-extrabold text-white drop-shadow-lg">
             Lashed.Ink
           </h2> */}
-          <img src={lashedBanner} alt="lashed.ink" className="w-52" />
+          <img src={lashedBanner} alt="lashed.ink" className="w-48" />
         </div>
         {!isMobile ? (
           <div className="flex flex-row justify-between">
