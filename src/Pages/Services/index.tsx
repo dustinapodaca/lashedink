@@ -185,7 +185,7 @@ const Services = () => {
               can drastically affect the way we look. For this reason it is
               important we tailor each pair of eyebrows to the individual, their
               face proportions and their desired look. Microblading, powder
-              brow, and combo brow are the three techniques/styles I offer for
+              brow, and combo brow are the three techniques/styles that I offer for
               semi-permanent eyebrow tattooing.
             </p>
           </div>
