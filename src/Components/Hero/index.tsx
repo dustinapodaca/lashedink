@@ -51,7 +51,7 @@ const HeroBanner = () => {
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",
               }}
-              className="font-inherit text-3xl italic md:text-6xl font-extralight text-white text-center"
+              className="font-vibes text-3xl italic md:text-6xl font-extralight text-white text-center"
             >
               Enhance Your Beauty
             </h1>

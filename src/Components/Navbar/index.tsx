@@ -11,12 +11,16 @@ const LayoutNav = () => {
   const containerRef = useRef(null);
 
   const handleClickLink = () => {
-    toggleOpen();
+    if (isMobile) {
+      toggleOpen();
+    }
   };
 
   const toggleOpenBooking = () => {
     window.open('https://square.site/book/ZD47SF4KTBRZS/lashed-ink-englewood-co', '_blank');
-    toggleOpen();
+    if (isMobile) {
+      toggleOpen();
+    }
   };
 
   const handleResize = () => {
@@ -30,6 +34,14 @@ const LayoutNav = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
+
   return (
     <>
       <nav
@@ -40,7 +52,9 @@ const LayoutNav = () => {
           {/* <h2 className="md:text-2xl text-2xl font-extrabold text-white drop-shadow-lg">
             Lashed.Ink
           </h2> */}
-          <img src={lashedBanner} alt="lashed.ink" className="w-48" />
+          <a href="/">
+            <img src={lashedBanner} alt="lashed.ink" className="w-48" />
+          </a>
         </div>
         {!isMobile ? (
           <div className="flex flex-row justify-between">
@@ -170,7 +184,7 @@ const LayoutNav = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Add this new motion.div for the dark background */}
+            {/* DARK BACKGROUND */}
             <motion.div
               className="fixed inset-0 z-40 bg-black opacity-50 top-[6.5rem]"
               initial={{ opacity: 0 }}
@@ -179,8 +193,7 @@ const LayoutNav = () => {
               transition={{ duration: 0.2 }}
               onClick={() => toggleOpen()} // Close the menu when the background is clicked
             />
-
-            {/* Update the motion.div wrapping your menu items */}
+            {/* MENU CONTENT */}
             <motion.div
               className="rounded-b-lg p-10 px-6 h-full z-50 fixed top-[5.5rem] left-0 right-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
@@ -280,14 +293,16 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <motion.button
-                  className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-                  whileHover={{ scale: [null, 1.4, 1.3] }}
-                  transition={{ duration: 0.3 }}
-                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-                >
-                  About
-                </motion.button>
+                <Link to="/services" onClick={handleClickLink}>
+                  <motion.button
+                    className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    transition={{ duration: 0.3 }}
+                    // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                  >
+                    Services
+                  </motion.button>
+                </Link>
               </motion.nav>
               <motion.nav
                 className="flex justify-evenly pb-6 items-center w-full pt-3"
@@ -318,14 +333,14 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <Link to="/services" onClick={handleClickLink}>
+                <Link to="/about" onClick={handleClickLink}>
                   <motion.button
                     className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
-                    Services
+                    About
                   </motion.button>
                 </Link>
               </motion.nav>
@@ -358,14 +373,16 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <motion.button
-                  className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-                  whileHover={{ scale: [null, 1.4, 1.3] }}
-                  transition={{ duration: 0.3 }}
-                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-                >
-                  Contact
-                </motion.button>
+                <Link to="/contact" onClick={handleClickLink}>
+                  <motion.button
+                    className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    transition={{ duration: 0.3 }}
+                    // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                  >
+                    Contact
+                  </motion.button>
+                </Link>
               </motion.nav>
               <motion.nav
                 className="flex justify-evenly pb-6 items-center w-full pt-3"
@@ -396,14 +413,16 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <motion.button
-                  className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
-                  whileHover={{ scale: [null, 1.4, 1.3] }}
-                  transition={{ duration: 0.3 }}
-                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-                >
-                  FAQ
-                </motion.button>
+                <Link to="/faq" onClick={handleClickLink}>
+                  <motion.button
+                    className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    transition={{ duration: 0.3 }}
+                    // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                  >
+                    FAQ
+                  </motion.button>
+                </Link>
               </motion.nav>
               <motion.nav
                 className="flex justify-evenly pb-6 items-center w-full pt-3"

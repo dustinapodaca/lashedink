@@ -48,10 +48,9 @@ const ServiceSelector = ({images, text}: CarouselProps) => {
                 />
               ))}
             </motion.div>
-            {/* <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-poiret stroke-white stroke-1">
+            <p className="font-vibes text-3xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl md:text-4xl font-poiret stroke-white stroke-1">
               {text}
-            </p> */}
-
+            </p>
             <AnimatePresence initial={false}>
               {index > 0 && (
                 <motion.button

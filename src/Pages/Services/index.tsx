@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { microbladeImages, powderImages, comboImages, darkLipImages, lipBlushImages, eyelashImages } from "../../Data/imagesData";
 
 import servicesHeader from "../../assets/images/img1lashed.png";
-import headerIcon from "../../assets/images/img4lashed.jpeg";
+import headerIcon from "../../assets/images/img20lashed.jpeg";
 
 import browIcon from "../../assets/images/img11lashed.jpeg";
 import lashIcon from "../../assets/images/img3lashed.jpeg";
@@ -120,7 +120,7 @@ const Services = () => {
                 </>
               ) : (
                 <>
-                  <p className=" bg-black text-center p-6 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4">
+                  <p className=" bg-black text-center p-4 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4">
                     Experience a Fusion of Art and Beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
                     that enhances your individuality and elevates your
