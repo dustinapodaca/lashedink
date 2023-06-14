@@ -6,7 +6,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      poiret: ['"Poiret One"', 'cursive'],
+      // poiret: ['"Poiret One"', 'cursive'],
+      vibes: ['"Great Vibes"', 'cursive'],
       cardo: ['"Cardo"', 'serif'],
     },
     extend: {},

@@ -1,8 +1,12 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect } from "react";
 
-import heroImg from "../../assets/images/hero2.png";
-import heroImg2 from "../../assets/images/hero1.png";
+// import heroImg from "../../assets/images/hero2.png";
+// import heroImg2 from "../../assets/images/hero1.png";
+
+//testIMG
+import heroImg from "../../assets/images/img2lashed.jpeg";
+import heroImg2 from "../../assets/images/img4lashed.jpeg";
 
 const HeroBanner = () => {
   const { scrollY } = useScroll();
@@ -43,7 +47,12 @@ const HeroBanner = () => {
             }}
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center">
-            <h1 className="font-poiret text-4xl md:text-6xl font-bold text-white text-center">
+            <h1
+              style={{
+                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",
+              }}
+              className="font-inherit text-3xl italic md:text-6xl font-extralight text-white text-center"
+            >
               Enhance Your Beauty
             </h1>
           </div>
@@ -51,24 +60,21 @@ const HeroBanner = () => {
       </header>
 
       <section>
-        <div className="grid max-w-screen-xl px-10 pb-8 md:pt-2 mx-auto lg:gap-8 xl:gap-0 lg:py-12 lg:grid-cols-12">
+        <div className="grid max-w-screen-xl px-8 lg:px-1 pb-8 md:pt-2 mx-auto lg:gap-8 xl:gap-0 lg:py-12 lg:grid-cols-12">
           <div className="ml-0 md:ml-8 place-self-center lg:col-span-7">
             <h1 className="text-center md:text-start max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
               Where Your Eyes Get the Attention They Deserve
             </h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-200 indent-3">
+            <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-200 mt-4 indent-6 lg:indent-0">
               Welcome to my little corner of the beauty world! As a makeup
               artist and brow specialist, I am passionate about helping you look
               and feel your best. From perfectly arched eyebrows to glamorous
               lashes, I am here to enhance your natural beauty and give you the
               confidence you deserve.
             </p>
-            <span className="block font-bold text-gray-500 dark:text-gray-300 text-2xl my-8 text-center md:text-start">
-              Let us take your beauty game to the next level!
-            </span>
             <div className="flex flex-row justify-center md:justify-start">
               <a
-                href="#"
+                href="/services"
                 className="bg-gray-700 inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
               >
                 Get started
@@ -91,7 +97,6 @@ const HeroBanner = () => {
               >
                 Book Now
               </a>
-
             </div>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex p-4">
