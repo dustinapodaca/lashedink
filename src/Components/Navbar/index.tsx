@@ -186,16 +186,16 @@ const LayoutNav = () => {
           <>
             {/* DARK BACKGROUND */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black opacity-50 top-[6.5rem]"
+              className="fixed inset-0 z-40 bg-black top-[6.4rem]"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.85 }}
+              animate={{ opacity: 0.90 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={() => toggleOpen()} // Close the menu when the background is clicked
             />
             {/* MENU CONTENT */}
             <motion.div
-              className="rounded-b-lg p-10 px-6 h-full z-50 fixed top-[5.5rem] left-0 right-0"
+              className="rounded-b-lg p-10 pt-16 px-6 h-full z-50 fixed left-0 right-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
               variants={{
                 open: {
