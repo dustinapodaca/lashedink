@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Old London';
+  src: url('./assets/fonts/OldLondon.ttf') format('truetype');
+}
+
+.font-london {
+  font-family: 'OldLondon';
+}
+
+@font-face {
+  font-family: 'Mark My Words';
+  src: url('./assets/fonts/MarkMyWords.ttf') format('truetype');
+}
+
+.font-cursive {
+  font-family: 'Mark My Words';
+}
