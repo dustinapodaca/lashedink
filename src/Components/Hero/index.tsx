@@ -1,12 +1,14 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect } from "react";
 
+import Contact from "../Contact";
+
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
 
 //testIMG
-import heroImg from "../../assets/images/img2lashed.jpeg";
-import heroImg2 from "../../assets/images/img4lashed.jpeg";
+import heroImg from "../../assets/images/img2-2lashed.png";
+import heroImg2 from "../../assets/images/img9lashed.jpeg";
 
 const HeroBanner = () => {
   const { scrollY } = useScroll();
@@ -51,7 +53,7 @@ const HeroBanner = () => {
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",
               }}
-              className="font-inherit text-3xl italic md:text-6xl font-extralight text-white text-center"
+              className="font-london text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white text-center"
             >
               Enhance Your Beauty
             </h1>
@@ -109,6 +111,7 @@ const HeroBanner = () => {
           </div>
         </div>
       </section>
+      <Contact />
     </>
   );
 };

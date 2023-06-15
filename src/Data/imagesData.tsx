@@ -1,7 +1,7 @@
 
-import microblade from "../assets/images/microblading.jpg";
-import powder from "../assets/images/powder.jpg";
-import combo from "../assets/images/combo.jpg";
+import microblade from "../assets/images/img13lashed.png";
+import powder from "../assets/images/img14lashed.png";
+import combo from "../assets/images/img15lashed.jpeg";
 import darkLip from "../assets/images/darkLip.png";
 import lipBlush from "../assets/images/lipBlush.jpg";
 

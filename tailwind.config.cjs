@@ -9,6 +9,7 @@ module.exports = {
       // poiret: ['"Poiret One"', 'cursive'],
       vibes: ['"Great Vibes"', 'cursive'],
       cardo: ['"Cardo"', 'serif'],
+      london: ['"Old London"', 'serif'],
     },
     extend: {},
   },

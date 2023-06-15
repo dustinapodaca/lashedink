@@ -5,6 +5,8 @@ import './App.css';
 
 import Hero from './Components/Hero';
 import Services from './Pages/Services';
+import About from './Pages/About';
+// import FAQ from './Pages/FAQ';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +15,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route path="/faq" element={<FAQ />} /> */}
       </Routes>
     </BrowserRouter>
   );
