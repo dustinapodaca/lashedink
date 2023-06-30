@@ -7,7 +7,7 @@ import Contact from "../Contact";
 // import heroImg2 from "../../assets/images/hero1.png";
 
 //testIMG
-import heroImg from "../../assets/images/img2-2lashed.png";
+import heroImg from "../../assets/images/marble2.jpg";
 import heroImg2 from "../../assets/images/img9lashed.jpeg";
 
 const HeroBanner = () => {
@@ -35,7 +35,7 @@ const HeroBanner = () => {
       <header>
         <div
           className="relative overflow-hidden bg-black w-screen mb-10 mt-20"
-          style={{ height: "60vh" }}
+          style={{ height: "70vh" }}
         >
           <motion.div
             className="absolute inset-0"
@@ -44,7 +44,7 @@ const HeroBanner = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.9)",
+              filter: "brightness(100.9), contrast(5.2)",
               y: yPos,
             }}
           />
@@ -53,7 +53,7 @@ const HeroBanner = () => {
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",
               }}
-              className="font-london text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white text-center"
+              className="font-london text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white text-center"
             >
               Enhance Your Beauty
             </h1>

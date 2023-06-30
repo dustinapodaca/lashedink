@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 // import ServiceSelector from "../../Components/ServiceSelector";
 import ServiceCard from "../../Components/ServiceCard";
 import { motion } from "framer-motion";
+import BookingModal from "../../Components/BookingModal";
 
 import { microbladeImages, powderImages, comboImages, darkLipImages, lipBlushImages, eyelashImages } from "../../Data/imagesData";
 
-import servicesHeader from "../../assets/images/img1-2lashed.png";
+import servicesHeader from "../../assets/images/marble.jpg";
 import headerIcon from "../../assets/images/img20lashed.jpeg";
 
 import browIcon from "../../assets/images/img11lashed.jpeg";
@@ -171,12 +172,13 @@ const Services = () => {
                 {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
               </h2>
             </div>
-            <p className="w-full pt-4 text-zinc-500 italic text-sm lg:max-w-md">
+            {/* <p className="w-full pt-4 text-zinc-500 italic text-sm lg:max-w-md">
               Please be advised that we have a 24-hour cancellation policy. If
               you need to cancel or reschedule your appointment, please do so at
               least 24 hours in advance. Failure to do so will result in a 50%
               charge of the scheduled service.
-            </p>
+            </p> */}
+            <BookingModal />
           </div>
           <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
             <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
