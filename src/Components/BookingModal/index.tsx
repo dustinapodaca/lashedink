@@ -83,7 +83,10 @@ const ServiceModal = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
               style={{
-                padding: "2rem",
+                paddingLeft: "1.5rem",
+                paddingRight: "1.5rem",
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
                 borderRadius: "0.5rem",
                 maxWidth: "100%",
                 maxHeight: "90%",
@@ -95,7 +98,7 @@ const ServiceModal = () => {
                   <span></span>
                   {!isMobile ? (
                     <h3
-                      className="text-5xl text-center font-bold font-london text-gray-900 dark:text-white"
+                      className="text-5xl text-center font-bold font-london text-white"
                       style={{
                         textShadow: "2px 2px 3px rgba(0, 0, 0, 0.8)",
                       }}
@@ -103,7 +106,14 @@ const ServiceModal = () => {
                       Before You Book
                     </h3>
                   ) : (
-                    <h3 className="text-4xl text-center font-bold font-london text-gray-900 dark:text-white">
+                    <h3
+                      className="text-center font-bold font-london text-white"
+                      style={{
+                        textShadow: "2px 2px 3px rgba(0, 0, 0, 0.8)",
+                        fontSize: "2.3rem",
+                        lineHeight: "2.95rem",
+                      }}
+                    >
                       Before You Book
                     </h3>
                   )}
@@ -128,11 +138,11 @@ const ServiceModal = () => {
                   </button>
                 </div>
 
-                <div className="p-6 text-white">
+                <div className="px-4 py-6 sm:px-6 text-white">
                   {!isMobile ? (
                     <div className="flex justify-between items-center mb-5">
                       <h2
-                        className="text-2xl font-bold"
+                        className="font-london text-4xl font-bold"
                         style={{
                           textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
                         }}
@@ -156,7 +166,7 @@ const ServiceModal = () => {
                         Failure to do so will result in a 50% charge of the
                         scheduled service.
                       </p>
-                      <h2 className="text-2xl font-bold mb-3 text-center">
+                      <h2 className="font-london text-3xl font-bold mb-4 text-center">
                         Are You a Candidate?
                       </h2>
                     </>
@@ -201,16 +211,25 @@ const ServiceModal = () => {
                   </ul>
 
                   <hr className="w-full mt-8 mb-6 border-zinc-700" />
-
-                  <h2
-                    className="text-2xl font-bold mb-2"
-                    style={{
-                      textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
-                    }}
-                  >
-                    Permanent Makeup Preparation
-                  </h2>
-
+                  {!isMobile ? (
+                    <h2
+                      className="font-london text-4xl font-bold mb-2"
+                      style={{
+                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Permanent Makeup Preparation
+                    </h2>
+                  ) : (
+                    <h2
+                      className="text-center font-london text-3xl font-bold mb-4"
+                      style={{
+                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
+                      Permanent Makeup Preparation
+                    </h2>
+                  )}
                   <p className="mb-4">
                     All permanent makeup appointments must be approved by the
                     artist before scheduling to ensure you are a good candidate.
