@@ -2,6 +2,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect } from "react";
 
 import Contact from "../Contact";
+import Gallery from "../GalleryViewer";
+import Footer from "../Footer";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
@@ -53,7 +55,7 @@ const HeroBanner = () => {
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",
               }}
-              className="font-london text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white text-center"
+              className="font-london text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white text-center"
             >
               Enhance Your Beauty
             </h1>
@@ -61,11 +63,11 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <section>
+      {/* <section>
         <div className="grid max-w-screen-xl px-8 lg:px-1 pb-8 md:pt-2 mx-auto lg:gap-8 xl:gap-0 lg:py-12 lg:grid-cols-12">
           <div className="ml-0 md:ml-8 place-self-center lg:col-span-7">
             <h1 className="text-center md:text-start max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-              Where Your Eyes Get the Attention They Deserve
+              Where You Get the Attention You Deserve
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-200 mt-4 indent-6 lg:indent-0">
               Welcome to my little corner of the beauty world! As a makeup
@@ -110,8 +112,13 @@ const HeroBanner = () => {
             />
           </div>
         </div>
-      </section>
-      <Contact />
+      </section> */}
+      <h1 className="py-12 px-10 text-center mx-auto mb-6 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">
+        Receive the Attention You Deserve
+      </h1>
+      <Gallery />
+      {/* <Contact /> */}
+      <Footer />
     </>
   );
 };

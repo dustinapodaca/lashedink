@@ -101,7 +101,7 @@ const Services = () => {
                     <img
                       src={headerIcon}
                       alt="headerIcon"
-                      className="rounded-full w-24 h-24 mt-72"
+                      className="rounded-full w-24 h-24 mt-10"
                     />
                   )}
                 </div>
@@ -112,16 +112,16 @@ const Services = () => {
               {!isMobile ? (
                 <>
                   <p className="text-base text-white mt-8 md:text-lg sm:px-4">
-                    Experience a Fusion of Art and Beauty, where skilled hands and
-                    a keen eye for detail combine to create a masterpiece that
-                    enhances your individuality and elevates your confidence to
-                    new heights.
+                    Experience a Fusion of Art and Beauty, where skilled hands
+                    and a keen eye for detail combine to create a masterpiece
+                    that enhances your individuality and elevates your
+                    confidence to new heights.
                   </p>
                   <hr className="w-full my-8 border-gray-300" />
                 </>
               ) : (
                 <>
-                  <p className=" bg-black text-center p-4 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4">
+                  <p className=" bg-black text-center p-4 mb-10 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4">
                     Experience a Fusion of Art and Beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
                     that enhances your individuality and elevates your
@@ -132,7 +132,10 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+        <div className="mx-auto w-56 mt-10">{isMobile && <BookingModal />}</div>
+
+        <div className="px-4 pt-8 pb-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-4">
             <div className="flex items-center group lg:max-w-xl">
               <a href="/" aria-label="Item" className="mr-3">
@@ -169,16 +172,9 @@ const Services = () => {
                 <span className="inline-block ml-2 text-white">
                   Eyebrow Services
                 </span>
-                {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
               </h2>
             </div>
-            {/* <p className="w-full pt-4 text-zinc-500 italic text-sm lg:max-w-md">
-              Please be advised that we have a 24-hour cancellation policy. If
-              you need to cancel or reschedule your appointment, please do so at
-              least 24 hours in advance. Failure to do so will result in a 50%
-              charge of the scheduled service.
-            </p> */}
-            <BookingModal />
+            {!isMobile && <BookingModal />}
           </div>
           <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
             <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
@@ -189,8 +185,8 @@ const Services = () => {
               can drastically affect the way we look. For this reason it is
               important we tailor each pair of eyebrows to the individual, their
               face proportions and their desired look. Microblading, powder
-              brow, and combo brow are the three techniques/styles that I offer for
-              semi-permanent eyebrow tattooing.
+              brow, and combo brow are the three techniques/styles that I offer
+              for semi-permanent eyebrow tattooing.
             </p>
           </div>
           <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">

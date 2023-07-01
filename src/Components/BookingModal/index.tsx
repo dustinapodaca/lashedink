@@ -123,14 +123,35 @@ const ServiceModal = () => {
                   </button>
                 </div>
 
-                <div className="p-8 text-white">
-                  {/* <h1 className="text-4xl font-bold mb-4">Before You Book</h1> */}
+                <div className="p-6 text-white">
+                  {!isMobile ? (
+                    <div className="flex justify-between items-center mb-5">
+                      <h2 className="text-2xl font-bold">
+                        Are You a Candidate?
+                      </h2>
+                      <p className="w-full text-zinc-500 italic text-sm lg:max-w-4xl text-right">
+                        Please be advised that we have a 24-hour cancellation
+                        policy. If you need to cancel or reschedule your
+                        appointment, please do so at least 24 hours in advance.
+                        Failure to do so will result in a 50% charge of the
+                        scheduled service.
+                      </p>
+                    </div>
+                  ) : (
+                    <>
+                      <p className="w-full text-zinc-500 italic text-sm lg:max-w-4xl text-center mb-4">
+                        Please be advised that we have a 24-hour cancellation
+                        policy. If you need to cancel or reschedule your
+                        appointment, please do so at least 24 hours in advance.
+                        Failure to do so will result in a 50% charge of the
+                        scheduled service.
+                      </p>
+                      <h2 className="text-2xl font-bold mb-3 text-center">
+                        Are You a Candidate?
+                      </h2>
+                    </>
+                  )}
 
-                  {/* <hr className="w-full my-8 border-gray-300" /> */}
-
-                  <h2 className="text-2xl font-bold mb-2">
-                    Are You a Candidate?
-                  </h2>
                   <p className="mb-4">
                     Permanent makeup, also known as micro-pigmentation, is a
                     cosmetic tattooing technique that involves the implantation
