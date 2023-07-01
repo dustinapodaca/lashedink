@@ -20,18 +20,18 @@ export default function ServiceCard ({images, headlineText, descText}: CarouselP
       <ServiceSelector images={images} text={headlineText} />
       <div className="p-5">
         <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          <h5 className="mb-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
             {headlineText}
           </h5>
         </a>
-        <p className="font-normal text-zinc-700 dark:text-zinc-400 h-56">
+        <p className="font-normal text-zinc-700 dark:text-zinc-400 h-60">
           {descText}
         </p>
       </div>
-      <hr className="max-w-full border-gray-300 text-center mb-4" />
+      {/* <hr className="max-w-full border-gray-300 text-center mb-4" />
       <div className="flex items-center justify-center mb-5">
         <ServiceModal text={headlineText} />
-      </div>
+      </div> */}
     </div>
   );
 };

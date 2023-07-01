@@ -2,12 +2,14 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect } from "react";
 
 import Contact from "../Contact";
+import Gallery from "../GalleryViewer";
+import Footer from "../Footer";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
 
 //testIMG
-import heroImg from "../../assets/images/img2-2lashed.png";
+import heroImg from "../../assets/images/marble2.jpg";
 import heroImg2 from "../../assets/images/img9lashed.jpeg";
 
 const HeroBanner = () => {
@@ -35,7 +37,7 @@ const HeroBanner = () => {
       <header>
         <div
           className="relative overflow-hidden bg-black w-screen mb-10 mt-20"
-          style={{ height: "60vh" }}
+          style={{ height: "70vh" }}
         >
           <motion.div
             className="absolute inset-0"
@@ -44,7 +46,7 @@ const HeroBanner = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.9)",
+              filter: "brightness(100.9), contrast(5.2)",
               y: yPos,
             }}
           />
@@ -61,11 +63,11 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <section>
+      {/* <section>
         <div className="grid max-w-screen-xl px-8 lg:px-1 pb-8 md:pt-2 mx-auto lg:gap-8 xl:gap-0 lg:py-12 lg:grid-cols-12">
           <div className="ml-0 md:ml-8 place-self-center lg:col-span-7">
             <h1 className="text-center md:text-start max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-              Where Your Eyes Get the Attention They Deserve
+              Where You Get the Attention You Deserve
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-200 mt-4 indent-6 lg:indent-0">
               Welcome to my little corner of the beauty world! As a makeup
@@ -110,8 +112,11 @@ const HeroBanner = () => {
             />
           </div>
         </div>
-      </section>
-      <Contact />
+      </section> */}
+      <h1 className="py-12 px-10 text-center mx-auto mb-6 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">
+        Receive the Attention You Deserve
+      </h1>
+      <Gallery />
     </>
   );
 };
