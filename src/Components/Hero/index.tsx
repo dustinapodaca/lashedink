@@ -36,8 +36,8 @@ const HeroBanner = () => {
     <>
       <header>
         <div
-          className="relative overflow-hidden bg-black w-screen mb-10 mt-20"
-          style={{ height: "70vh" }}
+          className="relative overflow-hidden bg-black w-screen mb-10"
+          style={{ height: "80vh" }}
         >
           <motion.div
             className="absolute inset-0"
@@ -50,7 +50,7 @@ const HeroBanner = () => {
               y: yPos,
             }}
           />
-          <div className="absolute inset-0 flex flex-col justify-center items-center">
+          <div className="absolute inset-0 flex flex-col justify-center items-center top-20">
             <h1
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",

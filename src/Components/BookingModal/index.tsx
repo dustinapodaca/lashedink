@@ -90,7 +90,7 @@ const ServiceModal = () => {
                 overflow: "auto",
               }}
             >
-              <div className="relative rounded-lg shadow dark:bg-zinc-900 p-2">
+              <div className="relative rounded-lg shadow dark:bg-zinc-900 px-2">
                 <div className="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
                   <span></span>
                   {!isMobile ? (
