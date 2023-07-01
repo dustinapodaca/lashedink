@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <>
-      <section className="pt-10 overflow-hidden bg-black md:pt-10 sm:pt-16 2xl:pt-16 mt-24">
+      <section className="pt-2 overflow-hidden bg-black md:pt-10 sm:pt-16 2xl:pt-16 mt-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
@@ -36,15 +36,15 @@ const About = () => {
                     src={aboutPic}
                     alt=""
                   />
-                </div> 
+                </div>
               ) : (
                 <></>
               )}
-              <h2 className="text-3xl font-black leading-relaxed text-pink-500 sm:text-4xl lg:text-6xl text-center md:text-left">
+              <p className="text-2xl italic font-bold mb-2 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
                 My name is <br />
-                <span className="font-cursive text-5xl md:text-6xl lg:text-7xl">
-                  Tatiana Herran!
-                </span>
+              </p>
+              <h2 className="font-cursive text-pink-500 text-center text-5xl md:text-5xl lg:text-7xl">
+                Tatiana Herran!
               </h2>
               {/* <p className="max-w-lg mt-3 text-xl leading-relaxed text-white md:mt-8">
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -72,12 +72,13 @@ const About = () => {
                   self-transformation and rediscovery together! */}
                 </p>
               </div>
-              <p className="mt-4 text-xl text-white md:mt-8">
+              <p className="mt-10 text-xl text-white md:mt-8">
                 <span className="relative inline-block">
                   <span className="absolute inline-block w-full top-6 h-1 bg-pink-500"></span>
                   <span className="relative"> Have a question? </span>
                 </span>
-                <br className="block sm:hidden" /> Ask me on{" "}
+                <br />
+                <br className="block" /> Ask me on{" "}
                 <a
                   href="https://www.instagram.com/lashed.ink/?hl=en"
                   title="Lashed Ink Instagram"
@@ -92,18 +93,18 @@ const About = () => {
               <></>
             ) : (
               <div className="relative">
-              {/* <img
+                {/* <img
                 className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg"
                 alt=""
               /> */}
 
-              <img
-                className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100"
-                src={aboutPic}
-                alt=""
-              />
-            </div>
+                <img
+                  className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100"
+                  src={aboutPic}
+                  alt=""
+                />
+              </div>
             )}
           </div>
         </div>

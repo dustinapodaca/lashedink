@@ -17,8 +17,8 @@ const FAQ = () => {
   return (
     <>
       <section className="w-full h-96 mt-36">
-        <h2 className="font-london text-6xl text-white text-center">
-          Frequently Asked Questions
+        <h2 className="font-london text-6xl text-white text-center mx-36">
+          Frequently <br /> Asked <br /> Questions
         </h2>
       </section>
     </>
