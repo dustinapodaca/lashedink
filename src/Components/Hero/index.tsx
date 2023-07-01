@@ -2,7 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import GalleryViewer from "../GalleryViewer";
 
-import heroBanner from "../../assets/images/marble2-2.jpg";
+import heroBanner from "../../assets/images/marbletriangle.jpg";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
