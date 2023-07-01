@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
-import placeholder from "../../assets/images/placeholder.jpeg";
+// import placeholder from "../../assets/images/placeholder.jpeg";
+
+import { imageData } from './imagesData';
 
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +37,10 @@ const Gallery = () => {
   const transitionDuration12 = Math.random() * 2.7 + 2.9;
 
   return (
-    <div id="gallery" className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4">
+    <div
+      id="gallery"
+      className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4"
+    >
       <div className="grid gap-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -44,7 +49,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+            src={imageData.img1}
             alt=""
           />
         </motion.div>
@@ -55,7 +60,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+            src={imageData.img2}
             alt=""
           />
         </motion.div>
@@ -66,7 +71,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+            src={imageData.img3}
             alt=""
           />
         </motion.div>
@@ -78,8 +83,8 @@ const Gallery = () => {
           transition={{ duration: transitionDuration4 }}
         >
           <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+            className="h-auto w-full rounded-lg"
+            src={imageData.img4}
             alt=""
           />
         </motion.div>
@@ -90,7 +95,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+            src={imageData.img5}
             alt=""
           />
         </motion.div>
@@ -101,7 +106,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+            src={imageData.img6}
             alt=""
           />
         </motion.div>
@@ -114,7 +119,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+            src={imageData.img7}
             alt=""
           />
         </motion.div>
@@ -125,7 +130,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+            src={imageData.img8}
             alt=""
           />
         </motion.div>
@@ -136,7 +141,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+            src={imageData.img9}
             alt=""
           />
         </motion.div>
@@ -149,7 +154,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+            src={imageData.img10}
             alt=""
           />
         </motion.div>
@@ -160,7 +165,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+            src={imageData.img11}
             alt=""
           />
         </motion.div>
@@ -171,7 +176,7 @@ const Gallery = () => {
         >
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+            src={imageData.img12}
             alt=""
           />
         </motion.div>

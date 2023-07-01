@@ -113,9 +113,12 @@ const HeroBanner = () => {
           </div>
         </div>
       </section> */}
-      <h1 className="py-12 px-10 text-center mx-auto mb-6 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">
-        Receive the Attention You Deserve
+      <h1 className="pt-12 px-10 text-center mx-auto text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">
+        Radiate Confidence
       </h1>
+      <h2 className="pb-12 px-10 text-center mx-auto mb-6 text-xl font-normal tracking-tight leading-none md:text-2xl xl:text-3xl text-white">
+        Enhance Your Look with Expert Touches
+      </h2>
       <Gallery />
     </>
   );
