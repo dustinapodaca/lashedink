@@ -117,8 +117,6 @@ const HeroBanner = () => {
         Receive the Attention You Deserve
       </h1>
       <Gallery />
-      {/* <Contact /> */}
-      <Footer />
     </>
   );
 };

@@ -186,7 +186,7 @@ const LayoutNav = () => {
           <>
             {/* DARK BACKGROUND */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black top-[6.4rem]"
+              className="fixed inset-0 z-40 bg-black top-[6.3rem]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.90 }}
               exit={{ opacity: 0 }}
