@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './Components/Navbar';
+import ScrollToTop from "./Components/ScrollToTop";
 import './App.css';
 
+import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Services from './Pages/Services';
 import About from './Pages/About';
@@ -14,6 +15,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/services" element={<Services />} />

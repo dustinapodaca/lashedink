@@ -138,7 +138,7 @@ const ServiceModal = () => {
                   </button>
                 </div>
 
-                <div className="px-4 py-6 sm:px-6 text-white">
+                <div className="px-4 py-5 sm:px-6 text-white">
                   {!isMobile ? (
                     <div className="flex justify-between items-center mb-5">
                       <h2
@@ -159,7 +159,7 @@ const ServiceModal = () => {
                     </div>
                   ) : (
                     <>
-                      <p className="w-full text-zinc-500 italic text-sm lg:max-w-4xl text-center mb-4">
+                      <p className="w-full text-zinc-500 italic text-sm lg:max-w-4xl text-center mb-3">
                         Please be advised that we have a 24-hour cancellation
                         policy. If you need to cancel or reschedule your
                         appointment, please do so at least 24 hours in advance.
@@ -210,7 +210,7 @@ const ServiceModal = () => {
                     </li>
                   </ul>
 
-                  <hr className="w-full mt-8 mb-6 border-zinc-700" />
+                  <hr className="w-full mt-7 mb-4 border-zinc-700" />
                   {!isMobile ? (
                     <h2
                       className="font-london text-4xl font-bold mb-2"
