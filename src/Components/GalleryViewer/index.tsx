@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 
+import ImageModal from "../ImageModal";
+
 import { imageData } from './imagesData';
 // import InstagramProfile from "../InstagramEmbed";
 
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null); // updated state type
   const { scrollY } = useScroll();
 
   useEffect(() => {
@@ -47,10 +50,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationTop1 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img1}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img1)}
+          />
+          <ImageModal
+            imageSrc={imageData.img1}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img1} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
@@ -58,21 +74,53 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationMiddle1 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img2}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img2)}
+          />
+          <ImageModal
+            imageSrc={imageData.img2}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img2} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationBottom1 }}
+        ></motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: transitionDurationBottom1 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img3}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img3)}
+          />
+          <ImageModal
+            imageSrc={imageData.img3}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img3} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
       </div>
@@ -82,10 +130,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationTop2 }}
         >
-          <img
+          <motion.img
             className="h-auto w-full rounded-lg"
             src={imageData.img4}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img4)}
+          />
+          <ImageModal
+            imageSrc={imageData.img4}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img4} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
@@ -93,10 +154,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationMiddle2 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img5}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img5)}
+          />
+          <ImageModal
+            imageSrc={imageData.img5}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img5} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
@@ -104,10 +178,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationBottom2 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img6}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img6)}
+          />
+          <ImageModal
+            imageSrc={imageData.img6}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img6} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
       </div>
@@ -117,10 +204,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationTop3 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img7}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img7)}
+          />
+          <ImageModal
+            imageSrc={imageData.img7}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img7} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
@@ -128,10 +228,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationMiddle3 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img8}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img8)}
+          />
+          <ImageModal
+            imageSrc={imageData.img8}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img8} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
@@ -139,10 +252,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationBottom3 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img9}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img9)}
+          />
+          <ImageModal
+            imageSrc={imageData.img9}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img9} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
       </div>
@@ -152,10 +278,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationTop4 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img10}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img10)}
+          />
+          <ImageModal
+            imageSrc={imageData.img10}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img10} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
@@ -163,10 +302,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationMiddle4 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img11}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img11)}
+          />
+          <ImageModal
+            imageSrc={imageData.img11}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img11} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
         <motion.div
@@ -174,10 +326,23 @@ const Gallery = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationBottom4 }}
         >
-          <img
-            className="h-auto max-w-full rounded-lg"
+          <motion.img
+            className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img12}
             alt=""
+            whileHover={{ scale: [null, 1.04, 1.04] }}
+            transition={{
+              duration: 0.2,
+              type: "spring",
+              damping: 15,
+              stiffness: 400,
+            }}
+            onClick={() => setZoomedImage(imageData.img12)}
+          />
+          <ImageModal
+            imageSrc={imageData.img12}
+            isOpen={zoomedImage !== null && zoomedImage === imageData.img12} // updated isOpen condition
+            setIsOpen={() => setZoomedImage(null)} // updated setIsOpen function
           />
         </motion.div>
       </div>
@@ -185,7 +350,6 @@ const Gallery = () => {
       {/* <section>
         <InstagramProfile />
       </section> */}
-
     </div>
   );
 };
