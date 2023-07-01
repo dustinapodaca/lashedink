@@ -91,10 +91,15 @@ const ServiceModal = () => {
               }}
             >
               <div className="relative rounded-lg shadow dark:bg-zinc-900 px-2">
-                <div className="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <div className="flex items-center justify-between p-4 border-b rounded-t border-zinc-700">
                   <span></span>
                   {!isMobile ? (
-                    <h3 className="text-5xl text-center font-bold font-london text-gray-900 dark:text-white">
+                    <h3
+                      className="text-5xl text-center font-bold font-london text-gray-900 dark:text-white"
+                      style={{
+                        textShadow: "2px 2px 3px rgba(0, 0, 0, 0.8)",
+                      }}
+                    >
                       Before You Book
                     </h3>
                   ) : (
@@ -126,7 +131,12 @@ const ServiceModal = () => {
                 <div className="p-6 text-white">
                   {!isMobile ? (
                     <div className="flex justify-between items-center mb-5">
-                      <h2 className="text-2xl font-bold">
+                      <h2
+                        className="text-2xl font-bold"
+                        style={{
+                          textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+                        }}
+                      >
                         Are You a Candidate?
                       </h2>
                       <p className="w-full text-zinc-500 italic text-sm lg:max-w-4xl text-right">
@@ -190,9 +200,14 @@ const ServiceModal = () => {
                     </li>
                   </ul>
 
-                  <hr className="w-full my-8 border-gray-300" />
+                  <hr className="w-full mt-8 mb-6 border-zinc-700" />
 
-                  <h2 className="text-2xl font-bold mb-2">
+                  <h2
+                    className="text-2xl font-bold mb-2"
+                    style={{
+                      textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+                    }}
+                  >
                     Permanent Makeup Preparation
                   </h2>
 
@@ -248,7 +263,7 @@ const ServiceModal = () => {
                   </p>
                 </div>
 
-                <div className="flex justify-center items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
+                <div className="flex justify-center items-center py-6 space-x-2 rounded-b border-t border-zinc-700">
                   <button
                     onClick={closeModal}
                     className="flex items-center justify-center bg-black hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white font-bold rounded-lg text-white text-xl px-5 py-2.5 dark:bg-black dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
