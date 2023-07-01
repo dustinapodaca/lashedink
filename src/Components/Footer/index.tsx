@@ -3,24 +3,28 @@ import lashedIcon from "../../../lashedIcon.svg";
 export default function Footer () {
   return (
     <footer>
-      <div className="relative mt-32 bg-zinc-900 ">
+      <div className="relative mt-24 md:mt-32 bg-zinc-900 ">
         <svg
-          className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-zinc-900 shadow-inner-lg"
+          className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-zinc-900"
           preserveAspectRatio="none"
           viewBox="0 0 1440 54"
         >
           <path
             fill="currentColor"
-            style={{
-              boxShadow: "inset 0 0 10px #000",
-            }}
             d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
           />
         </svg>
         <div className="mx-auto max-w-5xl px-4 pt-4 pb-14 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <a href="/">
-              <p className="font-london text-zinc-400 text-6xl">L</p>
+              <p
+                className="font-london text-zinc-400 text-6xl"
+                style={{
+                  textShadow: "2px 2px 3px rgba(0, 0, 0, 0.8)",
+                }}
+              >
+                L
+              </p>
             </a>
           </div>
 
@@ -61,7 +65,7 @@ export default function Footer () {
               </a>
             </li>
           </ul>
-          <hr className="w-full mt-8 border-zinc-400" />
+          <hr className="w-full mt-8 border-zinc-500" />
 
           <ul className="mt-8 flex justify-center items-center gap-6 md:gap-8">
             <li>

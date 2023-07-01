@@ -186,7 +186,7 @@ const LayoutNav = () => {
           <>
             {/* DARK BACKGROUND */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black top-[6.3rem]"
+              className="fixed inset-0 z-40 bg-black top-[5.8rem]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.90 }}
               exit={{ opacity: 0 }}
@@ -195,7 +195,7 @@ const LayoutNav = () => {
             />
             {/* MENU CONTENT */}
             <motion.div
-              className="rounded-b-lg p-10 pt-16 px-6 h-full z-50 fixed left-0 right-0"
+              className="rounded-b-lg p-10 pt-10 px-6 h-full z-50 fixed left-0 right-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
               variants={{
                 open: {
