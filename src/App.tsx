@@ -6,7 +6,8 @@ import './App.css';
 import Hero from './Components/Hero';
 import Services from './Pages/Services';
 import About from './Pages/About';
-// import FAQ from './Pages/FAQ';
+import Contact from './Pages/Contact';
+import FAQ from './Pages/FAQ';
 import Footer from './Components/Footer';
 
 const App: React.FC = () => {
@@ -17,7 +18,8 @@ const App: React.FC = () => {
         <Route path="/" element={<Hero />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/faq" element={<FAQ />} /> */}
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
       <Footer />
     </BrowserRouter>

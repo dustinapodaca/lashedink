@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = () => {
+const Map = () => {
   return (
     <section className="bg-zinc-900">
       <div className="container px-6 py-12 mx-auto">
@@ -131,4 +131,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Map;

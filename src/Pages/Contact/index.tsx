@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Map from "../../Components/Map";
 
-const FAQ = () => {
+
+const Contact = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
@@ -16,13 +18,11 @@ const FAQ = () => {
 
   return (
     <>
-      <section className="w-full h-96 mt-36">
-        <h2 className="font-london text-6xl text-white text-center">
-          Frequently Asked Questions
-        </h2>
+      <section className="mt-24">
+        <Map />
       </section>
     </>
   );
 };
 
-export default FAQ;
+export default Contact;

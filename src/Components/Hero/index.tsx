@@ -52,23 +52,23 @@ const HeroBanner = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center">
             <h1
               style={{
-                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.8)",
+                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
               }}
               className="font-london text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-pink-200 text-center mx-32 sm:mx-10"
             >
               Embrace the Artistry
             </h1>
             <p
-              className="max-w-5xl font-normal text-white text-md sm:text-lg lg:text-xl xl:text-2xl mt-8 text-center mx-8"
+              className="max-w-5xl font-normal text-white text-md sm:text-lg lg:text-xl xl:text-2xl mt-8 text-center mx-6"
               style={{
-                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                textShadow: "1px 1px 2px rgba(0, 0, 0, 0.95)",
               }}
             >
               Welcome to my little corner of the beauty world! As a makeup
-              artist and brow specialist, I am passionate about helping you look
-              and feel your best. From impeccably voluminous lashes to
-              meticulously crafted brows, I am here to enhance your natural
-              beauty and give you the confidence you deserve.
+              artist and brow specialist, I am passionate about helping you look and feel your best.
+              <br />
+              <br />
+              From impeccably voluminous lashes to meticulously crafted brows, I am here to enhance your natural beauty and give you the confidence you deserve.
             </p>
           </div>
         </div>
