@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
-// import placeholder from "../../assets/images/placeholder.jpeg";
 
 import { imageData } from './imagesData';
+// import InstagramProfile from "../InstagramEmbed";
 
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,18 +23,18 @@ const Gallery = () => {
     };
   }, [scrollY]);
 
-  const transitionDuration1 = Math.random() * 1.3 + 0.8;
-  const transitionDuration2 = Math.random() * 1.5 + 0.8;
-  const transitionDuration3 = Math.random() * 1.4 + 1.5;
-  const transitionDuration4 = Math.random() * 1.6 + 1.8;
-  const transitionDuration5 = Math.random() * 1.8 + 1.2;
-  const transitionDuration6 = Math.random() * 2.0 + 2.2;
-  const transitionDuration7 = Math.random() * 2.3 + 2.2;
-  const transitionDuration8 = Math.random() * 1.9 + 2.2;
-  const transitionDuration9 = Math.random() * 2.6 + 2.8;
-  const transitionDuration10 = Math.random() * 2.9 + 2.8;
-  const transitionDuration11 = Math.random() * 2.5 + 2.6;
-  const transitionDuration12 = Math.random() * 2.7 + 2.9;
+  const transitionDurationTop1 = Math.random() * 1.3 + 0.9;
+  const transitionDurationTop2 = Math.random() * 1.5 + 0.8;
+  const transitionDurationTop3 = Math.random() * 1.4 + 1.2;
+  const transitionDurationTop4 = Math.random() * 1.6 + 1.0;
+  const transitionDurationMiddle1 = Math.random() * 2.1 + 1.8;
+  const transitionDurationMiddle2 = Math.random() * 2.0 + 1.9;
+  const transitionDurationMiddle3 = Math.random() * 2.3 + 2.0;
+  const transitionDurationMiddle4 = Math.random() * 2.2 + 1.7;
+  const transitionDurationBottom1 = Math.random() * 2.7 + 2.5;
+  const transitionDurationBottom2 = Math.random() * 3.2 + 2.8;
+  const transitionDurationBottom3 = Math.random() * 2.9 + 2.6;
+  const transitionDurationBottom4 = Math.random() * 3.0 + 2.9;
 
   return (
     <div
@@ -45,7 +45,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration1 }}
+          transition={{ duration: transitionDurationTop1 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -56,7 +56,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration2 }}
+          transition={{ duration: transitionDurationMiddle1 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -67,7 +67,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration3 }}
+          transition={{ duration: transitionDurationBottom1 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -80,7 +80,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration4 }}
+          transition={{ duration: transitionDurationTop2 }}
         >
           <img
             className="h-auto w-full rounded-lg"
@@ -91,7 +91,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration5 }}
+          transition={{ duration: transitionDurationMiddle2 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -102,7 +102,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration6 }}
+          transition={{ duration: transitionDurationBottom2 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -115,7 +115,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration7 }}
+          transition={{ duration: transitionDurationTop3 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -126,7 +126,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration8 }}
+          transition={{ duration: transitionDurationMiddle3 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -137,7 +137,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration9 }}
+          transition={{ duration: transitionDurationBottom3 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -150,7 +150,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration10 }}
+          transition={{ duration: transitionDurationTop4 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -161,7 +161,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration11 }}
+          transition={{ duration: transitionDurationMiddle4 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -172,7 +172,7 @@ const Gallery = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDuration12 }}
+          transition={{ duration: transitionDurationBottom4 }}
         >
           <img
             className="h-auto max-w-full rounded-lg"
@@ -181,6 +181,11 @@ const Gallery = () => {
           />
         </motion.div>
       </div>
+
+      {/* <section>
+        <InstagramProfile />
+      </section> */}
+
     </div>
   );
 };
