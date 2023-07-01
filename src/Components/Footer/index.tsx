@@ -1,4 +1,5 @@
-import lashedIcon from "../../../lashedIcon.svg";
+import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 export default function Footer () {
   return (
@@ -16,53 +17,76 @@ export default function Footer () {
         </svg>
         <div className="mx-auto max-w-5xl px-4 pt-4 pb-14 sm:px-6 lg:px-8">
           <div className="flex justify-center">
-            <a href="/">
-              <p
+            <Link to="/">
+              <motion.p
                 className="font-london text-zinc-400 text-6xl"
                 style={{
                   textShadow: "2px 2px 3px rgba(0, 0, 0, 0.8)",
                 }}
+                whileHover={{ scale: [null, 1.1, 1.1], rotate: 360 }}
+                transition={{
+                  duration: 0.3,
+                  type: "spring",
+                  damping: 12,
+                  stiffness: 120,
+                }}
               >
                 L
-              </p>
-            </a>
+              </motion.p>
+            </Link>
           </div>
 
           <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
             <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                href="/services"
-              >
-                Services
-              </a>
+              <Link to="/about">
+                <motion.button
+                  className="text-zinc-200 text-md md:text-lg font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  About
+                </motion.button>
+              </Link>
             </li>
 
             <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                href="/about"
-              >
-                About
-              </a>
+              <Link to="/services">
+                <motion.button
+                  className="text-zinc-200 text-md md:text-lg font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  Services
+                </motion.button>
+              </Link>
             </li>
 
             <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                href="/contact"
-              >
-                Contact
-              </a>
+              <Link to="/contact">
+                <motion.button
+                  className="text-zinc-200 text-md md:text-lg font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  Contact
+                </motion.button>
+              </Link>
             </li>
 
             <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                href="/faq"
-              >
-                FAQ
-              </a>
+              <Link to="/faq">
+                <motion.button
+                  className="text-zinc-200 text-md md:text-lg font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  FAQ
+                </motion.button>
+              </Link>
             </li>
           </ul>
           <hr className="w-full mt-8 border-zinc-500" />
@@ -123,7 +147,7 @@ export default function Footer () {
               >
                 <span className="sr-only">TikTok</span>
                 <svg
-                  fill="#fff"
+                  fill="currentColor"
                   width="800px"
                   height="800px"
                   viewBox="0 0 512 512"
@@ -145,7 +169,7 @@ export default function Footer () {
               >
                 <span className="sr-only">Google Business</span>
                 <svg
-                  fill="#fff"
+                  fill="currentColor"
                   height="700px"
                   width="700px"
                   version="1.1"

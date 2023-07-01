@@ -68,16 +68,6 @@ const LayoutNav = () => {
                 Home
               </motion.button>
             </Link>
-            <Link to="/services">
-              <motion.button
-                className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
-                whileHover={{ scale: [null, 1.1, 1.1] }}
-                transition={{ duration: 0.3 }}
-                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-              >
-                Services
-              </motion.button>
-            </Link>
             <Link to="/about">
               <motion.button
                 className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
@@ -86,6 +76,16 @@ const LayoutNav = () => {
                 // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
               >
                 About
+              </motion.button>
+            </Link>
+            <Link to="/services">
+              <motion.button
+                className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                Services
               </motion.button>
             </Link>
             <Link to="/contact">
@@ -293,14 +293,14 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <Link to="/services" onClick={handleClickLink}>
+                <Link to="/about" onClick={handleClickLink}>
                   <motion.button
                     className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
-                    Services
+                    About
                   </motion.button>
                 </Link>
               </motion.nav>
@@ -333,14 +333,14 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <Link to="/about" onClick={handleClickLink}>
+                <Link to="/services" onClick={handleClickLink}>
                   <motion.button
                     className="text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
-                    About
+                    Services
                   </motion.button>
                 </Link>
               </motion.nav>
