@@ -64,8 +64,7 @@ const HeroBanner = () => {
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.95)",
               }}
             >
-              Welcome to my little corner of the beauty world! As a makeup
-              artist and brow specialist, I am passionate about helping you look and feel your best.
+              Welcome to my little corner of the beauty world! As a permanent makeup artist and eyelash specialist, I am passionate about helping you look and feel your best.
               <br />
               <br />
               From impeccably voluminous lashes to meticulously crafted brows, I am here to enhance your natural beauty and give you the confidence you deserve.
