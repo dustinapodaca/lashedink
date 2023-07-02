@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 export default function Footer () {
   return (
-    <footer>
-      <div className="relative mt-24 md:mt-32 bg-zinc-900 ">
+    <footer className="bottom-0">
+      <div className="relative mt-24 md:mt-32 bg-zinc-900">
         <svg
           className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-zinc-900"
           preserveAspectRatio="none"
