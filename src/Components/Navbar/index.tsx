@@ -109,7 +109,7 @@ const LayoutNav = () => {
               </motion.button>
             </Link>
             <motion.button
-              className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-1 font-vibes text-2xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+              className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-3xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
               style={{
                 textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
               }}
@@ -457,7 +457,7 @@ const LayoutNav = () => {
                 exit="closed"
               >
                 <motion.button
-                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-vibes text-3xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-3xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
                   style={{
                     textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
                   }}

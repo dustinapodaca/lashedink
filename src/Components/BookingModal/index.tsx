@@ -37,27 +37,28 @@ const ServiceModal = () => {
 
   return (
     <>
-      <button
+      <motion.button
+        className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 pb-1 font-cursive text-3xl rounded-lg shadow-lg"
+        style={{
+          textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
+        }}
+        initial={{ backgroundColor: "white", color: "black" }}
+        whileHover={{
+          scale: 1.15,
+          transition: {
+            duration: 0.2,
+            ease: "easeInOut",
+            delay: 0,
+            backgroundColor: "pink",
+            color: "white",
+          },
+        }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ duration: 0.2 }}
         onClick={openModal}
-        className="flex items-center justify-center bg-black hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white font-bold rounded-lg text-white text-xl px-5 py-2.5 dark:bg-black dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
-        type="button"
       >
         Before You Book
-        <svg
-          className="w-4 h-4 ml-2"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button>
+      </motion.button>
 
       <AnimatePresence>
         {isOpen && (
@@ -142,7 +143,7 @@ const ServiceModal = () => {
                   {!isMobile ? (
                     <div className="flex justify-between items-center mb-5">
                       <h2
-                        className="font-london text-4xl font-bold"
+                        className="font-london text-4xl font-bold mb-1"
                         style={{
                           textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
                         }}

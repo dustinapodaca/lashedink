@@ -19,7 +19,7 @@ export default function Footer () {
           <div className="flex justify-center">
             <Link to="/">
               <motion.p
-                className="font-london text-zinc-400 text-6xl"
+                className="font-london text-zinc-300 text-6xl"
                 style={{
                   textShadow: "2px 2px 3px rgba(0, 0, 0, 0.8)",
                 }}

@@ -73,11 +73,11 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <h2 className="pt-12 px-10 text-center mx-auto text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">
+      <h2 className="pt-12 px-10 text-center mx-auto text-4xl font-cursive tracking-tight leading-none md:text-5xl lg:text-6xl xl:text-7xl text-white">
         Radiate Confidence
       </h2>
-      <h3 className="pb-12 px-10 text-center mx-auto mb-6 text-xl font-normal tracking-tight leading-none md:text-2xl xl:text-3xl text-white">
-        Enhance Your Look with Expert Touches
+      <h3 className="pt-1 pb-12 px-10 text-center mx-auto mb-6 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
+        "Enhance Your Look with Expert Touches"
       </h3>
       <GalleryViewer />
     </>

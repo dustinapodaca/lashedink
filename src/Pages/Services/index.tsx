@@ -6,7 +6,7 @@ import BookingModal from "../../Components/BookingModal";
 import { microbladeImages, powderImages, comboImages, darkLipImages, lipBlushImages, eyelashImages } from "../../Data/imagesData";
 
 import servicesHeader from "../../assets/images/marble.jpg";
-import headerIcon from "../../assets/images/img20lashed.jpeg";
+import headerIcon from "../../assets/images/img1-2lashed.png";
 
 import browIcon from "../../assets/images/img11lashed.jpeg";
 import lashIcon from "../../assets/images/img3lashed.jpeg";
@@ -49,7 +49,7 @@ const Services = () => {
             </svg>
           </div>
           <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="max-w-screen-sm text-center sm:mx-auto">
+            <div className="max-w-screen-lg text-center sm:mx-auto">
               <a
                 href="/"
                 aria-label="View"
@@ -71,23 +71,38 @@ const Services = () => {
                   )}
                 </div>
               </a>
-              <h2 className="mb-4 py-2 font-london text-center font-bold tracking-tight text-white text-5xl sm:text-6xl sm:leading-none">
+              <h2
+                className="mb-4 py-2 font-london text-center font-bold tracking-tight text-pink-200 text-5xl md:text-6xl lg:text-7xl sm:leading-none"
+                style={{
+                  textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                }}
+              >
                 Services Menu
               </h2>
               {!isMobile ? (
                 <>
-                  <p className="text-base text-white mt-8 md:text-lg sm:px-4">
-                    Experience a Fusion of Art and Beauty, where skilled hands
+                  <p
+                    className="text-base text-white mt-8 text-md sm:text-lg lg:text-xl"
+                    style={{
+                      textShadow: "1px 1px 2px rgba(0, 0, 0, 0.95)",
+                    }}
+                  >
+                    Experience a fusion of art and beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
                     that enhances your individuality and elevates your
                     confidence to new heights.
                   </p>
-                  <hr className="w-full my-8 border-gray-300" />
+                  <hr className="w-full my-8 border-zinc-400" />
                 </>
               ) : (
                 <>
-                  <p className=" bg-black text-center p-4 mb-10 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4">
-                    Experience a Fusion of Art and Beauty, where skilled hands
+                  <p
+                    className=" bg-black text-center p-4 mb-10 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4"
+                    style={{
+                      textShadow: "1px 1px 2px rgba(0, 0, 0, 0.95)",
+                    }}
+                  >
+                    Experience a fusion of art and beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
                     that enhances your individuality and elevates your
                     confidence to new heights.
@@ -98,7 +113,9 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="mx-auto w-56 mt-10">{isMobile && <BookingModal />}</div>
+        <div className="flex justify-center items-center mt-10">
+          {isMobile && <BookingModal />}
+        </div>
 
         <div className="px-4 pt-8 pb-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-16">
           <div className="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-4">
