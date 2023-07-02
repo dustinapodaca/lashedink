@@ -40,7 +40,7 @@ const About = () => {
               ) : (
                 <></>
               )}
-              <p className="text-2xl italic font-bold mb-2 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
+              <p className="text-2xl italic font-bold mb-1 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
                 My name is <br />
               </p>
               <h2 className="font-cursive text-pink-500 text-center text-5xl md:text-5xl lg:text-7xl">
