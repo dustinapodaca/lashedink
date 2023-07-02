@@ -13,11 +13,16 @@ type CarouselProps = {
 };
 
 
-export default function ServiceCard ({images, headlineText, descText}: CarouselProps) {
+export default function ServiceCard({
+  images,
+  headlineText,
+  descText,
+}: CarouselProps) {
 
   return (
-    <div className="max-w-sm bg-white border border-zinc-200 rounded-lg shadow dark:bg-black dark:border-zinc-700 mt-5">
+    <div className="relative max-w-sm border-x border-zinc-800 rounded-lg shadow bg-black mt-5">
       <ServiceSelector images={images} text={headlineText} />
+
       <div className="p-5">
         <a href="#">
           <h5 className="mb-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
@@ -28,11 +33,10 @@ export default function ServiceCard ({images, headlineText, descText}: CarouselP
           {descText}
         </p>
       </div>
-      {/* <hr className="max-w-full border-gray-300 text-center mb-4" />
-      <div className="flex items-center justify-center mb-5">
-        <ServiceModal text={headlineText} />
-      </div> */}
+
+      <span className="absolute inset-x-0 bottom-0 h-2 rounded-b-lg bg-gradient-to-r from-green-300 via-cyan-500 to-pink-600"></span>
     </div>
   );
-};
+}
+
 
