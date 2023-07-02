@@ -198,7 +198,7 @@ const LayoutNav = () => {
             />
             {/* MENU CONTENT */}
             <motion.div
-              className="rounded-b-lg p-10 pt-8 px-6 h-full z-50 fixed left-0 right-0"
+              className="rounded-b-lg p-10 pt-5 px-6 h-full z-50 fixed left-0 right-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
               variants={{
                 open: {

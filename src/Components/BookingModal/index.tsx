@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import placeholder from "../../assets/images/placeholder.jpeg";
 import lashedIcon from "../../../lashedIcon.svg";
 
-const ServiceModal = () => {
+const BookingModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
@@ -26,6 +26,14 @@ const ServiceModal = () => {
       sessionStorage.setItem("hasModalBeenOpened", "true");
     }
   }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
 
   const openModal = () => {
     setIsOpen(true);
@@ -325,4 +333,4 @@ const ServiceModal = () => {
   );
 };
 
-export default ServiceModal;
+export default BookingModal;
