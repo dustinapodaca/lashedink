@@ -16,8 +16,8 @@ const FAQ = () => {
 
   return (
     <>
-      <section className="w-full h-96 mt-36">
-        <h2 className="font-london text-6xl text-white text-center">
+      <section className="w-full h-96 mt-24">
+        <h2 className="font-london pt-28 text-4xl text-white text-center">
           Frequently <br /> Asked <br /> Questions
         </h2>
       </section>

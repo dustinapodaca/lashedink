@@ -54,7 +54,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img1}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -78,7 +78,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img2}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -108,7 +108,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img3}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -131,10 +131,10 @@ const Gallery = () => {
           transition={{ duration: transitionDurationTop2 }}
         >
           <motion.img
-            className="h-auto w-full rounded-lg"
+            className="h-auto w-full rounded-lg cursor-pointer"
             src={imageData.img4}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -158,7 +158,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img5}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -182,7 +182,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img6}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -208,7 +208,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img7}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -232,7 +232,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img8}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -256,7 +256,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img9}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -282,7 +282,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img10}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -306,7 +306,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img11}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",
@@ -330,7 +330,7 @@ const Gallery = () => {
             className="h-auto max-w-full rounded-lg cursor-pointer"
             src={imageData.img12}
             alt=""
-            whileHover={{ scale: [null, 1.04, 1.04] }}
+            whileHover={{ scale: [null, 1.02, 1.02] }}
             transition={{
               duration: 0.2,
               type: "spring",

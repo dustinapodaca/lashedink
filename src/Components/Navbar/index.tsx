@@ -57,7 +57,7 @@ const LayoutNav = () => {
           </a>
         </div>
         {!isMobile ? (
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between items-center">
             <Link to="/">
               <motion.button
                 className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
@@ -109,7 +109,10 @@ const LayoutNav = () => {
               </motion.button>
             </Link>
             <motion.button
-              className="mx-auto bg-white text-black ml-8 mr-6 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+              className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-1 font-vibes text-2xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+              style={{
+                textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
+              }}
               initial={{ backgroundColor: "white", color: "black" }}
               whileHover={{
                 // backgroundColor: "pink",
@@ -188,7 +191,7 @@ const LayoutNav = () => {
             <motion.div
               className="fixed inset-0 z-40 bg-black top-[5.8rem]"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.90 }}
+              animate={{ opacity: 0.9 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={() => toggleOpen()} // Close the menu when the background is clicked
@@ -454,7 +457,10 @@ const LayoutNav = () => {
                 exit="closed"
               >
                 <motion.button
-                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-vibes text-3xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                  style={{
+                    textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
+                  }}
                   initial={{ backgroundColor: "white", color: "black" }}
                   whileHover={{
                     // backgroundColor: "pink",
