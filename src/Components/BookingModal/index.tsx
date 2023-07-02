@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import placeholder from "../../assets/images/placeholder.jpeg";
-import lashedIcon from "../../../lashedIcon.svg";
-
 const BookingModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
