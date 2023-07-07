@@ -8,7 +8,7 @@ const reviews = [
     text: "Review #1",
     content:
       "No, Rose, they are not breathing. And they have no arms or legs. Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
-    rating: 3,
+    rating: 5,
   },
   {
     id: 1,
@@ -22,7 +22,7 @@ const reviews = [
     text: "Review #3",
     content:
       "No, Rose, they are not breathing. And they have no arms or legs. Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
-    rating: 4,
+    rating: 5,
   },
 ];
 
@@ -44,9 +44,9 @@ type ReviewProps = {
 
 const Review = ({ review, isActive }: ReviewProps) => (
   <div className={`min-w-full ${isActive ? "active" : ""}`}>
-    <blockquote className="flex h-full flex-col justify-between bg-white p-12">
+    <blockquote className="flex h-full flex-col justify-between bg-zinc-900 rounded-xl p-12">
       <div>
-        <div className="flex gap-0.5 text-green-500">
+        <div className="flex gap-0.5 text-pink-300">
           {[...Array(review.rating)].map((_, i) => (
             <MySVGComponent key={i} />
           ))}
@@ -86,8 +86,13 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
       <div className="h-full bg-black">
         <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
-          <div className="relative overflow-hidden">
-            <motion.div animate={{ x: `-${index * 100}%` }} className="flex">
+          <div className="relative overflow-hidden rounded-xl">
+            <motion.div 
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: `-${index * 100}%`, opacity: 1 }} 
+              exit={{ opacity: 0, pointerEvents: "none" }}
+              className="flex"
+            >
               {reviews.map((review) => (
                 <Review
                   key={review.id}
@@ -103,10 +108,10 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
                   animate={{ opacity: 0.7 }}
                   exit={{ opacity: 0, pointerEvents: "none" }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute left-2 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full bg-white focus:outline-none"
+                  className="absolute left-1 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
                   onClick={() => setIndex(index - 1)}
                 >
-                  <ChevronLeftIcon className="h-6 w-6" />
+                  <ChevronLeftIcon className="h-8 w-8 text-white" />
                 </motion.button>
               )}
             </AnimatePresence>
@@ -118,10 +123,10 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
                   animate={{ opacity: 0.7 }}
                   exit={{ opacity: 0, pointerEvents: "none" }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute right-2 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full bg-white focus:outline-none"
+                  className="absolute right-1 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
                   onClick={() => setIndex(index + 1)}
                 >
-                  <ChevronRightIcon className="h-6 w-6" />
+                  <ChevronRightIcon className="h-8 w-8 text-white" />
                 </motion.button>
               )}
             </AnimatePresence>
@@ -134,20 +139,20 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
 
 const ReviewViewer = () => {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-black mt-10">
       <div className="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:me-0 lg:pe-0 lg:ps-8">
         <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+          <div className="text-white max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Don't just take our word for it...
+              Don't just take my word for it... <br />
               <br className="hidden sm:block lg:hidden" />
-              Read reviews from our customers
+              <span> </span>Read reviews from other clients!
             </h2>
 
-            <p className="mt-4 text-gray-500">
+            {/* <p className="mt-4 text-gray-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
               veritatis illo placeat harum porro optio fugit a culpa sunt id!
-            </p>
+            </p> */}
           </div>
 
           <div className="lg:col-span-2 lg:mx-0">
