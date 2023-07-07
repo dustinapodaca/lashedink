@@ -1,12 +1,30 @@
-import React from "react";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
+import { useState } from "react";
 import { motion, MotionConfig, AnimatePresence } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+
+const reviews = [
+  {
+    id: 0,
+    text: "Review #1",
+    content:
+      "No, Rose, they are not breathing. And they have no arms or legs. Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
+    rating: 3,
+  },
+  {
+    id: 1,
+    text: "Review #2",
+    content:
+      "No, Rose, they are not breathing. And they have no arms or legs. Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
+    rating: 5,
+  },
+  {
+    id: 2,
+    text: "Review #3",
+    content:
+      "No, Rose, they are not breathing. And they have no arms or legs. Where are they? You know what? If we come across somebody with no arms or legs, do we bother resuscitating them? I mean, what quality of life do we have there?",
+    rating: 4,
+  },
+];
 
 const MySVGComponent = () => (
   <svg
@@ -19,29 +37,27 @@ const MySVGComponent = () => (
   </svg>
 );
 
-const Review = () => (
-  <div className="swiper-slide">
+type ReviewProps = {
+  review: Review;
+  isActive: boolean;
+};
+
+const Review = ({ review, isActive }: ReviewProps) => (
+  <div className={`min-w-full ${isActive ? "active" : ""}`}>
     <blockquote className="flex h-full flex-col justify-between bg-white p-12">
       <div>
         <div className="flex gap-0.5 text-green-500">
-          <MySVGComponent />
-          <MySVGComponent />
-          <MySVGComponent />
-          <MySVGComponent />
-          <MySVGComponent />
+          {[...Array(review.rating)].map((_, i) => (
+            <MySVGComponent key={i} />
+          ))}
         </div>
 
         <div className="mt-4">
           <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-            Stayin' Alive
+            {review.text}
           </p>
 
-          <p className="mt-4 leading-relaxed text-gray-500">
-            No, Rose, they are not breathing. And they have no arms or legs …
-            Where are they? You know what? If we come across somebody with no
-            arms or legs, do we bother resuscitating them? I mean, what quality
-            of life do we have there?
-          </p>
+          <p className="mt-4 leading-relaxed text-gray-500">{review.content}</p>
         </div>
       </div>
 
@@ -52,7 +68,71 @@ const Review = () => (
   </div>
 );
 
-const MyComponent = () => {
+type Review = {
+  id: number;
+  text: string;
+  content: string;
+  rating: number;
+};
+
+type CarouselProps = {
+  reviews: Review[];
+};
+
+const ReviewCarousel = ({ reviews }: CarouselProps) => {
+  const [index, setIndex] = useState(0);
+
+  return (
+    <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
+      <div className="h-full bg-black">
+        <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
+          <div className="relative overflow-hidden">
+            <motion.div animate={{ x: `-${index * 100}%` }} className="flex">
+              {reviews.map((review) => (
+                <Review
+                  key={review.id}
+                  review={review}
+                  isActive={review.id === index}
+                />
+              ))}
+            </motion.div>
+            <AnimatePresence initial={false}>
+              {index > 0 && (
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.7 }}
+                  exit={{ opacity: 0, pointerEvents: "none" }}
+                  whileHover={{ opacity: 1 }}
+                  className="absolute left-2 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full bg-white focus:outline-none"
+                  onClick={() => setIndex(index - 1)}
+                >
+                  <ChevronLeftIcon className="h-6 w-6" />
+                </motion.button>
+              )}
+            </AnimatePresence>
+
+            <AnimatePresence initial={false}>
+              {index + 1 < reviews.length && (
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.7 }}
+                  exit={{ opacity: 0, pointerEvents: "none" }}
+                  whileHover={{ opacity: 1 }}
+                  className="absolute right-2 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full bg-white focus:outline-none"
+                  onClick={() => setIndex(index + 1)}
+                >
+                  <ChevronRightIcon className="h-6 w-6" />
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+    </MotionConfig>
+  );
+};
+
+const ReviewViewer = () => {
   return (
     <section className="bg-gray-100">
       <div className="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:me-0 lg:pe-0 lg:ps-8">
@@ -68,70 +148,10 @@ const MyComponent = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
               veritatis illo placeat harum porro optio fugit a culpa sunt id!
             </p>
-
-            {/* <div className="hidden lg:mt-8 lg:flex lg:gap-4">
-              <button className="prev-button rounded-full border border-pink-600 p-3 text-pink-600 hover:bg-pink-600 hover:text-white">
-                <span className="sr-only">Previous Slide</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="h-5 w-5 rtl:rotate-180"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 19.5L8.25 12l7.5-7.5"
-                  />
-                </svg>
-              </button>
-
-              <button className="next-button rounded-full border border-pink-600 p-3 text-pink-600 hover:bg-pink-600 hover:text-white">
-                <span className="sr-only">Next Slide</span>
-                <svg
-                  className="h-5 w-5 rtl:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 5l7 7-7 7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </button>
-            </div> */}
           </div>
 
-          <div className="-mx-6 lg:col-span-2 lg:mx-0">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={50}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              className="swiper-container overflow-hidden"
-            >
-              <div className="swiper-wrapper">
-                <SwiperSlide>
-                  <Review />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Review />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Review />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Review />
-                </SwiperSlide>
-              </div>
-            </Swiper>
+          <div className="lg:col-span-2 lg:mx-0">
+            <ReviewCarousel reviews={reviews} />
           </div>
         </div>
       </div>
@@ -139,4 +159,4 @@ const MyComponent = () => {
   );
 };
 
-export default MyComponent;
+export default ReviewViewer;
