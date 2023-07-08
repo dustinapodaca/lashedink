@@ -3,7 +3,16 @@ import React, { useState, useEffect } from "react";
 import ServiceCard from "../../Components/ServiceCard";
 import BookingModal from "../../Components/BookingModal";
 
-import { microbladeImages, powderImages, comboImages, darkLipImages, lipBlushImages, eyelashImages } from "../../Data/imagesData";
+import { 
+  microbladeImages,
+  powderImages,
+  comboImages,
+  darkLipImages,
+  lipBlushImages,
+  classicEye,
+  hybridEye,
+  volumeEye,
+} from "../../Data/imagesData";
 
 import servicesHeader from "../../assets/images/marble.jpg";
 import headerIcon from "../../assets/images/img1-2lashed.png";
@@ -229,21 +238,21 @@ const Services = () => {
           <div className="grid gap-8 row-gap-5 mb-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
             <div>
               <ServiceCard
-                images={eyelashImages}
+                images={classicEye}
                 descText="Classic eyelash extensions are your most natural option. With this set one single eyelash extension is applied to every healthy natural eyelash giving a softer, more understated look. This is perfect for clients who want to add a little bit of length and fullness to their natural lashes in place of mascara."
                 headlineText="Classic"
               />
             </div>
             <div>
               <ServiceCard
-                images={eyelashImages}
+                images={hybridEye}
                 descText="Hybrid eyelash extensions combine both classic and volume techniques. This set involves a combination of classic lash extensions and volume fans to create a more textured look. With hybrid extensions you will get a fuller effect than classic lashes but not as much drama as volume extensions."
                 headlineText="Hybrid"
               />
             </div>
             <div>
               <ServiceCard
-                images={eyelashImages}
+                images={volumeEye}
                 descText="Volume eyelash extensions are the most full and dramatic type of extensions offered at Lashed.Ink. This technique involves applying multiple lash extensions to one natural lash, creating a fan and giving a fuller, fluffier look. This is ideal for the client who wants a more bold look and wants to ditch their strip lashes!"
                 headlineText="Volume"
               />
@@ -291,34 +300,61 @@ const Services = () => {
           </div>
           <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
             <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
-              <hr className="max-w-full my-8 border-gray-300 text-center" />
+              <hr className="max-w-full mt-8 border-gray-300 text-center" />
             </p>
-            <p className="text-base text-gray-200 md:text-lg">
+            {/* <p className="text-base text-gray-200 md:text-lg">
               Eyelash extensions are a cosmetic procedure that involves
               attaching synthetic eyelashes to your natural lashes to make them
               appear longer and fuller. Your look can be customized according to
               your preferences, eye shape, and natural lash health.
-            </p>
+            </p> */}
+            <div className="relative max-w-full rounded-lg border-x border-zinc-800 shadow bg-black">
+              <div className="px-5 sm:px-10 pb-10 pt-5">
+                <a href="#">
+                  <h5 className="mb-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
+                    Corrections
+                  </h5>
+                </a>
+                <p className="font-normal text-zinc-700 dark:text-zinc-400 h-full">
+                  Color correction may be necessary for some clients with
+                  previous permanent makeup. Dissatisfaction with the original
+                  color, changes in personal preferences, fading or
+                  discoloration over time, or improper color selection during
+                  the initial procedure are all reasons someone might be in need
+                  for a color correction. You will need to schedule a free in
+                  person consultation to get your previous work assessed. Color
+                  correction often requires multiple sessions to achieve the
+                  desired results. This is because the process needs to be
+                  approached gradually to avoid over correcting or causing
+                  further issues. Each session allows the technician to assess
+                  the progress and make additional adjustments if needed but we
+                  will try to correct in as few sessions as possible.
+                </p>
+              </div>
+
+              <span className="absolute inset-x-0 bottom-0 h-1 rounded-b-lg bg-gradient-to-r from-purple-500 via-fuchsia-400 to-pink-500"></span>
+            </div>
           </div>
-          <div className="grid gap-8 row-gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:row-gap-8">
-            <div>
+
+          <div className="grid gap-8 row-gap-5 md:grid-cols-2 sm:grid-cols-1">
+            {/* <div>
               <ServiceCard
-                images={eyelashImages}
-                descText=""
+                images={volumeEye}
+                descText="Color correction may be necessary for some clients with previous permanent makeup.  Dissatisfaction with the original color, changes in personal preferences, fading or discoloration over time, or improper color selection during the initial procedure are all reasons someone might be in need for a color correction. You will need to schedule a free in person consultation to get your previous work assessed. Color correction often requires multiple sessions to achieve the desired results. This is because the process needs to be approached gradually to avoid over correcting or causing further issues. Each session allows the technician to assess the progress and make additional adjustments if needed but we will try to correct in as few sessions as possible."
                 headlineText="Corrections"
               />
-            </div>
-            <div>
+            </div> */}
+            <div className="mx-auto">
               <ServiceCard
                 images={lipBlushImages}
-                descText=""
+                descText="The lip blush procedure is semi-permanent makeup or cosmetic tattooing that aims to enhance the appearance of the lips by adding color and definition. Depending on the clients desired look we can give a soft tint to the lips or build the color up to give a more saturated “lip stick” inspired look."
                 headlineText="Lip Blush"
               />
             </div>
-            <div>
+            <div className="mx-auto">
               <ServiceCard
                 images={darkLipImages}
-                descText=""
+                descText="Dark lip neutralization is a specialized technique used in permanent makeup to neutralize the appearance of dark or unwanted pigments on the lips. This procedure aims to create a more balanced and natural lip color by using color correction to counteract the undesired darkness. Neutralizing the darkness in the lips will take multiple sessions depending on the degree of correction needed. Each session builds upon the previous one, gradually lightening and neutralizing the dark pigments. This process minimizes the risk of overcorrection and ensures a more seamless result."
                 headlineText="Dark Lip Neutralization"
               />
             </div>

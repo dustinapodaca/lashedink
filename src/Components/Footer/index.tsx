@@ -184,8 +184,26 @@ export default function Footer () {
             </li>
           </ul>
 
-          <p className="mx-auto mt-8 max-w-xl text-center leading-relaxed text-gray-500 dark:text-gray-400">
-            © Copyright 2023 Lashed.Ink and Dustin Apodaca. All rights reserved.
+          <p
+            className="mx-auto mt-12 max-w-xl text-center leading-relaxed text-zinc-400 text-sm"
+            style={{
+              textShadow: "1px 1px 1px rgba(0, 0, 0, 0.8)",
+            }}
+          >
+            © Copyright 2023 Lashed.Ink <br /> All rights reserved.
+          </p>
+          <p className="mx-auto mt-2 max-w-xl text-center leading-relaxed">
+            <a
+              href="https://linkedin.com/in/dustinapodaca"
+              className="text-zinc-600 text-sm hover:text-zinc-500 hover:ease-in-out duration-150 transition-colors"
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{
+                textShadow: "1px 1px 1px rgba(0, 0, 0, 0.8)",
+              }}
+            >
+              @dustinapodaca
+            </a>
           </p>
         </div>
       </div>
