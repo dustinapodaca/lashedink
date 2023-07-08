@@ -61,12 +61,18 @@ const Services = () => {
                       src={headerIcon}
                       alt="headerIcon"
                       className="rounded-full mt-20 mb-16"
+                      style={{
+                        mixBlendMode: "lighten",
+                      }}
                     />
                   ) : (
                     <img
                       src={headerIcon}
                       alt="headerIcon"
                       className="rounded-full w-24 h-24 mt-10"
+                      style={{
+                        mixBlendMode: "lighten",
+                      }}
                     />
                   )}
                 </div>
