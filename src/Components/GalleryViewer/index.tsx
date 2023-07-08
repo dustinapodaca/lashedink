@@ -9,40 +9,44 @@ import { imageData } from './imagesData';
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null); // updated state type
+  const [hasTriggeredEffects, setHasTriggeredEffects] = useState(false);
   const { scrollY } = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
       const targetElement = document.getElementById("gallery");
-      if (targetElement) {
+      if (targetElement && !hasTriggeredEffects) {
         const { top, bottom } = targetElement.getBoundingClientRect();
         const isInView = top < window.innerHeight && bottom >= 0;
         setIsVisible(isInView);
+        if (isInView) {
+          setHasTriggeredEffects(true);
+        }
       }
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollY]);
+  }, [scrollY, hasTriggeredEffects]);
 
-  const transitionDurationTop1 = Math.random() * 1.3 + 0.9;
-  const transitionDurationTop2 = Math.random() * 1.5 + 0.8;
-  const transitionDurationTop3 = Math.random() * 1.4 + 1.2;
-  const transitionDurationTop4 = Math.random() * 1.6 + 1.0;
-  const transitionDurationMiddle1 = Math.random() * 2.1 + 1.8;
-  const transitionDurationMiddle2 = Math.random() * 2.0 + 1.9;
-  const transitionDurationMiddle3 = Math.random() * 2.3 + 2.0;
-  const transitionDurationMiddle4 = Math.random() * 2.2 + 1.7;
-  const transitionDurationBottom1 = Math.random() * 2.7 + 2.5;
-  const transitionDurationBottom2 = Math.random() * 3.2 + 2.8;
-  const transitionDurationBottom3 = Math.random() * 2.9 + 2.6;
-  const transitionDurationBottom4 = Math.random() * 3.0 + 2.9;
+  const transitionDurationTop1 = Math.random() * 0.7 + 0.9;
+  const transitionDurationTop2 = Math.random() * 0.8 + 0.8;
+  const transitionDurationTop3 = Math.random() * 0.9 + 1.2;
+  const transitionDurationTop4 = Math.random() * 0.7 + 1.0;
+  const transitionDurationMiddle1 = Math.random() * 1.1 + 1.8;
+  const transitionDurationMiddle2 = Math.random() * 1.0 + 1.9;
+  const transitionDurationMiddle3 = Math.random() * 1.3 + 1.0;
+  const transitionDurationMiddle4 = Math.random() * 1.2 + 1.7;
+  const transitionDurationBottom1 = Math.random() * 1.7 + 1.5;
+  const transitionDurationBottom2 = Math.random() * 1.2 + 1.8;
+  const transitionDurationBottom3 = Math.random() * 1.9 + 1.6;
+  const transitionDurationBottom4 = Math.random() * 1.4 + 1.9;
 
   return (
     <div
       id="gallery"
-      className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4"
+      className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4 z-50"
     >
       <div className="grid gap-4">
         <motion.div
