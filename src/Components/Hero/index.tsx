@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import GalleryViewer from "../GalleryViewer";
 import ReviewViewer from "../ReviewViewer";
 
-import heroBanner from "../../assets/images/marbletriangle.jpg";
+import heroBanner from "../../assets/images/marble2.jpg";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
@@ -17,7 +17,7 @@ const HeroBanner = () => {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const yPos = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
+  const yPos = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   // useEffect(() => {
   //   const updatePosition = () => {
@@ -35,10 +35,10 @@ const HeroBanner = () => {
 
   return (
     <>
-      <header ref={ref}>
+      <header className="mt-24" ref={ref}>
         <div
-          className="relative overflow-hidden bg-black w-screen mb-10 mt-24"
-          style={{ height: "80vh" }}
+          className="relative overflow-hidden bg-black w-screen mb-10 pt-24"
+          style={{ height: "85vh" }}
         >
           <motion.div
             className="absolute inset-0"
@@ -50,25 +50,66 @@ const HeroBanner = () => {
               y: yPos,
             }}
           />
-          <div className="absolute inset-0 flex flex-col justify-center items-center">
+          <motion.div
+            className="absolute inset-0 flex flex-col justify-center items-center"
+            style={{
+              y: yPos,
+              width: "150%",
+              left: "-25%",
+              overflow: "visible",
+            }}
+          >
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              viewBox="0 0 1000 1000"
+              enable-background="new 0 0 1000 1000"
+              className="fill-black"
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "absolute",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                top: 15,
+                left: 0,
+              }}
+            >
+              <g>
+                <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                  <path d="M100,4334.8c0-7.2,564.1-989.6,1252.5-2182.3c688.4-1192.7,1785.5-3093,2438-4223.6C4443.1-3201.7,4988-4126.7,5000-4126.7s253.4,399.2,533,884.4c482.8,836.6,1130.6,1960,3391.8,5872.8c535.4,929.8,975.2,1697.1,975.2,1704.2s-2203.8,12-4900,12C2306.2,4346.7,100,4341.9,100,4334.8z M9190.1,3849.5C8162.3,2056.9,5009.6-3395.3,5000-3395.3c-7.2,0-303.6,506.7-659.7,1128.2c-511.5,886.8-3540,6135.8-3587.8,6214.6c-4.8,9.6,1905,16.7,4247.5,16.7h4254.6L9190.1,3849.5z" />
+                </g>
+              </g>
+            </svg>
+          </motion.div>
+          {/* <div className="absolute inset-0 bg-black opacity-50" />  */}
+
+          <div className="absolute inset-0 flex flex-col justify-center items-center -mt-10">
             <h1
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
               }}
-              className="font-london text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-pink-200 text-center mx-20 sm:mx-10"
+              className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-20 sm:mx-10 md:-mt-10"
             >
               Embrace the Artistry
             </h1>
             <p
-              className="max-w-5xl font-normal text-white text-md sm:text-lg lg:text-xl xl:text-2xl mt-8 text-center mx-6"
+              className="max-w-5xl font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mt-8 text-center mx-6"
               style={{
-                textShadow: "1px 1px 2px rgba(0, 0, 0, 0.95)",
+                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
               }}
             >
-              Welcome to my little corner of the beauty world! As a permanent makeup artist and eyelash specialist, I am passionate about helping you look and feel your best.
+              Welcome to my little corner of the beauty world! As a permanent
+              makeup artist and eyelash specialist, I am passionate about
+              helping you look and feel your best.
               <br />
               <br />
-              From impeccably voluminous lashes to meticulously crafted brows, I am here to enhance your natural beauty and give you the confidence you deserve.
+              From impeccably voluminous lashes to meticulously crafted brows, I
+              am here to enhance your natural beauty and give you the confidence
+              you deserve.
             </p>
           </div>
         </div>

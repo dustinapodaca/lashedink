@@ -78,7 +78,7 @@ const Services = () => {
                     <img
                       src={headerIcon}
                       alt="headerIcon"
-                      className="rounded-full w-24 h-24 mt-10"
+                      className="rounded-full w-24 h-24 mt-4"
                       style={{
                         mixBlendMode: "lighten",
                       }}
@@ -99,7 +99,7 @@ const Services = () => {
                   <p
                     className="text-base text-white mt-8 text-md sm:text-lg lg:text-xl"
                     style={{
-                      textShadow: "1px 1px 2px rgba(0, 0, 0, 0.95)",
+                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.99)",
                     }}
                   >
                     Experience a fusion of art and beauty, where skilled hands
@@ -107,14 +107,14 @@ const Services = () => {
                     that enhances your individuality and elevates your
                     confidence to new heights.
                   </p>
-                  <hr className="w-full my-8 border-zinc-400" />
+                  <hr className="max-w-4xl mx-auto my-8 border-zinc-200" />
                 </>
               ) : (
                 <>
                   <p
-                    className=" bg-black text-center p-4 mb-10 rounded-xl bg-opacity-80 text-base text-white md:text-lg sm:px-4"
+                    className="text-center p-4 mb-4 rounded-xl text-white md:text-lg sm:px-4"
                     style={{
-                      textShadow: "1px 1px 2px rgba(0, 0, 0, 0.95)",
+                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.99)",
                     }}
                   >
                     Experience a fusion of art and beauty, where skilled hands
@@ -122,6 +122,7 @@ const Services = () => {
                     that enhances your individuality and elevates your
                     confidence to new heights.
                   </p>
+                  <hr className="max-w-xs mx-auto border-zinc-200 pb-8" />
                 </>
               )}
             </div>
