@@ -78,7 +78,7 @@ const Services = () => {
                     <img
                       src={headerIcon}
                       alt="headerIcon"
-                      className="rounded-full w-24 h-24 mt-4"
+                      className="rounded-full w-24 h-24"
                       style={{
                         mixBlendMode: "lighten",
                       }}
@@ -97,7 +97,7 @@ const Services = () => {
               {!isMobile ? (
                 <>
                   <p
-                    className="text-base text-white mt-8 text-md sm:text-lg lg:text-xl"
+                    className="text-white mt-8 text-lg sm:text-lg md:text-xl xl:text-2xl text-center mx-10"
                     style={{
                       textShadow: "2px 2px 3px rgba(0, 0, 0, 0.99)",
                     }}
@@ -107,7 +107,7 @@ const Services = () => {
                     that enhances your individuality and elevates your
                     confidence to new heights.
                   </p>
-                  <hr className="max-w-4xl mx-auto my-8 border-zinc-200" />
+                  <hr className="max-w-4xl mx-auto my-8 border-zinc-200 pb-4" />
                 </>
               ) : (
                 <>
@@ -122,7 +122,7 @@ const Services = () => {
                     that enhances your individuality and elevates your
                     confidence to new heights.
                   </p>
-                  <hr className="max-w-xs mx-auto border-zinc-200 pb-8" />
+                  <hr className="max-w-xs mx-auto border-zinc-200 pb-12" />
                 </>
               )}
             </div>
