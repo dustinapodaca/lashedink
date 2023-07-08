@@ -14,7 +14,7 @@ const reviews = [
     id: 1,
     text: "Review #3",
     content:
-    "Tatiana did an amazing job! I am in absolutely aw of eyebrows! Definitely a self confidence booster! She did great kept me comfortable and well informed from the very beginning! Definitely recommended! Thank you again girly! ❤️",
+    "Tatiana did such an amazing job! I am absolutely in awe of eyebrows! Definitely a self confidence booster! She did great and kept me comfortable and well informed from the very beginning! I definitely recommend her! Thank you again girly! ❤️",
     author: "Marissa Martinez-Spiess",
   },
   {
@@ -75,21 +75,37 @@ const Review = ({ review, isActive }: ReviewProps) => (
           <MySVGComponent />
         </div>
 
-        <div className="mt-4">
-          {/* <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-            {review.text}
-          </p> */}
-
-          <p className="mt-4 leading-relaxed text-zinc-400">{review.content}</p>
-        </div>
+        <AnimatePresence>
+          <motion.div
+            key={review.id}
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.7, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
+          >
+            <p className="mt-4 text-md md:text-xl leading-relaxed text-zinc-400">
+              {review.content}
+            </p>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      <footer className="mt-8 text-md text-zinc-500">
-        &mdash; {review.author}
-      </footer>
+      <AnimatePresence>
+        <motion.footer
+          key={review.id}
+          initial={{ scale: 0.7, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.7, opacity: 0 }}
+          transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
+          className="mt-8 text-md md:text-lg text-zinc-500"
+        >
+          &mdash; {review.author}
+        </motion.footer>
+      </AnimatePresence>
     </blockquote>
   </div>
 );
+
 
 type Review = {
   id: number;
@@ -110,20 +126,11 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
       <div className="h-full bg-black">
         <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
           <div className="relative overflow-hidden rounded-xl">
-            <motion.div 
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: `-${index * 100}%`, opacity: 1 }} 
-              exit={{ opacity: 0, pointerEvents: "none" }}
-              className="flex"
-            >
-              {reviews.map((review) => (
-                <Review
-                  key={review.id}
-                  review={review}
-                  isActive={review.id === index}
-                />
-              ))}
-            </motion.div>
+            {reviews.map((review, i) =>
+              i === index ? (
+                <Review key={review.id} review={review} isActive={review.id === index} />
+              ) : null
+            )}
             <AnimatePresence initial={false}>
               {index > 0 && (
                 <motion.button
@@ -164,14 +171,14 @@ const ReviewViewer = () => {
   return (
     <section className="bg-black mt-10">
       <div className="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:me-0 lg:pe-0 lg:ps-8">
-        <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
+        <div className="items-center grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
           <div className="text-white max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-5xl px-4">
+            <p className="text-3xl font-extrabold tracking-tight sm:text-5xl px-6 pt-2 md:pt-6 ">
               Read Trusted Reviews From My Clients <br />
               <br />
               <br className="hidden sm:block lg:hidden" />
               <span> </span>
-            </h2>
+            </p>
             {/* <p className="text-4xl font-bold font-cursive tracking-tight sm:text-5xl">
               Read Trusted Reviews!
             </p> */}

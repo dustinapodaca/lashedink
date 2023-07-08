@@ -40,11 +40,11 @@ const About = () => {
               ) : (
                 <></>
               )}
-              <p className="text-2xl italic font-bold mb-1 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
+              {/* <p className="text-2xl italic font-bold mb-1 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
                 My name is <br />
-              </p>
-              <h2 className="font-cursive text-pink-500 text-center text-5xl md:text-5xl lg:text-7xl">
-                Tatiana Herran!
+              </p> */}
+              <h2 className="mt-6 font-cursive text-pink-500 text-center text-5xl md:text-6xl lg:text-6xl">
+                Tatiana Herran
               </h2>
               {/* <p className="max-w-lg mt-3 text-xl leading-relaxed text-white md:mt-8">
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -52,7 +52,7 @@ const About = () => {
                 Exercitation veniam consequat sunt nostrud amet.
               </p> */}
               <div className="w-full">
-                <p className="max-w-xl mt-3 text-lg leading-relaxed text-white md:mt-8">
+                <p className="max-w-xl mt-2 text-lg leading-relaxed text-white md:mt-8">
                   I am a licensed esthetician specializing in permanent makeup
                   and eyelash extensions in Denver, CO. I take pride in being
                   recognized as one of the best beauty specialists, driven by my
