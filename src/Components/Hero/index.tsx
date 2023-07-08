@@ -38,7 +38,7 @@ const HeroBanner = () => {
       <header className="mt-24" ref={ref}>
         <div
           className="relative overflow-hidden bg-black w-screen mb-10 pt-24"
-          style={{ height: "85vh" }}
+          style={{ height: "90vh" }}
         >
           <motion.div
             className="absolute inset-0"
@@ -92,12 +92,12 @@ const HeroBanner = () => {
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
               }}
-              className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-20 sm:mx-10 md:-mt-10"
+              className="font-london text-6xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-20 sm:mx-10 md:-mt-10"
             >
               Embrace the Artistry
             </h1>
             <p
-              className="max-w-5xl font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mt-8 text-center mx-6"
+              className="max-w-5xl font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mt-8 text-center mx-10"
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
               }}
