@@ -39,7 +39,7 @@ export default function ServiceCard({
             {headlineText}
           </h5>
         </a>
-        <p className="font-normal text-zinc-700 dark:text-zinc-400 h-64 md:h-72 xl:h-60 pb-6 md:pb-6 lg:pb-1 overflow-y-auto">
+        <p className="font-normal text-zinc-700 dark:text-zinc-400 h-64 md:h-72 xl:h-60 pb-4 md:pb-6 lg:pb-0 overflow-y-auto">
           {isExpanded ? descText : truncatedText}
           {words.length > maxWords && (
             <button
