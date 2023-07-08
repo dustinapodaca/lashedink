@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import aboutPic from "../../assets/images/aboutPic2.png";
+import aboutPic from "../../assets/images/aboutPic.jpg";
 
 // import heroImg from "../../assets/images/aboutWallpaper.jpg";
 

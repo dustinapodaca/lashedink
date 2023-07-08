@@ -134,7 +134,7 @@ const Map = () => {
                 boxShadow: "0 0 10px rgba(255, 105, 180, 0.3) inset",
               }}
               loading="lazy"
-              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQWULTWt9bIcR8QaAg8FB3H8&key=AIzaSyBiTyDXcgWVKFajSznnr6r9VSoNm8iJNGE"
+              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQWULTWt9bIcR8QaAg8FB3H8&key=AIzaSyBiTyDXcgWVKFajSznnr6r9VSoNm8iJNGE&zoom=14"
             ></iframe>
           </div>
         </div>

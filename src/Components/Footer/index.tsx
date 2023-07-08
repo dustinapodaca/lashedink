@@ -15,7 +15,7 @@ export default function Footer () {
             d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
           />
         </svg>
-        <div className="mx-auto max-w-5xl px-4 pt-4 pb-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl px-4 pt-4 pb-12 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <Link to="/">
               <motion.p
@@ -184,8 +184,26 @@ export default function Footer () {
             </li>
           </ul>
 
-          <p className="mx-auto mt-8 max-w-xl text-center leading-relaxed text-gray-500 dark:text-gray-400">
-            © Copyright 2023 Lashed.Ink and Dustin Apodaca. All rights reserved.
+          <p
+            className="mx-auto mt-12 max-w-xl text-center leading-relaxed text-zinc-400 text-sm"
+            style={{
+              textShadow: "1px 1px 1px rgba(0, 0, 0, 0.8)",
+            }}
+          >
+            © Copyright 2023 Lashed.Ink <br /> All rights reserved.
+          </p>
+          <p className="mx-auto mt-2 max-w-xl text-center leading-relaxed">
+            <a
+              href="https://linkedin.com/in/dustinapodaca"
+              className="text-zinc-600 text-sm hover:text-zinc-500 hover:ease-in-out duration-150 transition-colors"
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{
+                textShadow: "1px 1px 1px rgba(0, 0, 0, 0.8)",
+              }}
+            >
+              @dustinapodaca
+            </a>
           </p>
         </div>
       </div>

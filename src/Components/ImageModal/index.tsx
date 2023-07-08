@@ -32,7 +32,7 @@ const ImageModal = ({ imageSrc, isOpen, setIsOpen }: ImageModalProps) => {
             className="max-h-[80%] object-cover relative max-w-[90%]"
           >
             <motion.img
-              className="max-h-full max-w-full object-cover rounded-lg z-40"
+              className="max-h-full max-w-full object-cover rounded-lg z-50"
               src={imageSrc}
               alt=""
             />

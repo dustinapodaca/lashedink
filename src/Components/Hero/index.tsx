@@ -9,31 +9,6 @@ import heroBanner from "../../assets/images/marbletriangle.jpg";
 // import heroImg2 from "../../assets/images/hero1.png";
 // import heroImg2 from "../../assets/images/img9lashed.jpeg";
 
-// const testimonials = [
-//   {
-//     id: 1,
-//     rating: 5, // Assuming 5 star rating
-//     content:
-//       "I had an amazing experience at Lashed Ink. The staff was friendly and professional, and my lashes look fantastic!",
-//     author: "John Doe",
-//   },
-//   {
-//     id: 2,
-//     rating: 5, // Assuming 5 star rating
-//     content:
-//       "I highly recommend Lashed Ink for anyone looking for high-quality lash extensions. The results are stunning!",
-//     author: "Jane Smith",
-//   },
-//   {
-//     id: 3,
-//     rating: 5, // Assuming 5 star rating
-//     content:
-//       "I've been going to Lashed Ink for years and I wouldn't trust anyone else with my lashes. The team is simply the best!",
-//     author: "Bob Johnson",
-//   },
-// ];
-
-
 const HeroBanner = () => {
   // const { scrollY } = useScroll();
 

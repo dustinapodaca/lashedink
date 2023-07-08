@@ -31,14 +31,14 @@ const ServiceSelector = ({images, text}: CarouselProps) => {
                 />
               ))}
             </motion.div>
-            <p
+            {/* <p
               className="font-cursive text-3xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white md:text-4xl font-poiret stroke-white stroke-1"
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.4)",
               }}
             >
               {text}
-            </p>
+            </p> */}
             <AnimatePresence initial={false}>
               {index > 0 && (
                 <motion.button

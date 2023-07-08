@@ -68,11 +68,51 @@ const Review = ({ review, isActive }: ReviewProps) => (
     <blockquote className="flex h-full flex-col justify-between bg-zinc-900 rounded-xl p-12">
       <div>
         <div className="flex gap-0.5 text-pink-400 mb-6">
-          <MySVGComponent />
-          <MySVGComponent />
-          <MySVGComponent />
-          <MySVGComponent />
-          <MySVGComponent />
+          <motion.span
+            key={review.id}
+            initial={{ scale: 0.1, opacity: 0, x: -50 }}
+            animate={{ scale: 1, opacity: 1, x: 1 }}
+            exit={{ scale: 0.1, opacity: 0, x: 100 }}
+            transition={{ duration: 0.40, ease: [0.32, 0.72, 0, 1] }}
+          >
+            <MySVGComponent />
+          </motion.span>
+          <motion.span
+            key={review.id}
+            initial={{ scale: 0.1, opacity: 0, x: -50 }}
+            animate={{ scale: 1, opacity: 1, x: 1 }}
+            exit={{ scale: 0.1, opacity: 0, x: 100 }}
+            transition={{ duration: 0.45, ease: [0.32, 0.72, 0, 1] }}
+          >
+            <MySVGComponent />
+          </motion.span>
+          <motion.span
+            key={review.id}
+            initial={{ scale: 0.1, opacity: 0, x: -50 }}
+            animate={{ scale: 1, opacity: 1, x: 1 }}
+            exit={{ scale: 0.1, opacity: 0, x: 100 }}
+            transition={{ duration: 0.50, ease: [0.32, 0.72, 0, 1] }}
+          >
+            <MySVGComponent />
+          </motion.span>
+          <motion.span
+            key={review.id}
+            initial={{ scale: 0.1, opacity: 0, x: -50 }}
+            animate={{ scale: 1, opacity: 1, x: 1 }}
+            exit={{ scale: 0.1, opacity: 0, x: 100 }}
+            transition={{ duration: 0.55, ease: [0.32, 0.72, 0, 1] }}
+          >
+            <MySVGComponent />
+          </motion.span>
+          <motion.span
+            key={review.id}
+            initial={{ scale: 0.1, opacity: 0, x: -50 }}
+            animate={{ scale: 1, opacity: 1, x: 1 }}
+            exit={{ scale: 0.1, opacity: 0, x: 100 }}
+            transition={{ duration: 0.60, ease: [0.32, 0.72, 0, 1] }}
+          >
+            <MySVGComponent />
+          </motion.span>
         </div>
 
         <AnimatePresence>
@@ -83,7 +123,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
             exit={{ scale: 0.7, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
           >
-            <p className="mt-4 text-md md:text-xl leading-relaxed text-zinc-400">
+            <p className="mt-4 text-lg md:text-xl leading-relaxed text-zinc-400">
               {review.content}
             </p>
           </motion.div>
