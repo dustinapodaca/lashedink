@@ -1,7 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
-import GalleryViewer from "../GalleryViewer";
-import ReviewViewer from "../ReviewViewer";
 
 import heroBanner from "../../assets/images/marble2.jpg";
 
@@ -17,7 +15,7 @@ const HeroBanner = () => {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const yPos = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
+  const yPos = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
 
   // useEffect(() => {
   //   const updatePosition = () => {
@@ -121,9 +119,6 @@ const HeroBanner = () => {
       <h3 className="pt-1 pb-12 px-10 text-center mx-auto mb-6 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
         "Enhance Your Look with Expert Touches"
       </h3>
-      <GalleryViewer />
-
-      <ReviewViewer />
     </>
   );
 };

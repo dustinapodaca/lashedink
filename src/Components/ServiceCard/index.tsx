@@ -35,11 +35,11 @@ export default function ServiceCard({
 
       <div className="m-5 h-full md:h-full lg:h-[350px] xl:h-80">
         <a href="#">
-          <h5 className="mb-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          <h5 className="mb-3 mt-6 text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
             {headlineText}
           </h5>
         </a>
-        <p className="font-normal text-zinc-700 dark:text-zinc-400 h-64 md:h-72 xl:h-60 pb-4 md:pb-6 lg:pb-0 overflow-y-auto">
+        <p className="font-normal text-zinc-700 dark:text-zinc-400 h-[270px] md:h-72 xl:h-60 pb-4 md:pb-6 lg:pb-0 overflow-y-auto">
           {isExpanded ? descText : truncatedText}
           {words.length > maxWords && (
             <button

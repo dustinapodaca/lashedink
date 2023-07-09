@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Map from "../../Components/Map";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
+import Map from "../../Components/Map";
 
 const Contact = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -18,9 +19,14 @@ const Contact = () => {
 
   return (
     <>
-      <section className="mt-24">
+      <motion.section
+        className="mt-24"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <Map />
-      </section>
+      </motion.section>
     </>
   );
 };

@@ -49,12 +49,16 @@ const LayoutNav = () => {
         style={{ backgroundColor: "rgba(0, 0, 0)" }}
       >
         <div className="flex flex-row justify-between">
-          {/* <h2 className="md:text-2xl text-2xl font-extrabold text-white drop-shadow-lg">
-            Lashed.Ink
-          </h2> */}
-          <a href="/">
-            <img src={lashedBanner} alt="lashed.ink" className="w-48" />
-          </a>
+          <Link to="/">
+            <motion.button
+              className="pl-2"
+              whileHover={{ scale: [null, 1.1, 1.1] }}
+              transition={{ duration: 0.3 }}
+              // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+            >
+              <img src={lashedBanner} alt="Lashed.Ink" className="w-48" />
+            </motion.button>
+          </Link>
         </div>
         {!isMobile ? (
           <div className="flex flex-row justify-between items-center">
@@ -516,7 +520,8 @@ const LayoutNav = () => {
                       href="https://www.facebook.com/lashed.ink/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-pink-300"
+                      onClick={handleClickLink}
                     >
                       <span className="sr-only">Facebook</span>
                       <svg
@@ -539,7 +544,8 @@ const LayoutNav = () => {
                       href="https://www.instagram.com/lashed.ink/?hl=en"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-pink-300"
+                      onClick={handleClickLink}
                     >
                       <span className="sr-only">Instagram</span>
                       <svg
@@ -562,7 +568,8 @@ const LayoutNav = () => {
                       href="https://www.tiktok.com/@lashed.ink"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-white transition hover:text-zinc-700 dark:text-white dark:hover:text-white/75"
+                      className="text-white transition hover:text-zinc-700 dark:text-white dark:hover:text-pink-300"
+                      onClick={handleClickLink}
                     >
                       <span className="sr-only">TikTok</span>
                       <svg
@@ -584,7 +591,8 @@ const LayoutNav = () => {
                       href="https://www.google.com/search?q=lashed+ink&hl=en"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-white transition hover:text-zinc-700 dark:text-white dark:hover:text-white/75"
+                      className="text-white transition hover:text-zinc-700 dark:text-white dark:hover:text-pink-300"
+                      onClick={handleClickLink}
                     >
                       <span className="sr-only">Google Business</span>
                       <svg

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-// import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import ServiceCard from "../../Components/ServiceCard";
 import BookingModal from "../../Components/BookingModal";
 
@@ -18,7 +18,7 @@ import servicesHeader from "../../assets/images/marble.jpg";
 import headerIcon from "../../assets/images/img1-2lashed.png";
 
 import browIcon from "../../assets/images/img11lashed.jpeg";
-import lashIcon from "../../assets/images/img3lashed.jpeg";
+import lashIcon from "../../assets/images/img9lashed.jpeg";
 import lipIcon from "../../assets/images/img10lashed.jpeg";
 
 const Services = () => {
@@ -37,7 +37,12 @@ const Services = () => {
 
   return (
     <>
-      <div className="h-full bg-black mt-24">
+      <motion.section 
+        className="h-full bg-black mt-24" 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div
           className="relative bg-zinc-900"
           style={{
@@ -312,7 +317,7 @@ const Services = () => {
             <div className="relative max-w-full rounded-lg border-x border-zinc-800 shadow bg-black">
               <div className="px-5 sm:px-10 pb-10 pt-5">
                 <a href="#">
-                  <h5 className="mb-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
+                  <h5 className="mb-3 text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
                     Corrections
                   </h5>
                 </a>
@@ -361,7 +366,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.section>
     </>
   );
 };
