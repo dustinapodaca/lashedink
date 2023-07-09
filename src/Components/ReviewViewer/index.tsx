@@ -212,7 +212,7 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
 
 const ReviewViewer = () => {
   return (
-    <section className="bg-black mt-4">
+    <section className="bg-black mt-4 md:mt-3">
       <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
         <div className="items-center grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
           <div className="text-white text-center ltr:sm:text-left rtl:sm:text-right">

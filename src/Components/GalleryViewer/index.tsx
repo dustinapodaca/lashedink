@@ -101,12 +101,6 @@ const Gallery = () => {
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: transitionDurationBottom1 }}
-        ></motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: transitionDurationBottom1 }}
         >
           <motion.img
             className="h-auto max-w-full rounded-lg cursor-pointer"
@@ -350,10 +344,6 @@ const Gallery = () => {
           />
         </motion.div>
       </div>
-
-      {/* <section>
-        <InstagramProfile />
-      </section> */}
     </div>
   );
 };
