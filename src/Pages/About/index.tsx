@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import aboutPic from "../../assets/images/aboutPic.jpg";
 
 // import heroImg from "../../assets/images/aboutWallpaper.jpg";
@@ -19,7 +20,12 @@ const About = () => {
 
   return (
     <>
-      <section className="pt-2 overflow-hidden bg-black md:pt-10 sm:pt-16 2xl:pt-16 mt-24">
+      <motion.section
+        className="pt-2 overflow-hidden bg-black md:pt-10 sm:pt-16 2xl:pt-16 mt-24"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
@@ -108,7 +114,7 @@ const About = () => {
             )}
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

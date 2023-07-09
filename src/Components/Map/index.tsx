@@ -1,4 +1,4 @@
-import React from "react";
+import SocialLinks from "../SocialLinks";
 
 const Map = () => {
   return (
@@ -6,36 +6,31 @@ const Map = () => {
       <div className="container px-6 py-12 mx-auto pb-20">
         <div>
           <p
-            className="font-cursive text-pink-200 text-6xl text-center py-8 md:py-10"
+            className="font-cursive text-pink-300 text-6xl text-center py-8 md:py-10"
             style={{
               textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
             }}
           >
             Have Questions?
           </p>
-
-          {/* <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
-            Get in touch
-          </h1>
-
-          <p className="mt-3 text-gray-500 dark:text-gray-400">
-            I would love to hear from you!
-          </p> */}
+          <div className="-mt-8 flex justify-center py-2 lg:py-0 lg:justify-start">
+            <SocialLinks />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 text-center lg:text-left">
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-300 rounded-full bg-black">
+              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -45,28 +40,28 @@ const Map = () => {
                 </svg>
               </span>
 
-              <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
-                Email
-              </h2>
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                Feel free to reach out anytime!
+              <h2 className="text-2xl font-bold text-white">Email</h2>
+              <p className="mt-2 text-lg text-zinc-400">
+                Feel free to reach out with questions anytime!
               </p>
-              <p className="mt-2 text-sm text-pink-300 dark:text-pink-400">
-                tatiana_herran@live.com
+              <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+                <a href="mailto:tatiana_herran@live.com">
+                  tatiana_herran@live.com
+                </a>
               </p>
             </div>
 
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-300 rounded-full bg-black">
+              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -81,28 +76,28 @@ const Map = () => {
                 </svg>
               </span>
 
-              <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
-                Office
-              </h2>
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                Come say hello at our office HQ.
+              <h2 className="text-2xl font-bold text-white">Office</h2>
+              <p className="mt-2 text-lg text-zinc-400">
+                Come say hello at my office HQ.
               </p>
-              <p className="mt-2 text-sm dark:text-pink-400">
-                7939 E Arapahoe Rd #210, Greenwood Village, CO 80112
+              <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+                <a href="https://www.google.com/maps/search/?api=1&query=7939+E+Arapahoe+Rd+%23210+Greenwood+Village,+CO+80112">
+                  7939 E Arapahoe Rd #210 <br /> Greenwood Village, CO 80112
+                </a>
               </p>
             </div>
 
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-300 rounded-full bg-black">
+              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -111,15 +106,12 @@ const Map = () => {
                   />
                 </svg>
               </span>
-
-              <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
-                Phone
-              </h2>
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              <h2 className="text-2xl font-bold text-white">Phone</h2>
+              <p className="mt-2 text-lg text-zinc-400">
                 Mon-Fri from 8am to 5pm.
               </p>
-              <p className="mt-2 text-sm dark:text-pink-400">
-                +1 (303) 210-7403
+              <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+                <a href="tel:+13032107403">+1 (303) 210-7403</a>
               </p>
             </div>
             <hr className="w-full border-zinc-700" />
