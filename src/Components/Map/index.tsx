@@ -42,7 +42,10 @@ const Map = () => {
 
               <h2 className="text-2xl font-bold text-white">Email</h2>
               <p className="mt-2 text-lg text-zinc-400">
-                Feel free to reach out with questions anytime!
+                Reach out anytime! 👋 <br />
+              </p>
+              <p className="text-md italic text-zinc-300">
+                I do my best to respond within 24 hours.
               </p>
               <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
                 <a href="mailto:tatiana_herran@live.com">
@@ -78,10 +81,14 @@ const Map = () => {
 
               <h2 className="text-2xl font-bold text-white">Office</h2>
               <p className="mt-2 text-lg text-zinc-400">
-                Come say hello at my office HQ.
+                In the DTC area of Denver, CO.
               </p>
               <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
-                <a href="https://www.google.com/maps/search/?api=1&query=7939+E+Arapahoe+Rd+%23210+Greenwood+Village,+CO+80112">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=7939+E+Arapahoe+Rd+%23210+Greenwood+Village,+CO+80112"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   7939 E Arapahoe Rd #210 <br /> Greenwood Village, CO 80112
                 </a>
               </p>
@@ -90,7 +97,7 @@ const Map = () => {
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-3">
+              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -108,7 +115,10 @@ const Map = () => {
               </span>
               <h2 className="text-2xl font-bold text-white">Phone</h2>
               <p className="mt-2 text-lg text-zinc-400">
-                Mon-Fri from 8am to 5pm.
+                Mon-Th & Sat from 9am to 5pm.
+              </p>
+              <p className="text-md italic text-zinc-300">
+                {`(Closed Fri & Sun)`}
               </p>
               <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
                 <a href="tel:+13032107403">+1 (303) 210-7403</a>
