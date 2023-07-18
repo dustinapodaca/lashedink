@@ -126,7 +126,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
             exit={{ scale: 0.7, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
           >
-            <p className="mt-4 text-lg md:text-xl leading-relaxed text-zinc-400">
+            <p className="mt-4 font-sans text-lg md:text-xl leading-relaxed text-zinc-400">
               {review.content}
             </p>
           </motion.div>
@@ -140,7 +140,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.7, opacity: 0 }}
           transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
-          className="mt-8 text-lg md:text-lg text-zinc-500"
+          className="mt-8 font-sans text-lg md:text-lg text-zinc-500"
         >
           &mdash; {review.author}
         </motion.footer>
@@ -216,7 +216,7 @@ const ReviewViewer = () => {
       <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
         <div className="items-center grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
           <div className="text-white text-center ltr:sm:text-left rtl:sm:text-right">
-            <p className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-4xl lg:text-5xl px-6 pt-0 lg:pt-6 ">
+            <p className="text-3xl font-sans font-extrabold tracking-tight sm:text-4xl md:text-4xl lg:text-5xl px-6 pt-0 lg:pt-6 ">
               Read Trusted Reviews From My Clients <br />
               <br />
               <br className="hidden sm:block lg:hidden" />

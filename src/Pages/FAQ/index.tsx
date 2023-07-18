@@ -32,7 +32,7 @@ const FAQ = () => {
             Frequently <br /> Asked <br /> Questions
           </h2>
         )}
-        <div className="space-y-4 px-6 md:px-10 lg:px-20 xl:px-28 pt-12">
+        <div className="font-sans space-y-4 px-6 md:px-10 lg:px-20 xl:px-28 pt-12">
           <details
             className="group [&_summary::-webkit-details-marker]:hidden"
             open
@@ -58,7 +58,7 @@ const FAQ = () => {
               </svg>
             </summary>
 
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 dark:text-gray-200">
+            <p className="mt-4 px-4 pb-2 leading-relaxed text-gray-700 dark:text-gray-200">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
               veritatis molestias culpa in, recusandae laboriosam neque aliquid
               libero nesciunt voluptate dicta quo officiis explicabo consequuntur
@@ -88,7 +88,7 @@ const FAQ = () => {
               </svg>
             </summary>
 
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 dark:text-gray-200">
+            <p className="mt-4 px-4 pb-2 leading-relaxed text-gray-700 dark:text-gray-200">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
               veritatis molestias culpa in, recusandae laboriosam neque aliquid
               libero nesciunt voluptate dicta quo officiis explicabo consequuntur
@@ -118,7 +118,7 @@ const FAQ = () => {
               </svg>
             </summary>
 
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 dark:text-gray-200">
+            <p className="mt-4 px-4 pb-2 leading-relaxed text-gray-700 dark:text-gray-200">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
               veritatis molestias culpa in, recusandae laboriosam neque aliquid
               libero nesciunt voluptate dicta quo officiis explicabo consequuntur
@@ -148,7 +148,7 @@ const FAQ = () => {
               </svg>
             </summary>
 
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 dark:text-gray-200">
+            <p className="mt-4 px-4 pb-2 leading-relaxed text-gray-700 dark:text-gray-200">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
               veritatis molestias culpa in, recusandae laboriosam neque aliquid
               libero nesciunt voluptate dicta quo officiis explicabo consequuntur
@@ -178,7 +178,7 @@ const FAQ = () => {
               </svg>
             </summary>
 
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 dark:text-gray-200">
+            <p className="mt-4 px-4 pb-2 leading-relaxed text-gray-700 dark:text-gray-200">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
               veritatis molestias culpa in, recusandae laboriosam neque aliquid
               libero nesciunt voluptate dicta quo officiis explicabo consequuntur
@@ -208,7 +208,7 @@ const FAQ = () => {
               </svg>
             </summary>
 
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 dark:text-gray-200">
+            <p className="mt-4 px-4 pb-2 leading-relaxed text-gray-700 dark:text-gray-200">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
               veritatis molestias culpa in, recusandae laboriosam neque aliquid
               libero nesciunt voluptate dicta quo officiis explicabo consequuntur

@@ -155,7 +155,7 @@ const BookingModal = () => {
                       >
                         Are You a Candidate?
                       </h2>
-                      <p className="w-full text-zinc-500 italic text-sm lg:max-w-4xl text-right">
+                      <p className="font-sans w-full text-zinc-500 italic text-sm lg:max-w-4xl text-right">
                         Please be advised that we have a 24-hour cancellation
                         policy. If you need to cancel or reschedule your
                         appointment, please do so at least 24 hours in advance.
@@ -178,7 +178,7 @@ const BookingModal = () => {
                     </>
                   )}
 
-                  <p className="mb-4">
+                  <p className="font-sans mb-4">
                     Permanent makeup, also known as micro-pigmentation, is a
                     cosmetic tattooing technique that involves the implantation
                     of pigment into the skin to create long-lasting,
@@ -187,13 +187,13 @@ const BookingModal = () => {
                     the area of the body, the client's skin type, and aftercare.
                   </p>
 
-                  <p className="mb-4">
+                  <p className="font-sans mb-4">
                     Unfortunately, not everyone is a candidate for permanent
                     makeup. The following list contains contraindications that
                     disqualify you from receiving permanent makeup:
                   </p>
 
-                  <ul className="list-disc list-inside mb-8">
+                  <ul className="font-sans list-disc list-inside mb-8">
                     <li>Under 18 years of age</li>
                     <li>Currently pregnant or breastfeeding</li>
                     <li>
@@ -236,12 +236,12 @@ const BookingModal = () => {
                       Permanent Makeup Preparation
                     </h2>
                   )}
-                  <p className="mb-4">
+                  <p className="font-sans mb-4">
                     All permanent makeup appointments must be approved by the
                     artist before scheduling to ensure you are a good candidate.
                   </p>
 
-                  <p className="mb-4">
+                  <p className="font-sans mb-4">
                     If you have previous permanent makeup, please schedule an
                     in-person consultation to have your old work assessed and
                     ensure it can be corrected. If you are unable to schedule an
@@ -250,12 +250,12 @@ const BookingModal = () => {
                     permanent makeup.
                   </p>
 
-                  <p className="mb-4">
+                  <p className="font-sans mb-4">
                     Follow these guidelines to prepare for your permanent makeup
                     appointment:
                   </p>
 
-                  <ul className="list-disc list-inside mb-8">
+                  <ul className="font-sans list-disc list-inside mb-8">
                     <li>
                       No botox or fillers 3 weeks prior to your appointment
                     </li>
@@ -272,9 +272,9 @@ const BookingModal = () => {
                     </li>
                   </ul>
 
-                  <p className="mb-4 font-bold">For Lip Blush Only:</p>
+                  <p className="font-sans mb-4 font-extrabold">For Lip Blush Only:</p>
 
-                  <p className="mb-4">
+                  <p className="font-sans mb-4">
                     If you have the simplex virus herpes, the lip blush
                     procedure can awaken an outbreak following the treatment. It
                     is highly recommended to take an antiviral medication for 5
@@ -282,7 +282,7 @@ const BookingModal = () => {
                     after or as advised by your doctor.
                   </p>
 
-                  <p className="mb-0">
+                  <p className="font-sans mb-0">
                     Do not get lip injections for 4 weeks before and after this
                     procedure.
                   </p>
@@ -291,7 +291,7 @@ const BookingModal = () => {
                 <div className="flex justify-center items-center py-6 space-x-2 rounded-b border-t border-zinc-700">
                   <button
                     onClick={closeModal}
-                    className="flex items-center justify-center bg-black hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white font-bold rounded-lg text-white text-xl px-5 py-2.5 dark:bg-black dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
+                    className="font-sans tracking-tight font-extrabold flex items-center justify-center bg-black hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white rounded-lg text-white text-xl px-5 py-2.5 dark:bg-black dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
                     type="button"
                   >
                     Proceed to Services
