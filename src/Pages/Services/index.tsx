@@ -102,7 +102,7 @@ const Services = () => {
               {!isMobile ? (
                 <>
                   <p
-                    className="text-white mt-8 text-lg sm:text-lg md:text-xl xl:text-2xl text-center mx-10"
+                    className="font-sans text-white mt-8 text-lg sm:text-lg md:text-xl xl:text-2xl text-center mx-10"
                     style={{
                       textShadow: "2px 2px 3px rgba(0, 0, 0, 0.99)",
                     }}
@@ -117,7 +117,7 @@ const Services = () => {
               ) : (
                 <>
                   <p
-                    className="text-center p-4 mb-4 rounded-xl text-white md:text-lg sm:px-4"
+                    className="font-sans text-center p-4 mb-4 rounded-xl text-white md:text-lg sm:px-4"
                     style={{
                       textShadow: "2px 2px 3px rgba(0, 0, 0, 0.99)",
                     }}
@@ -146,7 +146,7 @@ const Services = () => {
                   <img src={browIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
-              <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-4xl">
                 <span className="inline-block ml-2 text-white">
                   Eyebrow Services
                 </span>
@@ -158,7 +158,7 @@ const Services = () => {
             <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
               <hr className="max-w-full my-8 border-gray-300 text-center" />
             </p>
-            <p className="text-base text-gray-200 md:text-lg">
+            <p className="font-sans text-zinc-200 md:text-lg">
               Eyebrows are such an important focal point that frame our face and
               can drastically affect the way we look. For this reason it is
               important we tailor each pair of eyebrows to the individual, their
@@ -222,7 +222,7 @@ const Services = () => {
                   <img src={lashIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
-              <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-4xl">
                 <span className="inline-block ml-2 text-white">
                   Eyelash Extensions
                 </span>
@@ -234,7 +234,7 @@ const Services = () => {
             <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
               <hr className="max-w-full my-8 border-gray-300 text-center" />
             </p>
-            <p className="text-base text-gray-200 md:text-lg">
+            <p className="font-sans text-zinc-200 md:text-lg">
               Eyelash extensions are a cosmetic procedure that involves
               attaching synthetic eyelashes to your natural lashes to make them
               appear longer and fuller. Your look can be customized according to
@@ -296,7 +296,7 @@ const Services = () => {
                   <img src={lipIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
-              <h2 className="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-4xl">
                 <span className="inline-block ml-2 text-white">
                   Other Services
                 </span>
@@ -308,7 +308,7 @@ const Services = () => {
             <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
               <hr className="max-w-full mt-8 border-gray-300 text-center" />
             </p>
-            {/* <p className="text-base text-gray-200 md:text-lg">
+            {/* <p className="font-sans text-zinc-200 md:text-lg">
               Eyelash extensions are a cosmetic procedure that involves
               attaching synthetic eyelashes to your natural lashes to make them
               appear longer and fuller. Your look can be customized according to
@@ -317,11 +317,11 @@ const Services = () => {
             <div className="relative max-w-full rounded-lg border-x border-zinc-800 shadow bg-black">
               <div className="px-5 sm:px-10 pb-10 pt-5">
                 <a href="#">
-                  <h5 className="mb-3 text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
+                  <h5 className="font-sans mb-3 text-2xl md:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
                     Corrections
                   </h5>
                 </a>
-                <p className="font-normal text-zinc-700 dark:text-zinc-400 h-full">
+                <p className="font-sans text-zinc-700 dark:text-zinc-400 h-full">
                   Color correction may be necessary for some clients with
                   previous permanent makeup. Dissatisfaction with the original
                   color, changes in personal preferences, fading or

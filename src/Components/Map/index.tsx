@@ -40,14 +40,14 @@ const Map = () => {
                 </svg>
               </span>
 
-              <h2 className="text-2xl font-bold text-white">Email</h2>
-              <p className="mt-2 text-lg text-zinc-400">
+              <h2 className="text-2xl font-sans font-extrabold text-white">Email</h2>
+              <p className="font-sans mt-2 text-lg text-zinc-400">
                 Reach out anytime! 👋 <br />
               </p>
-              <p className="text-md italic text-zinc-300">
+              <p className="font-sans text-md italic text-zinc-300">
                 I do my best to respond within 24 hours.
               </p>
-              <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+              <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
                 <a href="mailto:tatiana_herran@live.com">
                   tatiana_herran@live.com
                 </a>
@@ -79,11 +79,11 @@ const Map = () => {
                 </svg>
               </span>
 
-              <h2 className="text-2xl font-bold text-white">Office</h2>
-              <p className="mt-2 text-lg text-zinc-400">
+              <h2 className="text-2xl font-sans font-extrabold text-white">Office</h2>
+              <p className="font-sans mt-2 text-lg text-zinc-400">
                 In the DTC area of Denver, CO.
               </p>
-              <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+              <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=7939+E+Arapahoe+Rd+%23210+Greenwood+Village,+CO+80112"
                   target="_blank"
@@ -113,14 +113,14 @@ const Map = () => {
                   />
                 </svg>
               </span>
-              <h2 className="text-2xl font-bold text-white">Phone</h2>
-              <p className="mt-2 text-lg text-zinc-400">
+              <h2 className="text-2xl font-sans font-extrabold text-white">Phone</h2>
+              <p className="font-sans mt-2 text-lg text-zinc-400">
                 Mon-Th & Sat from 9am to 5pm.
               </p>
-              <p className="text-md italic text-zinc-300">
+              <p className="font-sans text-md italic text-zinc-300">
                 {`(Closed Fri & Sun)`}
               </p>
-              <p className="mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+              <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
                 <a href="tel:+13032107403">+1 (303) 210-7403</a>
               </p>
             </div>

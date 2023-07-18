@@ -57,7 +57,7 @@ const About = () => {
                 amet sint. Velit officia consequat duis enim velit mollit.
                 Exercitation veniam consequat sunt nostrud amet.
               </p> */}
-              <div className="w-full">
+              <div className="w-full font-sans">
                 <p className="max-w-xl mt-2 text-lg leading-relaxed text-white md:mt-8">
                   I am a licensed esthetician specializing in permanent makeup
                   and eyelash extensions in Denver, CO. I take pride in being
@@ -78,7 +78,7 @@ const About = () => {
                   self-transformation and rediscovery together! */}
                 </p>
               </div>
-              <p className="mt-10 text-xl text-white md:mt-8">
+              <p className="font-sans mt-10 text-xl text-white md:mt-8">
                 <span className="relative inline-block">
                   <span className="absolute inline-block w-full top-6 h-1 bg-pink-500"></span>
                   <span className="relative"> Have a question? </span>

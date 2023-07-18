@@ -95,7 +95,7 @@ const HeroBanner = () => {
               Embrace the Artistry
             </h1>
             <p
-              className="max-w-5xl font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mt-8 text-center mx-10"
+              className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mt-8 text-center mx-10"
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
               }}
