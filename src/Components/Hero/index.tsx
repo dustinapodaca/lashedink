@@ -48,7 +48,7 @@ const HeroBanner = () => {
               y: yPos,
             }}
           />
-          <motion.div
+          {/* <motion.div
             className="absolute inset-0 flex flex-col justify-center items-center"
             style={{
               y: yPos,
@@ -82,7 +82,7 @@ const HeroBanner = () => {
                 </g>
               </g>
             </svg>
-          </motion.div>
+          </motion.div> */}
           {/* <div className="absolute inset-0 bg-black opacity-50" />  */}
 
           <div className="absolute inset-0 flex flex-col justify-center items-center -mt-10">
@@ -90,7 +90,7 @@ const HeroBanner = () => {
               style={{
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
               }}
-              className="font-london text-6xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-20 sm:mx-10 md:-mt-10"
+              className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-32 sm:mx-10 md:-mt-10"
             >
               Embrace the Artistry
             </h1>
@@ -100,8 +100,7 @@ const HeroBanner = () => {
                 textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
               }}
             >
-              Welcome to my little corner of the beauty world! As a permanent
-              makeup artist and eyelash specialist, I am passionate about
+              As a permanent makeup artist and eyelash specialist, I am passionate about
               helping you look and feel your best.
               <br />
               <br />
