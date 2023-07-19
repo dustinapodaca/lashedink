@@ -143,12 +143,13 @@ const HeroBanner = () => {
               <>
                 <div style={{ 
                   position: "relative",
-                  // top: "50%",
+                  top: "-5%",
                   // left: "50%",
                   margin: "auto",
                   width: "200px",
                   height: "200px",
                   backgroundColor: "#000",
+                  boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
                 }}>
                   <h2
                     style={{
