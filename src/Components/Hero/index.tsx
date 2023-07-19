@@ -1,7 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
-import heroBanner from "../../assets/images/marble2.jpg";
+import heroBannerMobile from "../../assets/images/marble3.jpg";
+import heroBannerDesktop from "../../assets/images/marble2.jpg";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
@@ -9,12 +10,26 @@ import heroBanner from "../../assets/images/marble2.jpg";
 
 const HeroBanner = () => {
   // const { scrollY } = useScroll();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 640);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const ref = useRef<HTMLElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
+
   const yPos = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
 
   // useEffect(() => {
@@ -38,16 +53,29 @@ const HeroBanner = () => {
           className="relative overflow-hidden bg-black w-screen mb-10 pt-24"
           style={{ height: "90vh" }}
         >
-          <motion.div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${heroBanner})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              y: yPos,
-            }}
-          />
+          {!isMobile ? (
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${heroBannerDesktop})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                y: yPos,
+              }}
+            />
+          ) : (
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${heroBannerMobile})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                y: yPos,
+              }}
+            />
+          )}
           {/* <motion.div
             className="absolute inset-0 flex flex-col justify-center items-center"
             style={{
@@ -85,29 +113,74 @@ const HeroBanner = () => {
           </motion.div> */}
           {/* <div className="absolute inset-0 bg-black opacity-50" />  */}
 
-          <div className="absolute inset-0 flex flex-col justify-center items-center -mt-10">
-            <h1
-              style={{
-                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-              }}
-              className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-32 sm:mx-10 md:-mt-10"
-            >
-              Embrace the Artistry
-            </h1>
-            <p
-              className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mt-8 text-center mx-10"
-              style={{
-                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
-              }}
-            >
-              As a permanent makeup artist and eyelash specialist, I am passionate about
-              helping you look and feel your best.
-              <br />
-              <br />
-              From impeccably voluminous lashes to meticulously crafted brows, I
-              am here to enhance your natural beauty and give you the confidence
-              you deserve.
-            </p>
+          <div className="absolute inset-0 flex flex-col justify-center items-center -mt-2">
+            {!isMobile ? (
+              <>
+                <h2
+                  style={{
+                    textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                  }}
+                  className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-32 sm:mx-10 md:-mt-10"
+                >
+                  Embrace the Artistry
+                </h2>
+                <p
+                  className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-2xl xl:text-2xl mt-14 text-center mx-10 md:mx-16"
+                  style={{
+                    textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
+                  }}
+                >
+                  As a permanent makeup artist and eyelash specialist, I am
+                  passionate about helping you look and feel your best.
+                  <br />
+                  <br />
+                  From impeccably voluminous lashes to meticulously crafted
+                  brows, I am here to enhance your natural beauty and give you
+                  the confidence you deserve.
+                </p>
+              </>
+            ) : (
+              <>
+                <div style={{ position: "relative" }}>
+                  {/* <h2
+                    style={{
+                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                    }}
+                    className="font-london text-5xl sm:text-6xl text-pink-200 text-center mx-32 sm:mx-10 md:-mt-10 tracking-wide leading-snug"
+                  >
+                    Embrace
+                    <br />
+                    the
+                    <br />
+                    Artistry
+                  </h2> */}
+                  <h2
+                    style={{
+                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                      // transform: "rotate(-45deg)",
+                      // transformOrigin: "50% 50%",
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      margin: "-100px 0 0 -100px",
+                      width: "210px",
+                      height: "210px",
+                      backgroundColor: "#000",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="font-london text-5xl sm:text-6xl tracking-wide leading-snug pb-1 text-pink-200"
+                  >
+                    Embrace
+                    <br />
+                    the
+                    <br />
+                    Artistry
+                  </h2>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </header>
@@ -115,9 +188,33 @@ const HeroBanner = () => {
       <h2 className="pt-12 px-10 text-center mx-auto text-4xl font-cursive tracking-tight leading-none md:text-5xl lg:text-6xl xl:text-7xl text-white">
         Radiate Confidence
       </h2>
-      <h3 className="pt-1 pb-12 px-10 text-center mx-auto mb-6 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
-        "Enhance Your Look with Expert Touches"
-      </h3>
+      {!isMobile ? (
+        <>
+          <h3 className="pt-1 pb-12 px-10 text-center mx-auto mb-6 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
+            "Enhance Your Look with Expert Touches"
+          </h3>
+        </>
+      ) : (
+        <>
+          <h3 className="pt-1 pb-12 px-10 text-center mx-auto text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
+            "Enhance Your Look with Expert Touches"
+          </h3>
+          <p
+            className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-36  text-center mx-10"
+            style={{
+              textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
+            }}
+          >
+            As a permanent makeup artist and eyelash specialist, I am passionate
+            about helping you look and feel your best.
+            <br />
+            <br />
+            From impeccably voluminous lashes to meticulously crafted brows, I
+            am here to enhance your natural beauty and give you the confidence
+            you deserve.
+          </p>
+        </>
+      )}
     </>
   );
 };
