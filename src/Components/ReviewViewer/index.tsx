@@ -224,7 +224,7 @@ const ReviewViewer = () => {
             </p>
           </div>
 
-          <div className="lg:col-span-2 lg:mx-0">
+          <div className="lg:col-span-2 lg:mx-0 mt-4 sm:mt-0">
             <ReviewCarousel reviews={reviews} />
           </div>
         </div>
