@@ -141,36 +141,31 @@ const HeroBanner = () => {
               </>
             ) : (
               <>
-                <div style={{ position: "relative" }}>
-                  {/* <h2
-                    style={{
-                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-                    }}
-                    className="font-london text-5xl sm:text-6xl text-pink-200 text-center mx-32 sm:mx-10 md:-mt-10 tracking-wide leading-snug"
-                  >
-                    Embrace
-                    <br />
-                    the
-                    <br />
-                    Artistry
-                  </h2> */}
+                <div style={{ 
+                  position: "relative",
+                  // top: "50%",
+                  // left: "50%",
+                  margin: "auto",
+                  width: "200px",
+                  height: "200px",
+                  backgroundColor: "#000",
+                }}>
                   <h2
                     style={{
                       textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-                      // transform: "rotate(-45deg)",
-                      // transformOrigin: "50% 50%",
                       position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      margin: "-100px 0 0 -100px",
-                      width: "200px",
-                      height: "200px",
-                      backgroundColor: "#000",
+                      // top: "50%",
+                      // left: "50%",
+                      margin: "auto",
+                      // width: "200px",
+                      // height: "200px",
+                      // backgroundColor: "#000",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "100%",
                     }}
-                    className="font-london text-5xl sm:text-6xl tracking-wide leading-snug pb-3 text-pink-200"
+                    className="font-london text-5xl sm:text-6xl tracking-wide leading-snug text-pink-200"
                   >
                     Embrace
                     <br />
