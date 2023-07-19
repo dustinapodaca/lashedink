@@ -170,7 +170,7 @@ const HeroBanner = () => {
                       justifyContent: "center",
                       alignItems: "center",
                     }}
-                    className="font-london text-5xl sm:text-6xl tracking-wide leading-snug text-pink-200"
+                    className="font-london text-5xl sm:text-6xl tracking-wide items-center flex justify-center my-auto text-pink-200"
                   >
                     Embrace
                     <br />
