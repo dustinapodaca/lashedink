@@ -164,8 +164,9 @@ const HeroBanner = () => {
                       justifyContent: "center",
                       alignItems: "center",
                       width: "100%",
+                      height: "90%",
                     }}
-                    className="font-london text-5xl sm:text-6xl tracking-wide leading-snug text-pink-200"
+                    className="font-london text-5xl sm:text-6xl tracking-wide leading-tight text-pink-200"
                   >
                     Embrace
                     <br />
