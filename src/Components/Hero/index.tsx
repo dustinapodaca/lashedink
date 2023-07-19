@@ -163,14 +163,14 @@ const HeroBanner = () => {
                       top: "50%",
                       left: "50%",
                       margin: "-100px 0 0 -100px",
-                      width: "210px",
-                      height: "210px",
+                      width: "200px",
+                      height: "200px",
                       backgroundColor: "#000",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                     }}
-                    className="font-london text-5xl sm:text-6xl tracking-wide leading-snug pb-1 text-pink-200"
+                    className="font-london text-5xl sm:text-6xl tracking-wide leading-snug text-pink-200"
                   >
                     Embrace
                     <br />
