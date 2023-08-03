@@ -89,11 +89,54 @@ const HeroBanner = () => {
                 </p>
               </>
             ) : (
-              <div
+              // <div
+              //   style={{
+              //     position: "relative",
+              //     top: "-5%",
+              //     margin: "auto",
+              //     width: "200px",
+              //     height: "200px",
+              //     backgroundColor: "#000",
+              //     boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
+              //     display: "flex",
+              //     justifyContent: "center",
+              //     alignItems: "center",
+              //     textAlign: "center",
+              //     padding: "0",
+              //   }}
+              // >
+              //   <h2
+              //     className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
+              //     style={{
+              //       textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+              //       position: "absolute",
+              //       width: "100%",
+              //       height: "100%",
+              //       // display: "flex",
+              //       // justifyContent: "center",
+              //       // alignItems: "center",
+              //       margin: "0",
+              //       textAlign: "left",
+              //       paddingLeft: "22px",
+              //       top: "56%",
+              //       transform: "translateY(-50%)",
+              //       // lineHeight: "1.2",
+              //     }}
+              //   >
+              //     Embrace
+              //     <br />
+              //     the
+              //     <br />
+              //     Artistry
+              //   </h2>
+              // </div>
+              <span
+                className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
                 style={{
-                  position: "relative",
-                  top: "-5%",
-                  margin: "auto",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
                   width: "200px",
                   height: "200px",
                   backgroundColor: "#000",
@@ -101,35 +144,19 @@ const HeroBanner = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  textAlign: "center",
                   padding: "0",
+                  textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                  textAlign: "left",
+                  margin: "auto",
+                  lineHeight: "1.2",
                 }}
               >
-                <h2
-                  className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
-                  style={{
-                    textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    // display: "flex",
-                    // justifyContent: "center",
-                    // alignItems: "center",
-                    margin: "0",
-                    textAlign: "left",
-                    paddingLeft: "22px",
-                    top: "56%",
-                    transform: "translateY(-50%)",
-                    // lineHeight: "1.2",
-                  }}
-                >
-                  Embrace
-                  <br />
-                  the
-                  <br />
-                  Artistry
-                </h2>
-              </div>
+                Embrace
+                <br />
+                the
+                <br />
+                Artistry
+              </span>
             )}
           </div>
         </div>
