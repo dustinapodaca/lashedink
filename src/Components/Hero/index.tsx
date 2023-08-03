@@ -101,7 +101,6 @@ const HeroBanner = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  lineHeight: "1.2",
                 }}
               >
                 <h2
@@ -117,7 +116,6 @@ const HeroBanner = () => {
                     textAlign: "left",
                     margin: "0",
                     padding: "0",
-                    lineHeight: "1.2",
                   }}
                 >
                   Embrace
