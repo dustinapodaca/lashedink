@@ -134,9 +134,6 @@ const HeroBanner = () => {
                 className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
                 style={{
                   position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
                   width: "200px",
                   height: "200px",
                   backgroundColor: "#000",
