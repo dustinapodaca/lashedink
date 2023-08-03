@@ -45,20 +45,20 @@ const LayoutNav = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 pl-5 py-7 shadow-lg"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-7 shadow-lg"
         style={{ backgroundColor: "rgba(0, 0, 0)" }}
       >
         <div className="flex flex-row justify-between">
-          <Link to="/">
-            <motion.button
-              className="pl-2"
-              whileHover={{ scale: [null, 1.1, 1.1] }}
-              transition={{ duration: 0.3 }}
-              // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-            >
-              <img src={lashedBanner} alt="Lashed.Ink" className="w-48" />
-            </motion.button>
-          </Link>
+          <motion.button
+            className="ml-2"
+            whileHover={{ scale: [null, 1.1, 1.1] }}
+            transition={{ duration: 0.3 }}
+            // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+          >
+            <Link to="/">
+              <img src={lashedBanner} alt="Lashed.Ink" className="w-44" />
+            </Link>
+          </motion.button>
         </div>
         {!isMobile ? (
           <div className="flex flex-row justify-between items-center font-sans">

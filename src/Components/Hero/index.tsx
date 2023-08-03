@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import heroBannerMobile from "../../assets/images/marble3.jpg";
 import heroBannerDesktop from "../../assets/images/marble2.jpg";
 
+import heroSquare from "../../assets/images/lashedHeroSquare.png";
+
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
 // import heroImg2 from "../../assets/images/img9lashed.jpeg";
@@ -130,30 +132,50 @@ const HeroBanner = () => {
               //     Artistry
               //   </h2>
               // </div>
+
+
+              // <span
+              //   className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
+              //   style={{
+              //     position: "absolute",
+              //     width: "200px",
+              //     height: "200px",
+              //     backgroundColor: "#000",
+              //     boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
+              //     display: "flex",
+              //     justifyContent: "center",
+              //     alignItems: "center",
+              //     padding: "0",
+              //     textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+              //     textAlign: "left",
+              //     margin: "auto",
+              //     lineHeight: "1.2",
+              //   }}
+              // >
+              //   Embrace
+              //   <br />
+              //   the
+              //   <br />
+              //   Artistry
+              // </span>
               <span
-                className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
                 style={{
                   position: "absolute",
                   width: "200px",
                   height: "200px",
+                  backgroundImage: `url(${heroSquare})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
                   backgroundColor: "#000",
                   boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   padding: "0",
-                  textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-                  textAlign: "left",
                   margin: "auto",
-                  lineHeight: "1.2",
                 }}
-              >
-                Embrace
-                <br />
-                the
-                <br />
-                Artistry
-              </span>
+              />
             )}
           </div>
         </div>
