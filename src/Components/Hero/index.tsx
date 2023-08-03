@@ -98,9 +98,11 @@ const HeroBanner = () => {
                   height: "200px",
                   backgroundColor: "#000",
                   boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  // display: "flex",
+                  // justifyContent: "center",
+                  // alignItems: "center",
+                  textAlign: "center",
+                  padding: "0",
                 }}
               >
                 <h2
@@ -110,12 +112,15 @@ const HeroBanner = () => {
                     position: "absolute",
                     width: "100%",
                     height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
+                    // display: "flex",
+                    // justifyContent: "center",
+                    // alignItems: "center",
+                    margin: "auto",
                     textAlign: "left",
-                    margin: "0",
-                    padding: "0",
+                    paddingLeft: "22px",
+                    top: "56%",
+                    transform: "translateY(-50%)",
+                    lineHeight: "1.2",
                   }}
                 >
                   Embrace
