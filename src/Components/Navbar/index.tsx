@@ -232,7 +232,7 @@ const LayoutNav = () => {
               exit="closed"
             >
               <motion.nav
-                className="flex justify-evenly pb-6 items-center w-full"
+                className="flex justify-evenly pb-5 items-center w-full"
                 variants={{
                   open: {
                     y: 0,
@@ -262,7 +262,7 @@ const LayoutNav = () => {
               >
                 <Link to="/" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -272,7 +272,7 @@ const LayoutNav = () => {
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-6 items-center w-full pt-3"
+                className="flex justify-evenly pb-5 items-center w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -302,7 +302,7 @@ const LayoutNav = () => {
               >
                 <Link to="/about" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -312,7 +312,7 @@ const LayoutNav = () => {
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-6 items-center w-full pt-3"
+                className="flex justify-evenly pb-5 items-center w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -342,7 +342,7 @@ const LayoutNav = () => {
               >
                 <Link to="/services" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -352,7 +352,7 @@ const LayoutNav = () => {
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-6 items-center w-full pt-3"
+                className="flex justify-evenly pb-5 items-center w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -382,7 +382,7 @@ const LayoutNav = () => {
               >
                 <Link to="/contact" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -392,7 +392,7 @@ const LayoutNav = () => {
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-6 items-center w-full pt-3"
+                className="flex justify-evenly pb-5 items-center w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -422,7 +422,7 @@ const LayoutNav = () => {
               >
                 <Link to="/faq" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight text-white md:text-md text-2xl md:px-3 px-10 font-extrabold hover:drop-shadow-lg rounded-full"
+                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -432,7 +432,7 @@ const LayoutNav = () => {
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-6 items-center w-full pt-3"
+                className="flex justify-evenly pb-5 items-center w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -461,7 +461,7 @@ const LayoutNav = () => {
                 exit="closed"
               >
                 <motion.button
-                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-3xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-2xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
                   style={{
                     textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
                   }}
@@ -486,7 +486,7 @@ const LayoutNav = () => {
                 </motion.button>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-6 items-center w-full pt-3"
+                className="flex justify-evenly pb-5 items-center w-full"
                 variants={{
                   open: {
                     y: 0,
@@ -514,7 +514,7 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <ul className="mt-8 flex justify-center items-center gap-6 md:gap-8">
+                <ul className="mt-5 flex justify-center items-center gap-6 md:gap-8">
                   <li>
                     <a
                       href="https://www.facebook.com/lashed.ink/"
