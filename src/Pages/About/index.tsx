@@ -21,7 +21,8 @@ const About = () => {
   return (
     <>
       <motion.section
-        className="pt-2 overflow-hidden bg-black md:pt-10 sm:pt-16 2xl:pt-16 mt-24"
+        className="pt-2 overflow-hidden bg-black md:pt-10 sm:pt-16 2xl:pt-16"
+        style={{ marginTop: "90px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

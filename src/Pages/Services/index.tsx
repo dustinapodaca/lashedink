@@ -37,8 +37,9 @@ const Services = () => {
 
   return (
     <>
-      <motion.section 
-        className="h-full bg-black mt-24" 
+      <motion.section
+        className="h-full bg-black"
+        style={{ marginTop: "90px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

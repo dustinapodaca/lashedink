@@ -53,7 +53,8 @@ const FAQ = () => {
   return (
     <>
       <motion.section
-        className="w-full mt-24 mb-10 md:mb-16"
+        className="w-full mb-10 md:mb-16"
+        style={{ marginTop: "90px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
