@@ -46,3 +46,89 @@ input:focus {
 .noSelect:focus {
     outline: none !important;
 }
+
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while on iOS */
+    -ms-text-size-adjust: 100%; /* IE 9 */
+    -ms-overflow-style: scrollbar; /* IE 11 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Tap highlight color for iOS and Android */
+}
+
+body {
+    margin: 0;
+    font-family: var(--default-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Form element styles reset for better control */
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    color: inherit;
+}
+
+button,
+input { 
+    overflow: visible;
+}
+
+button,
+select { 
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/* Reset fieldset */
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Reset lists */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Accessibility hide for visually impaired */
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
