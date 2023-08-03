@@ -202,7 +202,7 @@ const LayoutNav = () => {
             />
             {/* MENU CONTENT */}
             <motion.div
-              className="font-sans tracking-tight rounded-b-lg p-10 pt-5 px-6 h-screen z-50 fixed left-0 right-0"
+              className="font-sans tracking-tight rounded-b-lg p-10 pt-7 px-6 h-screen z-50 fixed left-0 right-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
               variants={{
                 open: {
@@ -262,7 +262,7 @@ const LayoutNav = () => {
               >
                 <Link to="/" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -302,7 +302,7 @@ const LayoutNav = () => {
               >
                 <Link to="/about" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -342,7 +342,7 @@ const LayoutNav = () => {
               >
                 <Link to="/services" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -382,7 +382,7 @@ const LayoutNav = () => {
               >
                 <Link to="/contact" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -422,7 +422,7 @@ const LayoutNav = () => {
               >
                 <Link to="/faq" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-tight font-sans text-white text-xl px-10 font-bold hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
