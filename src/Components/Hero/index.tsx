@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import heroBannerMobile from "../../assets/images/marble3.jpg";
 import heroBannerDesktop from "../../assets/images/marble2.jpg";
 
-import heroSquare from "../../assets/images/lashedHeroSquare.png";
+import heroSquare from "../../assets/images/heroSquare.png";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
@@ -35,9 +35,9 @@ const HeroBanner = () => {
 
   return (
     <>
-      <header className="mt-24" ref={ref}>
+      <header style={{marginTop: "90px"}} ref={ref}>
         <div
-          className="relative overflow-hidden bg-black w-screen mb-10 pt-24"
+          className="relative overflow-hidden bg-black w-screen mb-10"
           style={{ height: "90vh" }}
         >
           {!isMobile ? (
@@ -64,7 +64,7 @@ const HeroBanner = () => {
             />
           )}
 
-          <div className="absolute inset-0 flex flex-col justify-center items-center -mt-2">
+          <div className="absolute inset-0 flex flex-col justify-center items-center">
             {!isMobile ? (
               <>
                 <h2
@@ -133,34 +133,10 @@ const HeroBanner = () => {
               //   </h2>
               // </div>
 
-
-              // <span
-              //   className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
-              //   style={{
-              //     position: "absolute",
-              //     width: "200px",
-              //     height: "200px",
-              //     backgroundColor: "#000",
-              //     boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
-              //     display: "flex",
-              //     justifyContent: "center",
-              //     alignItems: "center",
-              //     padding: "0",
-              //     textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-              //     textAlign: "left",
-              //     margin: "auto",
-              //     lineHeight: "1.2",
-              //   }}
-              // >
-              //   Embrace
-              //   <br />
-              //   the
-              //   <br />
-              //   Artistry
-              // </span>
-              <span
+              <div
                 style={{
                   position: "absolute",
+                  top: "30%",
                   width: "200px",
                   height: "200px",
                   backgroundImage: `url(${heroSquare})`,
@@ -169,9 +145,6 @@ const HeroBanner = () => {
                   backgroundRepeat: "no-repeat",
                   backgroundColor: "#000",
                   boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
                   padding: "0",
                   margin: "auto",
                 }}
