@@ -27,7 +27,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
 
   return (
     <details className="group [&_summary::-webkit-details-marker]:hidden">
-      <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 bg-zinc-900 border border-pink-300 text-zinc-300">
+      <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 bg-zinc-900 border border-pink-300 text-zinc-200">
         <h2 className="font-medium">{question}</h2>
         <svg
           className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
@@ -46,7 +46,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
       </summary>
 
       {answer && (
-        <div className="mt-4 px-4 -mb-5 leading-relaxed text-gray-700 dark:text-gray-200">
+        <div className="mt-5 px-4 -mb-3 leading-relaxed text-white">
           {renderParagraphs(answer)}
         </div>
       )}
