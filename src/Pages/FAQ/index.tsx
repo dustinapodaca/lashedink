@@ -43,6 +43,11 @@ const faqData = [
 
 const FAQ = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
@@ -74,8 +79,14 @@ const FAQ = () => {
           </h2>
         )}
         <div className="font-sans space-y-4 px-6 md:px-10 lg:px-20 xl:px-28 pt-12">
-          {faqData.map((faq) => (
-            <FAQItem key={faq.id} question={faq.q} answer={faq.a} />
+          {faqData.map((faq, index) => (
+            <FAQItem
+              key={faq.id}
+              question={faq.q}
+              answer={faq.a}
+              open={openIndex === index}
+              onToggle={() => handleToggle(index)}
+            />
           ))}
         </div>
       </motion.section>
