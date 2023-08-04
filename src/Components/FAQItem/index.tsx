@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 interface FAQItemProps {
   question: string;
   answer: string;
@@ -11,6 +13,11 @@ interface Paragraph {
 }
 
 const FAQItem = ({ question, answer, open, onToggle }: FAQItemProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    onToggle();
+  };
 
   const renderParagraphs = (content: string) => {
     const paragraphs: Paragraph[] = content
@@ -30,7 +37,8 @@ const FAQItem = ({ question, answer, open, onToggle }: FAQItemProps) => {
 
   return (
     <div
-      onClick={onToggle}
+      ref={ref}
+      onClick={handleClick}
       className="group [&_summary::-webkit-details-marker]:hidden"
     >
       <div

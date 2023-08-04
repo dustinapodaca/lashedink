@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import heroBannerMobile from "../../assets/images/marble3.jpg";
 import heroBannerDesktop from "../../assets/images/marble2.jpg";
 
-import heroSquare from "../../assets/images/heroSquareIcon.png";
+import heroSquare from "../../assets/images/heroSquare.png";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
@@ -35,7 +35,7 @@ const HeroBanner = () => {
 
   return (
     <>
-      <header style={{marginTop: "90px"}} ref={ref}>
+      <header style={{ marginTop: "90px" }} ref={ref}>
         <div
           className="relative overflow-hidden bg-black w-screen mb-10"
           style={{ height: "90vh" }}
@@ -67,15 +67,38 @@ const HeroBanner = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center">
             {!isMobile ? (
               <>
-                <h2
-                  className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-32 sm:mx-10 md:-mt-10"
+                <div
                   style={{
-                    textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                    position: "relative",
+                    backgroundColor: "#000",
+                    boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                    padding: "0",
                   }}
+                  className="sm:w-[530px] sm:h-[120px] md:w-[630px] md:h-[140px] xl:w-[820px] xl:h-[160px] sm:left-0 md:left-0 lg:left-44 xl:left-56"
                 >
-                  Embrace the Artistry
-                </h2>
-                <p
+                  <h2
+                    className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-32 sm:mx-10"
+                    style={{
+                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "-10px 0 0 0",
+                      textAlign: "center",
+                    }}
+                  >
+                    Embrace the Artistry
+                  </h2>
+                </div>
+
+                {/* <p
                   className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-2xl xl:text-2xl mt-14 text-center mx-10 md:mx-16"
                   style={{
                     textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
@@ -88,51 +111,9 @@ const HeroBanner = () => {
                   From impeccably voluminous lashes to meticulously crafted
                   brows, I am here to enhance your natural beauty and give you
                   the confidence you deserve.
-                </p>
+                </p> */}
               </>
             ) : (
-              // <div
-              //   style={{
-              //     position: "relative",
-              //     top: "-5%",
-              //     margin: "auto",
-              //     width: "200px",
-              //     height: "200px",
-              //     backgroundColor: "#000",
-              //     boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
-              //     display: "flex",
-              //     justifyContent: "center",
-              //     alignItems: "center",
-              //     textAlign: "center",
-              //     padding: "0",
-              //   }}
-              // >
-              //   <h2
-              //     className="font-london text-5xl sm:text-6xl tracking-wide text-pink-200"
-              //     style={{
-              //       textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-              //       position: "absolute",
-              //       width: "100%",
-              //       height: "100%",
-              //       // display: "flex",
-              //       // justifyContent: "center",
-              //       // alignItems: "center",
-              //       margin: "0",
-              //       textAlign: "left",
-              //       paddingLeft: "22px",
-              //       top: "56%",
-              //       transform: "translateY(-50%)",
-              //       // lineHeight: "1.2",
-              //     }}
-              //   >
-              //     Embrace
-              //     <br />
-              //     the
-              //     <br />
-              //     Artistry
-              //   </h2>
-              // </div>
-
               <div
                 style={{
                   position: "absolute",
@@ -159,9 +140,30 @@ const HeroBanner = () => {
       </h2>
       {!isMobile ? (
         <>
-          <h3 className="pt-1 pb-12 px-10 text-center mx-auto mb-6 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
+          <h3 className="pt-1 px-10 text-center mx-auto mb-14 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
             "Enhance Your Look with Expert Touches"
           </h3>
+
+          <div className="flex flex-row justify-evenly items-center mb-10">
+            <p
+              className="font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96"
+              style={{
+                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
+              }}
+            >
+              As a permanent makeup artist and eyelash specialist, I am
+              passionate about helping you look and feel your best.
+            </p>
+            <p
+              className="font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96"
+              style={{
+                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
+              }}
+            >
+              From voluminous lashes to meticulously crafted brows, I help give
+              you the confidence you deserve.
+            </p>
+          </div>
         </>
       ) : (
         <>
