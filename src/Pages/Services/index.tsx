@@ -15,7 +15,7 @@ import {
 } from "../../Data/imagesData";
 
 import servicesHeader from "../../assets/images/marble.jpg";
-import headerIcon from "../../assets/images/services4.png";
+import headerIcon from "../../assets/images/servicesIcon.png";
 
 import browIcon from "../../assets/images/img11lashed.jpeg";
 import lashIcon from "../../assets/images/img9lashed.jpeg";
