@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import heroBannerMobile from "../../assets/images/marble3.jpg";
 import heroBannerDesktop from "../../assets/images/marble2.jpg";
 
-import heroSquare from "../../assets/images/heroSquareIcon.png";
+import heroSquare from "../../assets/images/heroSquare.png";
 
 // import heroImg from "../../assets/images/hero2.png";
 // import heroImg2 from "../../assets/images/hero1.png";
