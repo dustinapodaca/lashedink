@@ -55,7 +55,7 @@ const LayoutNav = () => {
             transition={{ duration: 0.3 }}
             // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
           >
-            <Link to="/">
+            <Link to="/" onClick={handleClickLink}>
               <img src={lashedBanner} alt="Lashed.Ink" className="w-44" />
             </Link>
           </motion.button>

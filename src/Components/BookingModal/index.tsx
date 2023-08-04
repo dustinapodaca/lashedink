@@ -78,9 +78,9 @@ const BookingModal = () => {
               right: 0,
               bottom: 0,
               display: "flex",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
               justifyContent: "center",
               alignItems: "center",
-              background: "rgba(0, 0, 0, 0.8)",
               zIndex: 9999,
             }}
           >
@@ -89,17 +89,13 @@ const BookingModal = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
               style={{
-                paddingLeft: "1.5rem",
-                paddingRight: "1.5rem",
-                paddingTop: "0.5rem",
-                paddingBottom: "0.5rem",
-                borderRadius: "0.5rem",
                 maxWidth: "100%",
                 maxHeight: "90%",
                 overflow: "auto",
               }}
+              className="mx-6 my-2 md:mx-20 lg:mx-32 xl:mx-56 xl:my-32 rounded-xl bg-black shadow-xl shadow-black"
             >
-              <div className="relative rounded-lg shadow dark:bg-zinc-900 px-2">
+              <div className="relative rounded-lg bg-black px-2">
                 <div className="flex items-center justify-between p-4 border-b rounded-t border-zinc-700">
                   <span></span>
                   {!isMobile ? (
@@ -127,7 +123,7 @@ const BookingModal = () => {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    className="text-zinc-400 bg-transparent hover:bg-zinc-200 hover:text-zinc-900 rounded-lg text-sm p-1.5 inline-flex items-center dark:hover:bg-zinc-600 dark:hover:text-white"
                   >
                     <svg
                       className="w-5 h-5"
@@ -155,7 +151,7 @@ const BookingModal = () => {
                       >
                         Are You a Candidate?
                       </h2>
-                      <p className="font-sans w-full text-zinc-500 italic text-sm lg:max-w-4xl text-right">
+                      <p className="font-sans w-full text-zinc-500 italic text-sm lg:max-w-3xl text-right">
                         Please be advised that we have a 24-hour cancellation
                         policy. If you need to cancel or reschedule your
                         appointment, please do so at least 24 hours in advance.
@@ -165,7 +161,7 @@ const BookingModal = () => {
                     </div>
                   ) : (
                     <>
-                      <p className="w-full text-zinc-500 italic text-sm lg:max-w-4xl text-center mb-3">
+                      <p className="w-full text-zinc-500 italic text-sm lg:max-w-3xl text-center mb-3">
                         Please be advised that we have a 24-hour cancellation
                         policy. If you need to cancel or reschedule your
                         appointment, please do so at least 24 hours in advance.
@@ -177,7 +173,7 @@ const BookingModal = () => {
                       </h2>
                     </>
                   )}
-
+                  <hr className="w-full mt-5 mb-5 border-zinc-700" />
                   <p className="font-sans mb-4">
                     Permanent makeup, also known as micro-pigmentation, is a
                     cosmetic tattooing technique that involves the implantation
@@ -236,6 +232,7 @@ const BookingModal = () => {
                       Permanent Makeup Preparation
                     </h2>
                   )}
+                  <hr className="w-full mt-5 mb-4 border-zinc-700" />
                   <p className="font-sans mb-4">
                     All permanent makeup appointments must be approved by the
                     artist before scheduling to ensure you are a good candidate.
@@ -272,7 +269,9 @@ const BookingModal = () => {
                     </li>
                   </ul>
 
-                  <p className="font-sans mb-4 font-extrabold">For Lip Blush Only:</p>
+                  <p className="font-sans mb-4 font-extrabold">
+                    For Lip Blush Only:
+                  </p>
 
                   <p className="font-sans mb-4">
                     If you have the simplex virus herpes, the lip blush
@@ -291,7 +290,7 @@ const BookingModal = () => {
                 <div className="flex justify-center items-center py-6 space-x-2 rounded-b border-t border-zinc-700">
                   <button
                     onClick={closeModal}
-                    className="font-sans tracking-tight font-extrabold flex items-center justify-center bg-black hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white rounded-lg text-white text-xl px-5 py-2.5 dark:bg-black dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
+                    className="font-sans tracking-tight font-extrabold flex items-center justify-center bg-zinc-900 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white rounded-lg text-white text-xl px-5 py-2.5 dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
                     type="button"
                   >
                     Proceed to Services
@@ -311,16 +310,6 @@ const BookingModal = () => {
                     </svg>
                   </button>
                 </div>
-
-                {/* <div className="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                  <button
-                    onClick={closeModal}
-                    type="button"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    Book Now
-                  </button>
-                </div> */}
               </div>
             </motion.div>
           </motion.div>
