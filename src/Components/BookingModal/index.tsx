@@ -43,7 +43,7 @@ const BookingModal = () => {
   return (
     <>
       <motion.button
-        className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 pb-1 font-cursive text-3xl rounded-lg shadow-lg"
+        className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 pb-1 font-cursive text-xl md:text-3xl rounded-lg shadow-lg"
         style={{
           textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
         }}

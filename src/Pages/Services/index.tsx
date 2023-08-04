@@ -15,7 +15,7 @@ import {
 } from "../../Data/imagesData";
 
 import servicesHeader from "../../assets/images/marble.jpg";
-import headerIcon from "../../assets/images/img1-2lashed.png";
+import headerIcon from "../../assets/images/servicesIcon.png";
 
 import browIcon from "../../assets/images/img11lashed.jpeg";
 import lashIcon from "../../assets/images/img9lashed.jpeg";
@@ -63,19 +63,19 @@ const Services = () => {
               <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z" />
             </svg>
           </div>
-          <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="px-4 py-16 pb-16 md:pb-20 lg:pb-24 mx-auto md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-screen-lg text-center sm:mx-auto">
               <a
                 href="/"
                 aria-label="View"
-                className="inline-block mb-5 rounded-full sm:mx-auto"
+                className="inline-block sm:mx-auto"
               >
-                <div className="flex items-center justify-center w-28 h-28 mb-4 rounded-full">
+                <div className="flex items-center justify-center rounded-full">
                   {!isMobile ? (
                     <img
                       src={headerIcon}
                       alt="headerIcon"
-                      className="rounded-full mt-20 mb-16"
+                      className="rounded-full w-40 mb-6 mt-2"
                       style={{
                         mixBlendMode: "lighten",
                       }}
@@ -84,7 +84,7 @@ const Services = () => {
                     <img
                       src={headerIcon}
                       alt="headerIcon"
-                      className="rounded-full w-24 h-24"
+                      className="rounded-full w-24 mb-5 -mt-1"
                       style={{
                         mixBlendMode: "lighten",
                       }}
@@ -135,7 +135,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center mt-10 mb-2">
           {isMobile && <BookingModal />}
         </div>
 

@@ -202,7 +202,7 @@ const LayoutNav = () => {
             />
             {/* MENU CONTENT */}
             <motion.div
-              className="font-sans tracking-tight rounded-b-lg p-10 pt-7 px-6 h-screen z-50 fixed left-0 right-0"
+              className="font-sans tracking-tight rounded-b-lg p-10 pt-6 px-6 h-screen z-50 fixed left-0 right-0"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
               variants={{
                 open: {
