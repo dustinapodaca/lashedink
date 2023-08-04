@@ -144,7 +144,7 @@ const HeroBanner = () => {
             "Enhance Your Look with Expert Touches"
           </h3>
 
-          <div className="flex flex-row justify-between items-center mb-10">
+          <div className="flex flex-row justify-evenly items-center mb-10">
             <p
               className="font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96"
               style={{
