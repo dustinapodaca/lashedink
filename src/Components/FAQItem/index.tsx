@@ -51,10 +51,10 @@ const FAQItem = ({ question, answer, open, onToggle }: FAQItemProps) => {
       content: paragraph,
     }));
     return paragraphs.map((paragraph) => (
-      <motion.p key={paragraph.id} variants={contentVariants}>
-        <br />
+      <motion.p key={paragraph.id} variants={contentVariants} className="pb-3 pt-5">
         {paragraph.content}
         <br />
+
       </motion.p>
     ));
   };
@@ -66,8 +66,10 @@ const FAQItem = ({ question, answer, open, onToggle }: FAQItemProps) => {
       className="group [&_summary::-webkit-details-marker]:hidden"
     >
       <div
-        className={`flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 border border-pink-300 ${
-          open ? "text-pink-300 bg-zinc-900" : "text-white bg-black"
+        className={`flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 border ${
+          open
+            ? "text-pink-300 bg-zinc-900 border-pink-200"
+            : "text-white bg-black border-pink-300"
         }`}
       >
         <h2 className="font-medium">{question}</h2>
