@@ -70,15 +70,15 @@ const FAQ = () => {
         exit={{ opacity: 0 }}
       >
         {!isMobile ? (
-          <h2 className="font-london pt-12 text-5xl text-white text-center">
+          <h2 className="font-london pt-12 text-5xl text-white text-center mb-12">
             Frequently Asked Questions
           </h2>
         ) : (
-          <h2 className="font-london pt-4 text-4xl text-white text-center">
+          <h2 className="font-london pt-4 text-4xl text-white text-center mb-12">
             Frequently <br /> Asked <br /> Questions
           </h2>
         )}
-        <div className="font-sans space-y-4 px-6 md:px-10 lg:px-20 xl:px-28 pt-12">
+        <div className="font-sans space-y-4 px-6 md:px-10 lg:px-20 xl:px-28">
           {faqData.map((faq, index) => (
             <FAQItem
               key={faq.id}
