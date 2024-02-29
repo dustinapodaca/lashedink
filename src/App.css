@@ -15,3 +15,21 @@
 .font-cursive {
   font-family: 'Mark My Words';
 }
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('./assets/fonts/GeneralSans-Regular.ttf') format('truetype');
+}
+
+.font-sans {
+  font-family: 'General Sans';
+}
+
+@font-face {
+  font-family: 'General Sans Light';
+  src: url('./assets/fonts/GeneralSans-Light.ttf') format('truetype');
+}
+
+.font-sanslight {
+  font-family: 'General Sans Light';
+}

@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     fontFamily: {
       london: ['"Old London"', 'serif'],
-      sans: ['"Manrope"', 'sans-serif'],
+      sans: ['"General Sans"', 'sans-serif'],
+      sanslight : ['"General Sans Light"'],
     },
     extend: {},
   },

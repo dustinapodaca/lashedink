@@ -232,7 +232,7 @@ const BookingModal = () => {
                       Permanent Makeup Preparation
                     </h2>
                   )}
-                  <hr className="w-full mt-5 mb-4 border-zinc-700" />
+                  <hr className="w-full mt-6 md:mt-5 mb-4 border-zinc-700" />
                   <p className="font-sans mb-4">
                     All permanent makeup appointments must be approved by the
                     artist before scheduling to ensure you are a good candidate.
@@ -290,10 +290,10 @@ const BookingModal = () => {
                 <div className="flex justify-center items-center py-6 space-x-2 rounded-b border-t border-zinc-700">
                   <button
                     onClick={closeModal}
-                    className="font-sans tracking-tight font-extrabold flex items-center justify-center bg-zinc-900 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white rounded-lg text-white text-xl px-5 py-2.5 dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
+                    className="font-sans tracking-normal font-extrabold flex items-center justify-center bg-zinc-900 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white rounded-lg text-white text-xl px-5 py-2.5 dark:hover:bg-white dark:hover:text-black dark:focus:ring-2 dark:focus:ring-offset-2 dark:focus:ring-offset-black dark:focus:ring-white"
                     type="button"
                   >
-                    Proceed to Services
+                    Service Menu
                     <svg
                       className="w-4 h-4 ml-2"
                       fill="none"
