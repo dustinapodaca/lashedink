@@ -68,8 +68,8 @@ const FAQItem = ({ question, answer, open, onToggle }: FAQItemProps) => {
       <div
         className={`flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 border ${
           open
-            ? "text-pink-300 bg-zinc-900 border-pink-200"
-            : "text-white bg-black border-pink-300"
+            ? "text-pink-700 bg-pink-50 border-pink-200"
+            : "text-black bg-white border-zinc-300"
         }`}
       >
         <h2 className="font-medium">{question}</h2>
@@ -98,7 +98,7 @@ const FAQItem = ({ question, answer, open, onToggle }: FAQItemProps) => {
             animate="open"
             exit="closed"
             variants={faqVariants}
-            className="px-4 leading-relaxed text-white"
+            className="px-4 leading-relaxed text-black"
           >
             {renderParagraphs(answer)}
           </motion.div>

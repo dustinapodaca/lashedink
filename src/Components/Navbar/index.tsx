@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import lashedBanner from '../../assets/images/lashedinkbannerblack.png';
+import lashedBanner from '../../assets/images/LashedCenter.png';
 
 const LayoutNav = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -45,97 +45,109 @@ const LayoutNav = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-7 shadow-lg"
-        style={{ backgroundColor: "rgba(0, 0, 0)" }}
+        className="fixed top-0 left-0 right-0 z-50 px-3 py-7 border-b-2"
+        style={{ backgroundColor: "rgba(255, 255, 255)" }}
       >
-        <div className="flex flex-row justify-between">
-          <motion.button
-            className="ml-2"
-            whileHover={{ scale: [null, 1.1, 1.1] }}
-            transition={{ duration: 0.3 }}
-            // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-          >
-            <Link to="/" onClick={handleClickLink}>
-              <img src={lashedBanner} alt="Lashed.Ink" className="w-44" />
-            </Link>
-          </motion.button>
-        </div>
         {!isMobile ? (
-          <div className="flex flex-row justify-between items-center font-sans">
-            <Link to="/">
+          <div className="flex flex-row justify-evenly items-center font-sanslight tracking-tight">
+            <div>
+              <Link to="/">
+                <motion.button
+                  className="text-black md:text-md text-xl px-3 font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  HOME
+                </motion.button>
+              </Link>
+              <Link to="/services">
+                <motion.button
+                  className="text-black md:text-md text-xl px-3 font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  SERVICES
+                </motion.button>
+              </Link>
               <motion.button
-                className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
+                className="text-black md:text-md text-xl px-3 font-light"
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                onClick={() => toggleOpenBooking()}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                BOOK
+              </motion.button>
+            </div>
+            <div className="flex flex-row justify-between">
+              <motion.button
                 whileHover={{ scale: [null, 1.1, 1.1] }}
                 transition={{ duration: 0.3 }}
                 // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
               >
-                Home
+                <Link to="/" onClick={handleClickLink}>
+                  <img src={lashedBanner} alt="Lashed.Ink" className="w-48" />
+                </Link>
               </motion.button>
-            </Link>
-            <Link to="/about">
-              <motion.button
-                className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
-                whileHover={{ scale: [null, 1.1, 1.1] }}
-                transition={{ duration: 0.3 }}
-                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+            </div>
+            <div>
+              <Link to="/about">
+                <motion.button
+                  className="text-black md:text-md text-xl px-3 font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  ABOUT
+                </motion.button>
+              </Link>
+              <Link to="/contact">
+                <motion.button
+                  className="text-black md:text-md text-xl px-3 font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  CONTACT
+                </motion.button>
+              </Link>
+              <Link to="/faq">
+                <motion.button
+                  className="text-black md:text-md text-xl px-3 font-light hover:drop-shadow-lg rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  FAQ
+                </motion.button>
+              </Link>
+              {/* <motion.button
+                className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-3xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                style={{
+                  textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
+                }}
+                initial={{ backgroundColor: "white", color: "black" }}
+                whileHover={{
+                  // backgroundColor: "pink",
+                  // color: "white",
+                  scale: 1.15,
+                  transition: {
+                    duration: 0.2,
+                    ease: "easeInOut",
+                    delay: 0,
+                    backgroundColor: "pink",
+                    color: "white",
+                  },
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                onClick={() => toggleOpenBooking()}
               >
-                About
-              </motion.button>
-            </Link>
-            <Link to="/services">
-              <motion.button
-                className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
-                whileHover={{ scale: [null, 1.1, 1.1] }}
-                transition={{ duration: 0.3 }}
-                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-              >
-                Services
-              </motion.button>
-            </Link>
-            <Link to="/contact">
-              <motion.button
-                className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
-                whileHover={{ scale: [null, 1.1, 1.1] }}
-                transition={{ duration: 0.3 }}
-                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-              >
-                Contact
-              </motion.button>
-            </Link>
-            <Link to="/faq">
-              <motion.button
-                className="text-white md:text-md text-xl px-4 font-light hover:drop-shadow-lg rounded-full"
-                whileHover={{ scale: [null, 1.1, 1.1] }}
-                transition={{ duration: 0.3 }}
-                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-              >
-                FAQ
-              </motion.button>
-            </Link>
-            <motion.button
-              className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-3xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
-              style={{
-                textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
-              }}
-              initial={{ backgroundColor: "white", color: "black" }}
-              whileHover={{
-                // backgroundColor: "pink",
-                // color: "white",
-                scale: 1.15,
-                transition: {
-                  duration: 0.2,
-                  ease: "easeInOut",
-                  delay: 0,
-                  backgroundColor: "pink",
-                  color: "white",
-                },
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              onClick={() => toggleOpenBooking()}
-            >
-              Book Now
-            </motion.button>
+                Book Now
+              </motion.button> */}
+            </div>
           </div>
         ) : (
           <button
@@ -262,7 +274,7 @@ const LayoutNav = () => {
               >
                 <Link to="/" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-black text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -302,7 +314,7 @@ const LayoutNav = () => {
               >
                 <Link to="/about" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-black text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -342,7 +354,7 @@ const LayoutNav = () => {
               >
                 <Link to="/services" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-black text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -382,7 +394,7 @@ const LayoutNav = () => {
               >
                 <Link to="/contact" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-black text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -422,7 +434,7 @@ const LayoutNav = () => {
               >
                 <Link to="/faq" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-white text-xl px-10 hover:drop-shadow-lg rounded-full"
+                    className="tracking-normal font-sans text-black text-xl px-10 hover:drop-shadow-lg rounded-full"
                     whileHover={{ scale: [null, 1.4, 1.3] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -461,7 +473,7 @@ const LayoutNav = () => {
                 exit="closed"
               >
                 <motion.button
-                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-2xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-2xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
                   style={{
                     textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
                   }}
@@ -520,7 +532,7 @@ const LayoutNav = () => {
                       href="https://www.facebook.com/lashed.ink/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-pink-300"
+                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-black dark:hover:text-pink-300"
                       onClick={handleClickLink}
                     >
                       <span className="sr-only">Facebook</span>
@@ -544,7 +556,7 @@ const LayoutNav = () => {
                       href="https://www.instagram.com/lashed.ink/?hl=en"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-pink-300"
+                      className="text-gray-700 transition hover:text-gray-700/75 dark:text-black dark:hover:text-pink-300"
                       onClick={handleClickLink}
                     >
                       <span className="sr-only">Instagram</span>
@@ -568,7 +580,7 @@ const LayoutNav = () => {
                       href="https://www.tiktok.com/@lashed.ink"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-white transition hover:text-zinc-700 dark:text-white dark:hover:text-pink-300"
+                      className="text-black transition hover:text-zinc-700 dark:text-black dark:hover:text-pink-300"
                       onClick={handleClickLink}
                     >
                       <span className="sr-only">TikTok</span>
@@ -591,7 +603,7 @@ const LayoutNav = () => {
                       href="https://www.google.com/search?q=lashed+ink&hl=en"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-white transition hover:text-zinc-700 dark:text-white dark:hover:text-pink-300"
+                      className="text-black transition hover:text-zinc-700 dark:text-black dark:hover:text-pink-300"
                       onClick={handleClickLink}
                     >
                       <span className="sr-only">Google Business</span>
@@ -612,7 +624,7 @@ const LayoutNav = () => {
                 </ul>
               </motion.nav>
               {/* <div className="flex justify-center">
-                <button className="mx-auto bg-black text-white py-2 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2">
+                <button className="mx-auto bg-black text-black py-2 px-6 font-poiret text-xl rounded-lg shadow-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2">
                   Book Now
                 </button>
               </div> */}

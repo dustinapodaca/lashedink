@@ -63,22 +63,24 @@ const FAQ = () => {
   return (
     <>
       <motion.section
-        className="w-full mb-10 md:mb-16"
-        style={{ marginTop: "90px" }}
+        className="w-full max-w-[1200px] m-auto mb-10 md:mb-16 bg-white"
+        style={{ marginTop: "180px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
         {!isMobile ? (
-          <h2 className="font-london pt-12 text-5xl text-white text-center mb-12">
-            Frequently Asked Questions
-          </h2>
+          <div className="font-sanslight my-10 py-8 text-2xl text-center tracking-tight flex flex-row justify-center max-w-[460px] m-auto border-y border-pink-300 rounded-lg">
+            <h2 className="w-full">
+              FREQUENTLY ASKED QUESTIONS
+            </h2>
+          </div>
         ) : (
-          <h2 className="font-london pt-4 text-4xl text-white text-center mb-12">
+          <h2 className="font-sans pt-4 text-4xl text- text-center mb-12">
             Frequently <br /> Asked <br /> Questions
           </h2>
         )}
-        <div className="font-sans space-y-4 px-6 md:px-10 lg:px-20 xl:px-28">
+        <div className="font-sans text-black space-y-4 px-6 md:px-8 lg:px-28 xl:px-28">
           {faqData.map((faq, index) => (
             <FAQItem
               key={faq.id}
