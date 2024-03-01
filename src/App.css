@@ -33,3 +33,12 @@
 .font-sanslight {
   font-family: 'General Sans Light';
 }
+
+@font-face {
+  font-family: 'General Sans Bold';
+  src: url('./assets/fonts/GeneralSans-Bold.ttf') format('truetype');
+}
+
+.font-sansbold {
+  font-family: 'General Sans Bold';
+}

@@ -66,10 +66,10 @@ const FAQItem = ({ question, answer, open, onToggle }: FAQItemProps) => {
       className="group [&_summary::-webkit-details-marker]:hidden"
     >
       <div
-        className={`flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 border ${
+        className={`flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 ${
           open
-            ? "text-pink-700 bg-pink-50 border-pink-200"
-            : "text-black bg-white border-zinc-300"
+            ? "text-pink-700 bg-white border-pink-200 border-y"
+            : "text-black bg-white border-pink-300 border-y"
         }`}
       >
         <h2 className="font-medium">{question}</h2>
