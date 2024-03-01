@@ -39,7 +39,7 @@ const HeroBanner = () => {
       <header style={{ marginTop: "90px" }} ref={ref}>
         <div
           className="relative overflow-hidden bg-white w-screen mb-10"
-          style={{ height: "56vh" }}
+          style={{ height: "64vh" }}
         >
           {!isMobile ? (
             <motion.div
@@ -68,7 +68,7 @@ const HeroBanner = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center">
             {!isMobile ? (
               <>
-                <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg mt-20 backdrop-blur-lg bg-white/50">
+                <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg mt-16 backdrop-blur-md bg-white/60">
                   {/* <h2 className="font-sanslight text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-pink-300 text-center tracking-tight">
                     COSMETIC ARTISTRY
                   </h2> */}
@@ -116,7 +116,7 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <h2 className="pt-16 px-10 text-center mx-auto text-4xl font-cursive tracking-tight leading-none md:text-5xl lg:text-6xl xl:text-7xl text-pink-400">
+      <h2 className="pt-16 px-10 text-center mx-auto text-3xl font-cursive tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl text-pink-400">
         Radiate Confidence
       </h2>
       {!isMobile ? (
@@ -125,12 +125,42 @@ const HeroBanner = () => {
             "Enhance Your Look with Expert Touches"
           </h3> */}
 
-          <div className="flex flex-row justify-center items-center mb-10 mt-10">
-            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-10 w-96">
+          <div className="flex flex-row justify-center mb-10 mt-16">
+            <p
+              className="font-sanslight border-zinc-300 border-y py-10 px-12 font-normal text-zinc-600 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-20 max-w-md rounded-lg"
+              style={{
+                backgroundColor: "hsla(0,0%,100%,1)",
+                backgroundImage: `radial-gradient(at 2% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 97% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 27% 9%, hsla(323,100%,99%,1) 0px, transparent 50%),
+                      radial-gradient(at 16% 91%, hsla(343,100%,98%,1) 0px, transparent 50%),
+                      radial-gradient(at 62% 4%, hsla(321,100%,97%,1) 0px, transparent 50%),
+                      radial-gradient(at 97% 30%, hsla(0,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 2% 28%, hsla(0,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 66% 87%, hsla(333,100%,96%,1) 0px, transparent 50%),
+                      radial-gradient(at 34% 83%, hsla(288,100%,95%,1) 0px, transparent 50%)`,
+              }}
+            >
               As a permanent makeup artist and eyelash specialist, I am
               passionate about helping you look and feel your best.
             </p>
-            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-10 w-96">
+
+            <p
+              className="font-sanslight border-zinc-300 border-y py-10 px-12 font-normal text-zinc-600 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-20 max-w-md rounded-lg"
+              style={{
+                backgroundColor: "hsla(0,0%,100%,1)",
+                backgroundImage: `radial-gradient(at 2% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 97% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 27% 9%, hsla(323,100%,99%,1) 0px, transparent 50%),
+                      radial-gradient(at 16% 91%, hsla(343,100%,98%,1) 0px, transparent 50%),
+                      radial-gradient(at 62% 4%, hsla(321,100%,97%,1) 0px, transparent 50%),
+                      radial-gradient(at 97% 30%, hsla(0,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 2% 28%, hsla(0,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 66% 87%, hsla(333,100%,96%,1) 0px, transparent 50%),
+                      radial-gradient(at 34% 83%, hsla(288,100%,95%,1) 0px, transparent 50%)`,
+              }}
+            >
+              {" "}
               From voluminous lashes to meticulously crafted brows, I help give
               you the confidence you deserve.
             </p>

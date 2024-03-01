@@ -27,7 +27,7 @@ const About = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 lg:pl-16 max-w-7xl">
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
               {isMobile ? (
@@ -44,7 +44,7 @@ const About = () => {
               {/* <p className="text-2xl italic font-bold mb-1 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
                 My name is <br />
               </p> */}
-              <h2 className="mt-6 font-sans tracking-tighter text-pink-500 text-center text-5xl md:text-6xl lg:text-6xl">
+              <h2 className="-mt-4 font-sans tracking-tighter text-pink-500 text-center text-5xl md:text-6xl lg:text-6xl">
                 Tatiana Herran
               </h2>
               {/* <p className="max-w-lg mt-3 text-xl leading-relaxed text-white md:mt-8">
@@ -55,19 +55,19 @@ const About = () => {
               <div className="w-full font-sans">
                 <p className="max-w-xl mt-2 text-lg leading-relaxed text-black md:mt-8">
                   I am a licensed esthetician specializing in permanent makeup
-                  and eyelash extensions in Denver, CO. I take pride in being
-                  recognized as one of the best beauty specialists, driven by my
-                  unwavering pursuit of perfection and a strong desire to ensure
-                  utmost satisfaction for all my clients. <br />
+                  and eyelash extensions in Denver, CO. My dedication to
+                  flawless results and client satisfaction has earned me
+                  recognition as a top beauty specialist. <br />
                   <br />
                   Connecting with individuals and helping them feel confident
                   through makeup artistry fuels my passion and growth in the
-                  beauty community. With over 4 years of experience, I possess
-                  the skills and expertise to create a range of stunning
-                  results, from natural and subtle to bold and dramatic. When
-                  you book an appointment with me, you can expect a personalized
-                  experience that enhances your natural beauty and accentuates
-                  your unique features. <br />
+                  beauty community. With over 5 years of experience and a proven
+                  track record of satisfied clients, I deliver the skills and
+                  expertise to create a range of stunning results, from natural
+                  to bold and dramatic. When you book an appointment
+                  with me, you can expect a personalized experience that
+                  enhances your natural beauty and accentuates your unique
+                  features. <br />
                   {/* Feel free to reach out to me and let's embark on a journey of
                   self-transformation and rediscovery together! */}
                 </p>

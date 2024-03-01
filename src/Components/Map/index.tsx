@@ -2,28 +2,23 @@ import SocialLinks from "../SocialLinks";
 
 const Map = () => {
   return (
-    <section className="bg-zinc-900">
-      <div className="container px-6 py-12 mx-auto pb-20">
-        <div>
-          <p
-            className="font-cursive text-pink-300 text-6xl text-center py-8 md:py-10"
-            style={{
-              textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-            }}
-          >
-            Have Questions?
+    <section className="bg-white">
+      <div className="container px-6 py-12 mx-auto pb-20 max-w-6xl">
+        <div className="pt-8 pb-4">
+          <p className="font-sanslight text-black text-2xl text-center max-w-[460px] m-auto border-y border-pink-300 rounded-lg py-8">
+            HAVE QUESTIONS?
           </p>
-          <div className="-mt-8 flex justify-center py-2 lg:py-0 lg:justify-start">
+          <div className="flex justify-center lg:justify-start">
             <SocialLinks />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 text-center lg:text-left">
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-3">
+              <span className="inline-block p-3 text-pink-500 border-2 border-pink-400 rounded-full bg-white -mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -40,11 +35,13 @@ const Map = () => {
                 </svg>
               </span>
 
-              <h2 className="text-2xl font-sans font-extrabold text-white">Email</h2>
-              <p className="font-sans mt-2 text-lg text-zinc-400">
+              <h2 className="text-2xl font-sans font-extrabold text-white">
+                Email
+              </h2>
+              <p className="font-sans text-lg text-black">
                 Reach out anytime! 👋 <br />
               </p>
-              <p className="font-sans text-md italic text-zinc-300">
+              <p className="font-sans text-md italic text-zinc-500">
                 I do my best to respond within 24 hours.
               </p>
               <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
@@ -57,7 +54,7 @@ const Map = () => {
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-3">
+              <span className="inline-block p-3 text-pink-500 border-2 border-pink-400 rounded-full bg-white -mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -79,8 +76,10 @@ const Map = () => {
                 </svg>
               </span>
 
-              <h2 className="text-2xl font-sans font-extrabold text-white">Office</h2>
-              <p className="font-sans mt-2 text-lg text-zinc-400">
+              <h2 className="text-2xl font-sans font-extrabold text-white">
+                Office
+              </h2>
+              <p className="font-sans text-lg text-black">
                 In the DTC area of Denver, CO.
               </p>
               <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
@@ -97,7 +96,7 @@ const Map = () => {
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-300 rounded-full bg-black mb-2 -mt-2">
+              <span className="inline-block p-3 text-pink-500 border-2 border-pink-400 rounded-full bg-white -mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -113,11 +112,13 @@ const Map = () => {
                   />
                 </svg>
               </span>
-              <h2 className="text-2xl font-sans font-extrabold text-white">Phone</h2>
-              <p className="font-sans mt-2 text-lg text-zinc-400">
+              <h2 className="text-2xl font-sans font-extrabold text-white">
+                Phone
+              </h2>
+              <p className="font-sans text-lg text-black">
                 Mon-Th & Sat from 9am to 5pm.
               </p>
-              <p className="font-sans text-md italic text-zinc-300">
+              <p className="font-sans text-md italic text-zinc-500">
                 {`(Closed Fri & Sun)`}
               </p>
               <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
@@ -127,12 +128,12 @@ const Map = () => {
             <hr className="w-full border-zinc-700" />
           </div>
 
-          <div className="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto shadow-black shadow-2xl">
+          <div className="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto border-4">
             <iframe
               className="w-full h-full"
               style={{
                 border: 0,
-                filter: "grayscale(30%) invert(100%) hue-rotate(110deg)",
+                filter: "grayscale(10%) invert(0%) hue-rotate(290deg)",
                 boxShadow: "0 0 10px rgba(255, 105, 180, 0.3) inset",
               }}
               loading="lazy"

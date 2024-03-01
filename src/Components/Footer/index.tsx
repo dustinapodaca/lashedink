@@ -51,7 +51,7 @@ export default function Footer () {
             <li>
               <Link to="/about">
                 <motion.button
-                  className="text-gray-600 text-sm md:text-md font-light tracking-tight"
+                  className="text-zinc-700 text-sm md:text-md font-light tracking-tight"
                   whileHover={{ scale: [null, 1.1, 1.1] }}
                   transition={{ duration: 0.3 }}
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -64,7 +64,7 @@ export default function Footer () {
             <li>
               <Link to="/services">
                 <motion.button
-                  className="text-gray-600 text-sm md:text-md font-light tracking-tight"
+                  className="text-zinc-700 text-sm md:text-md font-light tracking-tight"
                   whileHover={{ scale: [null, 1.1, 1.1] }}
                   transition={{ duration: 0.3 }}
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -77,7 +77,7 @@ export default function Footer () {
             <li>
               <Link to="/contact">
                 <motion.button
-                  className="text-gray-600 text-sm md:text-md font-light tracking-tight"
+                  className="text-zinc-700 text-sm md:text-md font-light tracking-tight"
                   whileHover={{ scale: [null, 1.1, 1.1] }}
                   transition={{ duration: 0.3 }}
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -90,7 +90,7 @@ export default function Footer () {
             <li>
               <Link to="/faq">
                 <motion.button
-                  className="text-gray-600 text-sm md:text-md font-light tracking-tight"
+                  className="text-zinc-700 text-sm md:text-md font-light tracking-tight"
                   whileHover={{ scale: [null, 1.1, 1.1] }}
                   transition={{ duration: 0.3 }}
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}

@@ -64,7 +64,7 @@ const FAQ = () => {
     <>
       <motion.section
         className="w-full max-w-[1200px] m-auto mb-10 md:mb-16 bg-white"
-        style={{ marginTop: "212px" }}
+        style={{ marginTop: "220px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
