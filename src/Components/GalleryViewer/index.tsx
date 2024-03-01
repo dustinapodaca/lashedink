@@ -46,7 +46,7 @@ const Gallery = () => {
   return (
     <div
       id="gallery"
-      className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4 z-50"
+      className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto px-4 z-50"
     >
       <div className="grid gap-4">
         <motion.div

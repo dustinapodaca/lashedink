@@ -53,9 +53,6 @@ const MySVGComponent = () => (
     viewBox="0 0 20 20"
     className="h-6 w-6 md:h-7 md:w-7"
     fill="currentColor"
-    style={{
-      filter: "drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.65))",
-    }}
   >
     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
   </svg>
@@ -68,9 +65,9 @@ type ReviewProps = {
 
 const Review = ({ review, isActive }: ReviewProps) => (
   <div className={`min-w-full ${isActive ? "active" : ""}`}>
-    <blockquote className="flex h-full flex-col justify-between bg-zinc-900 rounded-xl p-12">
+    <div className="flex h-full flex-col justify-between bg-white border-2 border-pink-200 rounded-xl p-10 px-16">
       <div>
-        <div className="flex gap-0.5 text-pink-400 mb-6">
+        <div className="flex gap-0.5 text-pink-300 mb-6">
           <motion.span
             key={review.id}
             initial={{ scale: 0.1, opacity: 0, x: -50 }}
@@ -126,7 +123,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
             exit={{ scale: 0.7, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
           >
-            <p className="mt-4 font-sans text-lg md:text-xl leading-relaxed text-zinc-400">
+            <p className="mt-4 font-sans text-lg md:text-xl leading-relaxed text-zinc-500">
               {review.content}
             </p>
           </motion.div>
@@ -140,12 +137,12 @@ const Review = ({ review, isActive }: ReviewProps) => (
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.7, opacity: 0 }}
           transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
-          className="mt-8 font-sans text-lg md:text-lg text-zinc-500"
+          className="mt-8 font-sans text-lg md:text-lg text-zinc-700"
         >
           &mdash; {review.author}
         </motion.footer>
       </AnimatePresence>
-    </blockquote>
+    </div>
   </div>
 );
 
@@ -166,7 +163,7 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
 
   return (
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
-      <div className="h-full bg-black">
+      <div className="h-full bg-white">
         <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
           <div className="relative overflow-hidden rounded-xl">
             {reviews.map((review, i) =>
@@ -181,10 +178,10 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
                   animate={{ opacity: 0.7 }}
                   exit={{ opacity: 0, pointerEvents: "none" }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute left-1 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
+                  className="absolute left-4 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
                   onClick={() => setIndex(index - 1)}
                 >
-                  <ChevronLeftIcon className="h-8 w-8 text-white" />
+                  <ChevronLeftIcon className="h-8 w-8 text-black" />
                 </motion.button>
               )}
             </AnimatePresence>
@@ -196,10 +193,10 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
                   animate={{ opacity: 0.7 }}
                   exit={{ opacity: 0, pointerEvents: "none" }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute right-1 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
+                  className="absolute right-4 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
                   onClick={() => setIndex(index + 1)}
                 >
-                  <ChevronRightIcon className="h-8 w-8 text-white" />
+                  <ChevronRightIcon className="h-8 w-8 text-black" />
                 </motion.button>
               )}
             </AnimatePresence>
@@ -212,10 +209,10 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
 
 const ReviewViewer = () => {
   return (
-    <section className="bg-black mt-4 md:mt-3">
-      <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
+    <section className="bg-white mt-4 md:mt-3">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
         <div className="items-center grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
-          <div className="text-white text-center ltr:sm:text-left rtl:sm:text-right">
+          <div className="text-black text-center ltr:sm:text-left rtl:sm:text-right">
             <p className="text-3xl font-sans font-extrabold tracking-tight sm:text-4xl md:text-4xl lg:text-5xl px-6 pt-0 lg:pt-6 ">
               Read Trusted Reviews From My Clients <br />
               <br />

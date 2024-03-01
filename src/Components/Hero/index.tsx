@@ -2,7 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 import heroBannerMobile from "../../assets/images/marble3.jpg";
-import heroBannerDesktop from "../../assets/images/marble2.jpg";
+import heroBannerDesktop from "../../assets/images/whitepinkback.png";
 
 import heroSquare from "../../assets/images/heroSquare.png";
 
@@ -37,8 +37,8 @@ const HeroBanner = () => {
     <>
       <header style={{ marginTop: "90px" }} ref={ref}>
         <div
-          className="relative overflow-hidden bg-black w-screen mb-10"
-          style={{ height: "90vh" }}
+          className="relative overflow-hidden bg-white w-screen mb-10"
+          style={{ height: "56vh" }}
         >
           {!isMobile ? (
             <motion.div
@@ -67,34 +67,9 @@ const HeroBanner = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center">
             {!isMobile ? (
               <>
-                <div
-                  style={{
-                    position: "relative",
-                    backgroundColor: "#000",
-                    boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    textAlign: "center",
-                    padding: "0",
-                  }}
-                  className="sm:w-[530px] sm:h-[120px] md:w-[630px] md:h-[140px] xl:w-[820px] xl:h-[160px] sm:left-0 md:left-0 lg:left-44 xl:left-56"
-                >
-                  <h2
-                    className="font-london text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-pink-200 text-center mx-32 sm:mx-10"
-                    style={{
-                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-                      position: "absolute",
-                      width: "100%",
-                      height: "100%",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      margin: "-10px 0 0 0",
-                      textAlign: "center",
-                    }}
-                  >
-                    Embrace the Artistry
+                <div className="border-2 border-pink-200 px-20 py-10 rounded-lg mt-20 backdrop-blur-md bg-white/30">
+                  <h2 className="font-sanslight text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-pink-300 text-center tracking-tight">
+                    COSMETIC ARTISTRY
                   </h2>
                 </div>
 
@@ -124,7 +99,7 @@ const HeroBanner = () => {
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                  backgroundColor: "#000",
+                  backgroundColor: "#fff",
                   boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
                   padding: "0",
                   margin: "auto",
@@ -135,31 +110,21 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <h2 className="pt-12 px-10 text-center mx-auto text-4xl font-cursive tracking-tight leading-none md:text-5xl lg:text-6xl xl:text-7xl text-white">
+      <h2 className="pt-12 px-10 text-center mx-auto text-4xl font-cursive tracking-tight leading-none md:text-5xl lg:text-6xl xl:text-7xl text-black">
         Radiate Confidence
       </h2>
       {!isMobile ? (
         <>
-          <h3 className="pt-1 px-10 text-center mx-auto mb-14 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
+          <h3 className="pt-1 px-10 text-center mx-auto mb-14 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-400 italic">
             "Enhance Your Look with Expert Touches"
           </h3>
 
-          <div className="flex flex-row justify-evenly items-center mb-10">
-            <p
-              className="font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96"
-              style={{
-                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
-              }}
-            >
+          <div className="flex flex-row justify-center items-center mb-10">
+            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96">
               As a permanent makeup artist and eyelash specialist, I am
               passionate about helping you look and feel your best.
             </p>
-            <p
-              className="font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96"
-              style={{
-                textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
-              }}
-            >
+            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96">
               From voluminous lashes to meticulously crafted brows, I help give
               you the confidence you deserve.
             </p>

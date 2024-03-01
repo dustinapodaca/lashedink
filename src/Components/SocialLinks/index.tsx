@@ -1,13 +1,13 @@
 const SocialLinks = () => {
   return (
     <>
-      <ul className="mt-8 flex justify-center items-center gap-6 md:gap-8">
+      <ul className="mt-4 flex justify-center items-center gap-6 md:gap-8">
         <li>
           <a
             href="https://www.facebook.com/lashed.ink/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-900 transition hover:text-pink-300"
+            className="text-zinc-500 transition hover:text-pink-300"
           >
             <span className="sr-only">Facebook</span>
             <svg
@@ -30,7 +30,7 @@ const SocialLinks = () => {
             href="https://www.instagram.com/lashed.ink/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-900 transition hover:text-pink-700"
+            className="text-zinc-500 transition hover:text-pink-700"
           >
             <span className="sr-only">Instagram</span>
             <svg
@@ -53,7 +53,7 @@ const SocialLinks = () => {
             href="https://www.tiktok.com/@lashed.ink"
             rel="noreferrer"
             target="_blank"
-            className="text-zinc-900 transition hover:text-pink-700"
+            className="text-zinc-500 transition hover:text-pink-700"
           >
             <span className="sr-only">TikTok</span>
             <svg
@@ -75,7 +75,7 @@ const SocialLinks = () => {
             href="https://www.google.com/search?q=lashed+ink&hl=en"
             rel="noreferrer"
             target="_blank"
-            className="text-zinc-900 transition hover:text-pink-300"
+            className="text-zinc-500 transition hover:text-pink-300"
           >
             <span className="sr-only">Google Business</span>
             <svg
