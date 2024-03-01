@@ -36,10 +36,10 @@ const HeroBanner = () => {
 
   return (
     <>
-      <header style={{ marginTop: "90px" }} ref={ref}>
+      <header style={{ marginTop: "164px" }} ref={ref}>
         <div
-          className="relative overflow-hidden bg-white w-screen mb-10"
-          style={{ height: "64vh" }}
+          className="relative overflow-hidden bg-white w-screen mb-10 select-none"
+          style={{ height: "56vh" }}
         >
           {!isMobile ? (
             <motion.div
@@ -68,7 +68,7 @@ const HeroBanner = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center">
             {!isMobile ? (
               <>
-                <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg mt-16 backdrop-blur-md bg-white/60">
+                <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg backdrop-blur-md bg-white/60">
                   {/* <h2 className="font-sanslight text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-pink-300 text-center tracking-tight">
                     COSMETIC ARTISTRY
                   </h2> */}
@@ -116,7 +116,7 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <h2 className="pt-16 px-10 text-center mx-auto text-3xl font-cursive tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl text-pink-400">
+      <h2 className="pt-16 px-10 text-center mx-auto text-3xl font-cursive tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl text-pink-400 select-none">
         Radiate Confidence
       </h2>
       {!isMobile ? (
@@ -125,7 +125,7 @@ const HeroBanner = () => {
             "Enhance Your Look with Expert Touches"
           </h3> */}
 
-          <div className="flex flex-row justify-center mb-10 mt-16">
+          <div className="flex flex-row justify-center mb-10 mt-16 select-none">
             <p
               className="font-sanslight border-zinc-300 border-y py-10 px-12 font-normal text-zinc-600 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-20 max-w-md rounded-lg"
               style={{

@@ -27,7 +27,7 @@ const About = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 lg:pl-16 max-w-7xl">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 lg:pl-16 max-w-7xl select-none">
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
               {isMobile ? (
@@ -64,10 +64,9 @@ const About = () => {
                   beauty community. With over 5 years of experience and a proven
                   track record of satisfied clients, I deliver the skills and
                   expertise to create a range of stunning results, from natural
-                  to bold and dramatic. When you book an appointment
-                  with me, you can expect a personalized experience that
-                  enhances your natural beauty and accentuates your unique
-                  features. <br />
+                  to bold and dramatic. When you book an appointment with me,
+                  you can expect a personalized experience that enhances your
+                  natural beauty and accentuates your unique features. <br />
                   {/* Feel free to reach out to me and let's embark on a journey of
                   self-transformation and rediscovery together! */}
                 </p>

@@ -11,7 +11,9 @@ module.exports = {
       sanslight : ['"General Sans Light"'],
       sansbold : ['"General Sans Bold"'],
     },
-    extend: {},
+    extend: {
+      userSelect: ['none'],
+    },
   },
   plugins: [],
 }

@@ -65,7 +65,7 @@ type ReviewProps = {
 
 const Review = ({ review, isActive }: ReviewProps) => (
   <div className={`min-w-full ${isActive ? "active" : ""}`}>
-    <div className="flex h-full flex-col justify-between bg-white border-2 border-pink-200 rounded-xl p-10 px-16">
+    <div className="flex h-full flex-col justify-between bg-white border-2 border-pink-200 rounded-xl p-10 px-16 select-none">
       <div>
         <div className="flex gap-0.5 text-pink-300 mb-6">
           <motion.span
@@ -73,7 +73,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
             initial={{ scale: 0.1, opacity: 0, x: -50 }}
             animate={{ scale: 1, opacity: 1, x: 1 }}
             exit={{ scale: 0.1, opacity: 0, x: 100 }}
-            transition={{ duration: 0.40, ease: [0.32, 0.72, 0, 1] }}
+            transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
           >
             <MySVGComponent />
           </motion.span>
@@ -91,7 +91,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
             initial={{ scale: 0.1, opacity: 0, x: -50 }}
             animate={{ scale: 1, opacity: 1, x: 1 }}
             exit={{ scale: 0.1, opacity: 0, x: 100 }}
-            transition={{ duration: 0.50, ease: [0.32, 0.72, 0, 1] }}
+            transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
           >
             <MySVGComponent />
           </motion.span>
@@ -109,7 +109,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
             initial={{ scale: 0.1, opacity: 0, x: -50 }}
             animate={{ scale: 1, opacity: 1, x: 1 }}
             exit={{ scale: 0.1, opacity: 0, x: 100 }}
-            transition={{ duration: 0.60, ease: [0.32, 0.72, 0, 1] }}
+            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
           >
             <MySVGComponent />
           </motion.span>
@@ -209,7 +209,7 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
 
 const ReviewViewer = () => {
   return (
-    <section className="bg-white mt-4 md:mt-3">
+    <section className="bg-white mt-4 md:mt-3 select-none">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
         <div className="items-center grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
           <div className="text-black text-center ltr:sm:text-left rtl:sm:text-right">

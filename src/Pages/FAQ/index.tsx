@@ -63,7 +63,7 @@ const FAQ = () => {
   return (
     <>
       <motion.section
-        className="w-full max-w-[1200px] m-auto mb-10 md:mb-16 bg-white"
+        className="w-full max-w-[1200px] m-auto mb-10 md:mb-16 bg-white select-none"
         style={{ marginTop: "220px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -71,9 +71,7 @@ const FAQ = () => {
       >
         {!isMobile ? (
           <div className="font-sanslight my-10 py-8 text-2xl text-center tracking-tight flex flex-row justify-center max-w-[460px] m-auto border-y border-pink-300 rounded-lg">
-            <h2 className="w-full">
-              FREQUENTLY ASKED QUESTIONS
-            </h2>
+            <h2 className="w-full">FREQUENTLY ASKED QUESTIONS</h2>
           </div>
         ) : (
           <h2 className="font-sans pt-4 text-4xl text- text-center mb-12">

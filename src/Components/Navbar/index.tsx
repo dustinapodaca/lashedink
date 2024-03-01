@@ -45,17 +45,7 @@ const LayoutNav = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 px-3 py-10 border-b border-zinc-300"
-        style={{
-          backgroundColor: "hsla(0,0%,100%,1)",
-          backgroundImage: `radial-gradient(at 50% 48%, hsla(0,0%,100%,1) 0px, transparent 50%),
-                      radial-gradient(at 86% 3%, hsla(188,100%,97%,1) 0px, transparent 50%),
-                      radial-gradient(at 0% 50%, hsla(185,100%,99%,1) 0px, transparent 50%),
-                      radial-gradient(at 100% 45%, hsla(339,100%,96%,1) 0px, transparent 50%),
-                      radial-gradient(at 0% 100%, hsla(333,100%,97%,1) 0px, transparent 50%),
-                      radial-gradient(at 72% 98%, hsla(240,100%,97%,1) 0px, transparent 50%),
-                      radial-gradient(at 0% 0%, hsla(340,100%,96%,1) 0px, transparent 50%)`,
-        }}
+        className="fixed top-0 left-0 right-0 z-50 px-3 py-10 border-b border-zinc-300 backdrop-blur-lg bg-white/80"
       >
         {!isMobile ? (
           <div className="flex flex-row justify-evenly items-center font-sanslight tracking-tight">

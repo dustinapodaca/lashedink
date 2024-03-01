@@ -2,7 +2,7 @@ import SocialLinks from "../SocialLinks";
 
 const Map = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white select-none">
       <div className="container px-6 py-12 mx-auto pb-20 max-w-6xl">
         <div className="pt-8 pb-4">
           <p className="font-sanslight text-black text-2xl text-center max-w-[460px] m-auto border-y border-pink-300 rounded-lg py-8">
