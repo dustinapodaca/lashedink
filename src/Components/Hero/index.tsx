@@ -116,8 +116,8 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <h2 className="pt-16 px-10 text-center mx-auto text-3xl font-cursive tracking-tight leading-none md:text-4xl lg:text-5xl xl:text-6xl text-pink-400 select-none">
-        Radiate Confidence
+      <h2 className="pt-12 px-10 text-center mx-auto text-3xl font-sans tracking-widest leading-none md:text-4xl lg:text-5xl xl:text-5xl text-pink-400 select-none">
+        R A D I A T E<br/>C O N F I D E N C E
       </h2>
       {!isMobile ? (
         <>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 // import aboutPic from "../../assets/images/aboutPic.jpg";
 import aboutPic from "../../assets/images/aboutPicNoBack.png";
+import aboutText from "../../assets/images/THerran.svg";
 
 const About = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -43,15 +44,15 @@ const About = () => {
               )}
               {/* <p className="text-2xl italic font-bold mb-1 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
                 My name is <br />
-              </p> */}
+              </p>
               <h2 className="-mt-4 font-sans tracking-tighter text-pink-500 text-center text-5xl md:text-6xl lg:text-6xl">
                 Tatiana Herran
-              </h2>
-              {/* <p className="max-w-lg mt-3 text-xl leading-relaxed text-white md:mt-8">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
-              </p> */}
+              </h2> */}
+              <img
+                className="relative w-full xl:max-w-md xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-lg"
+                src={aboutText}
+                alt=""
+              />
               <div className="w-full font-sans">
                 <p className="max-w-xl mt-2 text-lg leading-relaxed text-black md:mt-8">
                   I am a licensed esthetician specializing in permanent makeup
@@ -104,12 +105,6 @@ const About = () => {
                       radial-gradient(at 64% 75%, hsla(288,59%,89%,1) 0px, transparent 50%)`,
                 }}
               >
-                {/* <img
-                className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg"
-                alt=""
-              /> */}
-
                 <img
                   className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-xl"
                   src={aboutPic}

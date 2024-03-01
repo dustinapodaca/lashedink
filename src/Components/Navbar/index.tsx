@@ -48,8 +48,8 @@ const LayoutNav = () => {
         className="fixed top-0 left-0 right-0 z-50 px-3 py-10 border-b border-zinc-300 backdrop-blur-lg bg-white/80"
       >
         {!isMobile ? (
-          <div className="flex flex-row justify-evenly items-center font-sanslight tracking-tight">
-            <div className="pl-8">
+          <div className="flex flex-row justify-evenly items-center font-sanslight tracking-tight max-w-[1400px] mx-auto">
+            <div>
               <Link to="/">
                 <motion.button
                   className="text-black md:text-md text-lg px-3 font-light rounded-full"
@@ -91,7 +91,7 @@ const LayoutNav = () => {
                 </Link>
               </motion.button>
             </div>
-            <div className="pr-8">
+            <div>
               <Link to="/about">
                 <motion.button
                   className="text-black md:text-md text-lg px-3 font-light rounded-full"
