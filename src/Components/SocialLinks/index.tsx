@@ -7,7 +7,7 @@ const SocialLinks = () => {
             href="https://www.facebook.com/lashed.ink/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-500 transition hover:text-pink-300"
+            className="text-zinc-500 transition hover:text-pink-600"
           >
             <span className="sr-only">Facebook</span>
             <svg
@@ -30,7 +30,7 @@ const SocialLinks = () => {
             href="https://www.instagram.com/lashed.ink/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-500 transition hover:text-pink-700"
+            className="text-zinc-500 transition hover:text-pink-600"
           >
             <span className="sr-only">Instagram</span>
             <svg
@@ -53,7 +53,7 @@ const SocialLinks = () => {
             href="https://www.tiktok.com/@lashed.ink"
             rel="noreferrer"
             target="_blank"
-            className="text-zinc-500 transition hover:text-pink-700"
+            className="text-zinc-500 transition hover:text-pink-600"
           >
             <span className="sr-only">TikTok</span>
             <svg
@@ -75,7 +75,7 @@ const SocialLinks = () => {
             href="https://www.google.com/search?q=lashed+ink&hl=en"
             rel="noreferrer"
             target="_blank"
-            className="text-zinc-500 transition hover:text-pink-300"
+            className="text-zinc-500 transition hover:text-pink-600"
           >
             <span className="sr-only">Google Business</span>
             <svg

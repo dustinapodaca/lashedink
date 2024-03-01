@@ -6,17 +6,19 @@ import SocialLinks from '../SocialLinks';
 export default function Footer () {
   return (
     <footer className="bottom-0">
-      <div className="relative mt-24 md:mt-16 border-t border-zinc-300"
-          style={{ 
-            backgroundColor: "hsla(0,0%,100%,1)", 
-            backgroundImage: `radial-gradient(at 46% 13%, hsla(18,100%,97%,1) 0px, transparent 50%),
-                              radial-gradient(at 28% 70%, hsla(189,100%,84%,1) 0px, transparent 50%),
-                              radial-gradient(at 0% 50%, hsla(351,100%,97%,1) 0px, transparent 50%),
-                              radial-gradient(at 100% 45%, hsla(340,100%,86%,1) 0px, transparent 50%),
-                              radial-gradient(at 0% 100%, hsla(13,100%,91%,1) 0px, transparent 50%),
-                              radial-gradient(at 72% 98%, hsla(240,100%,86%,1) 0px, transparent 50%),
-                              radial-gradient(at 0% 0%, hsla(343,100%,88%,1) 0px, transparent 50%)`
-          }}>
+      <div
+        className="relative mt-24 md:mt-16 border-t border-zinc-300"
+        style={{
+          backgroundColor: "hsla(0,0%,100%,1)",
+          backgroundImage: `radial-gradient(at 36% 91%, hsla(310,100%,88%,1) 0px, transparent 40%),
+            radial-gradient(at 19% 20%, hsla(289,85%,91%,1) 0px, transparent 50%),
+            radial-gradient(at 98% 82%, hsla(279,100%,91%,1) 0px, transparent 50%),
+            radial-gradient(at 72% 21%, hsla(100,0%,100%,1) 0px, transparent 80%),
+            radial-gradient(at 10% 63%, hsla(276,0%,100%,1) 0px, transparent 40%),
+            radial-gradient(at 97% 34%, hsla(224,67%,65%,1) 0px, transparent 90%),
+            radial-gradient(at 64% 75%, hsla(288,100%,93%,1) 0px, transparent 50%)`,
+        }}
+      >
         {/* <svg
           className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-zinc-100"
           preserveAspectRatio="none"

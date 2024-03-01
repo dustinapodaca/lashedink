@@ -2,7 +2,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 import heroBannerMobile from "../../assets/images/marble3.jpg";
-import heroBannerDesktop from "../../assets/images/whitepinkback.png";
+import heroBannerDesktop from "../../assets/images/lashedBack.png";
+import lashedInkHero from "../../assets/images/LashedInkHero.svg";
 
 import heroSquare from "../../assets/images/heroSquare.png";
 
@@ -67,10 +68,15 @@ const HeroBanner = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center">
             {!isMobile ? (
               <>
-                <div className="border-2 border-pink-200 px-20 py-10 rounded-lg mt-20 backdrop-blur-md bg-white/30">
-                  <h2 className="font-sanslight text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-pink-300 text-center tracking-tight">
+                <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg mt-20 backdrop-blur-lg bg-white/50">
+                  {/* <h2 className="font-sanslight text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-pink-300 text-center tracking-tight">
                     COSMETIC ARTISTRY
-                  </h2>
+                  </h2> */}
+                  <img
+                    src={lashedInkHero}
+                    alt="Lashed Ink Logo"
+                    className="w-full max-w-lg "
+                  />
                 </div>
 
                 {/* <p
@@ -110,21 +116,21 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <h2 className="pt-12 px-10 text-center mx-auto text-4xl font-cursive tracking-tight leading-none md:text-5xl lg:text-6xl xl:text-7xl text-black">
+      <h2 className="pt-16 px-10 text-center mx-auto text-4xl font-cursive tracking-tight leading-none md:text-5xl lg:text-6xl xl:text-7xl text-pink-400">
         Radiate Confidence
       </h2>
       {!isMobile ? (
         <>
-          <h3 className="pt-1 px-10 text-center mx-auto mb-14 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-400 italic">
+          {/* <h3 className="pt-1 px-10 text-center mx-auto mb-14 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-400 italic">
             "Enhance Your Look with Expert Touches"
-          </h3>
+          </h3> */}
 
-          <div className="flex flex-row justify-center items-center mb-10">
-            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96">
+          <div className="flex flex-row justify-center items-center mb-10 mt-10">
+            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-10 w-96">
               As a permanent makeup artist and eyelash specialist, I am
               passionate about helping you look and feel your best.
             </p>
-            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-24 text-center mx-10 w-96">
+            <p className="font-sans font-normal text-zinc-500 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-10 w-96">
               From voluminous lashes to meticulously crafted brows, I help give
               you the confidence you deserve.
             </p>
@@ -132,9 +138,9 @@ const HeroBanner = () => {
         </>
       ) : (
         <>
-          <h3 className="pt-1 pb-12 px-10 text-center mx-auto text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
+          {/* <h3 className="pt-1 pb-12 px-10 text-center mx-auto text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
             "Enhance Your Look with Expert Touches"
-          </h3>
+          </h3> */}
           <p
             className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-36  text-center mx-10"
             style={{
