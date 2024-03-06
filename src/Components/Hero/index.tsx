@@ -2,7 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 import heroBannerMobile from "../../assets/images/marble3.jpg";
-import heroBannerDesktop from "../../assets/images/lashedBack.png";
+import heroBannerDesktop from "../../assets/images/LashedBack12.jpg";
 import lashedInkHero from "../../assets/images/LashedInkHero.svg";
 
 import heroSquare from "../../assets/images/heroSquare.png";
@@ -36,9 +36,9 @@ const HeroBanner = () => {
 
   return (
     <>
-      <header style={{ marginTop: "164px" }} ref={ref}>
+      <header style={{ marginTop: "168px" }} ref={ref}>
         <div
-          className="relative overflow-hidden bg-white w-screen mb-10 select-none"
+          className="relative overflow-hidden bg-white w-screen mb-10 select-none max-h-[540px]"
           style={{ height: "56vh" }}
         >
           {!isMobile ? (
@@ -68,16 +68,16 @@ const HeroBanner = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center">
             {!isMobile ? (
               <>
-                <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg backdrop-blur-md bg-white/60">
+                {/* <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg backdrop-blur-md bg-white/60"> */}
                   {/* <h2 className="font-sanslight text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-pink-300 text-center tracking-tight">
                     COSMETIC ARTISTRY
                   </h2> */}
-                  <img
+                  {/* <img
                     src={lashedInkHero}
                     alt="Lashed Ink Logo"
                     className="w-full max-w-lg "
                   />
-                </div>
+                </div> */}
 
                 {/* <p
                   className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-2xl xl:text-2xl mt-14 text-center mx-10 md:mx-16"
@@ -116,22 +116,22 @@ const HeroBanner = () => {
         </div>
       </header>
 
-      <h2 className="pt-12 px-10 text-center mx-auto text-3xl font-sans tracking-widest leading-none md:text-4xl lg:text-5xl xl:text-5xl text-pink-400 select-none">
+      {/* <h2 className="pt-12 px-10 text-center mx-auto text-3xl font-sans tracking-widest leading-none md:text-4xl lg:text-5xl xl:text-5xl text-pink-400 select-none">
         R A D I A T E<br/>C O N F I D E N C E
-      </h2>
+      </h2> */}
       {!isMobile ? (
         <>
           {/* <h3 className="pt-1 px-10 text-center mx-auto mb-14 text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-400 italic">
             "Enhance Your Look with Expert Touches"
           </h3> */}
 
-          <div className="flex flex-row justify-center mb-10 mt-16 select-none">
+          <div className="flex flex-row justify-center mb-10 mt-24 select-none">
             <p
-              className="font-sanslight border-zinc-300 border-y py-10 px-12 font-normal text-zinc-600 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-20 max-w-md rounded-lg"
+              className="font-sanslight border-zinc-400 border-y py-10 px-12 font-normal text-zinc-700 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-20 max-w-md rounded-lg"
               style={{
                 backgroundColor: "hsla(0,0%,100%,1)",
-                backgroundImage: `radial-gradient(at 2% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
-                      radial-gradient(at 97% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                backgroundImage: `radial-gradient(at 2% 73%, hsla(100,0%,100%,1) 0px, transparent 20%),
+                      radial-gradient(at 97% 73%, hsla(100,0%,100%,1) 0px, transparent 20%),
                       radial-gradient(at 27% 9%, hsla(323,100%,99%,1) 0px, transparent 50%),
                       radial-gradient(at 16% 91%, hsla(343,100%,98%,1) 0px, transparent 50%),
                       radial-gradient(at 62% 4%, hsla(321,100%,97%,1) 0px, transparent 50%),
@@ -146,11 +146,11 @@ const HeroBanner = () => {
             </p>
 
             <p
-              className="font-sanslight border-zinc-300 border-y py-10 px-12 font-normal text-zinc-600 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-20 max-w-md rounded-lg"
+              className="font-sanslight border-zinc-400 border-y py-10 px-12 md:px-20 font-normal text-zinc-700 text-lg sm:text-lg md:text-xl xl:text-2xl mb-20 text-center mx-20 max-w-md rounded-lg"
               style={{
                 backgroundColor: "hsla(0,0%,100%,1)",
-                backgroundImage: `radial-gradient(at 2% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
-                      radial-gradient(at 97% 73%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                backgroundImage: `radial-gradient(at 2% 73%, hsla(100,0%,100%,1) 0px, transparent 20%),
+                      radial-gradient(at 97% 73%, hsla(100,0%,100%,1) 0px, transparent 20%),
                       radial-gradient(at 27% 9%, hsla(323,100%,99%,1) 0px, transparent 50%),
                       radial-gradient(at 16% 91%, hsla(343,100%,98%,1) 0px, transparent 50%),
                       radial-gradient(at 62% 4%, hsla(321,100%,97%,1) 0px, transparent 50%),

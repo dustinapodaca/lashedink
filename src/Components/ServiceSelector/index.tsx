@@ -19,7 +19,7 @@ const ServiceSelector = ({images, text}: CarouselProps) => {
 
   return (
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
-      <div className="h-full bg-black">
+      <div className="h-full bg-white">
         <div className="mx-auto flex h-full max-w-7xl flex-col justify-center rounded-xl">
           <div className="relative overflow-hidden rounded-t-md">
             <motion.div animate={{ x: `-${index * 100}%` }} className="flex">

@@ -45,7 +45,7 @@ const LayoutNav = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 px-3 py-10 border-b border-zinc-300 backdrop-blur-lg bg-white/80"
+        className="fixed top-0 left-0 right-0 z-50 px-3 py-10 border-b border-zinc-300 backdrop-blur-lg bg-white/70"
       >
         {!isMobile ? (
           <div className="flex flex-row justify-evenly items-center font-sanslight tracking-tight max-w-[1400px] mx-auto">

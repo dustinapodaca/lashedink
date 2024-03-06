@@ -30,16 +30,16 @@ export default function ServiceCard({
   };
   
   return (
-    <div className="relative max-w-sm border-x border-zinc-800 rounded-lg shadow bg-black mt-5 mx-auto">
+    <div className="relative max-w-sm border-x border-zinc-300 rounded-lg shadow bg-white mt-5 mx-auto">
       <ServiceSelector images={images} text={headlineText} />
 
       <div className="m-5 h-full md:h-full lg:h-[350px] xl:h-80">
         <a href="#">
-          <h5 className="mb-3 mt-6 text-2xl md:text-3xl font-extrabold font-sans tracking-tight text-zinc-900 dark:text-white">
+          <h5 className="mb-3 mt-6 text-2xl md:text-3xl font-extrabold font-sans tracking-tight text-black">
             {headlineText}
           </h5>
         </a>
-        <p className="font-sans text-zinc-400 h-[270px] md:h-72 xl:h-60 pb-4 md:pb-6 lg:pb-0 overflow-y-auto">
+        <p className="font-sans text-zinc-700 h-[270px] md:h-72 xl:h-60 pb-4 md:pb-6 lg:pb-0 overflow-y-auto">
           {isExpanded ? descText : truncatedText}
           {words.length > maxWords && (
             <button
@@ -51,7 +51,7 @@ export default function ServiceCard({
           )}
         </p>
       </div>
-      <span className="absolute inset-x-0 bottom-0 h-5 rounded-b-lg bg-black"></span>
+      <span className="absolute inset-x-0 bottom-0 h-5 rounded-b-lg bg-white"></span>
       <span className="absolute inset-x-0 bottom-0 h-1 rounded-b-lg bg-gradient-to-r from-purple-500 via-fuchsia-400 to-pink-500"></span>
     </div>
   );

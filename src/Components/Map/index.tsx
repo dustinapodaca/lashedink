@@ -18,7 +18,7 @@ const Map = () => {
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-500 border-2 border-pink-400 rounded-full bg-white -mt-2">
+              <span className="inline-block p-3 text-pink-400 border-2 border-pink-300 rounded-full bg-white -mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -44,7 +44,7 @@ const Map = () => {
               <p className="font-sans text-md italic text-zinc-500">
                 I do my best to respond within 24 hours.
               </p>
-              <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+              <p className="font-sans mt-2 text-lg text-zinc-700 hover:text-pink-400 transition-colors ease-in-out">
                 <a href="mailto:tatiana_herran@live.com">
                   tatiana_herran@live.com
                 </a>
@@ -54,7 +54,7 @@ const Map = () => {
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-500 border-2 border-pink-400 rounded-full bg-white -mt-2">
+              <span className="inline-block p-3 text-pink-400 border-2 border-pink-300 rounded-full bg-white -mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -82,7 +82,7 @@ const Map = () => {
               <p className="font-sans text-lg text-black">
                 In the DTC area of Denver, CO.
               </p>
-              <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+              <p className="font-sans mt-2 text-lg text-zinc-700 hover:text-pink-400 transition-colors ease-in-out">
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=7939+E+Arapahoe+Rd+%23210+Greenwood+Village,+CO+80112"
                   target="_blank"
@@ -96,7 +96,7 @@ const Map = () => {
             <hr className="w-full border-zinc-700" />
 
             <div>
-              <span className="inline-block p-3 text-pink-500 border-2 border-pink-400 rounded-full bg-white -mt-2">
+              <span className="inline-block p-3 text-pink-400 border-2 border-pink-300 rounded-full bg-white -mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -121,7 +121,7 @@ const Map = () => {
               <p className="font-sans text-md italic text-zinc-500">
                 {`(Closed Fri & Sun)`}
               </p>
-              <p className="font-sans mt-2 text-lg text-pink-400 hover:text-pink-200 transition-colors ease-in-out">
+              <p className="font-sans mt-2 text-lg text-zinc-700 hover:text-pink-400 transition-colors ease-in-out">
                 <a href="tel:+13032107403">+1 (303) 210-7403</a>
               </p>
             </div>
@@ -137,7 +137,7 @@ const Map = () => {
                 boxShadow: "0 0 10px rgba(255, 105, 180, 0.3) inset",
               }}
               loading="lazy"
-              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQWULTWt9bIcR8QaAg8FB3H8&key=AIzaSyBiTyDXcgWVKFajSznnr6r9VSoNm8iJNGE&zoom=14"
+              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQWULTWt9bIcR8QaAg8FB3H8&key=AIzaSyBiTyDXcgWVKFajSznnr6r9VSoNm8iJNGE&zoom=15"
             ></iframe>
           </div>
         </div>

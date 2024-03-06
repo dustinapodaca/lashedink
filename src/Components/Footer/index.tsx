@@ -47,20 +47,7 @@ export default function Footer () {
             </Link>
           </div>
 
-          <ul className="mt-6 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-            <li>
-              <Link to="/about">
-                <motion.button
-                  className="text-zinc-700 text-sm md:text-md font-light tracking-tight"
-                  whileHover={{ scale: [null, 1.1, 1.1] }}
-                  transition={{ duration: 0.3 }}
-                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-                >
-                  ABOUT
-                </motion.button>
-              </Link>
-            </li>
-
+          <ul className="mt-6 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-14">
             <li>
               <Link to="/services">
                 <motion.button
@@ -70,6 +57,19 @@ export default function Footer () {
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                 >
                   SERVICES
+                </motion.button>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/about">
+                <motion.button
+                  className="text-zinc-700 text-sm md:text-md font-light tracking-tight"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  ABOUT
                 </motion.button>
               </Link>
             </li>

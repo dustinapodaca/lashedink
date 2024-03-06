@@ -14,7 +14,7 @@ import {
   volumeEye,
 } from "../../Data/imagesData";
 
-import servicesHeader from "../../assets/images/marble.jpg";
+import servicesHeader from "../../assets/images/lashedBack.png";
 import headerIcon from "../../assets/images/servicesIcon.png";
 
 import browIcon from "../../assets/images/img11lashed.jpeg";
@@ -38,14 +38,14 @@ const Services = () => {
   return (
     <>
       <motion.section
-        className="h-full bg-black"
-        style={{ marginTop: "90px" }}
+        className="h-full bg-white select-none"
+        style={{ marginTop: "164px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
         <div
-          className="relative bg-zinc-900"
+          className="relative bg-white bg-no-repeat bg-cover bg-center"
           style={{
             backgroundImage: `url(${servicesHeader})`,
             backgroundSize: "cover",
@@ -53,16 +53,6 @@ const Services = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-x-0 bottom-0">
-            <svg
-              viewBox="0 0 224 12"
-              fill="currentColor"
-              className="w-full -mb-1 text-black"
-              preserveAspectRatio="none"
-            >
-              <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z" />
-            </svg>
-          </div>
           <div className="px-4 py-16 pb-16 md:pb-20 lg:pb-24 mx-auto md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-screen-lg text-center sm:mx-auto">
               <a
@@ -93,20 +83,14 @@ const Services = () => {
                 </div>
               </a>
               <h2
-                className="mb-4 py-2 font-london text-center font-bold tracking-tight text-pink-200 text-5xl md:text-6xl lg:text-7xl sm:leading-none"
-                style={{
-                  textShadow: "2px 2px 3px rgba(0, 0, 0, 0.9)",
-                }}
+                className="mb-4 py-2 font-sans text-center tracking-tight text-white text-5xl md:text-6xl lg:text-7xl sm:leading-none"
               >
-                Service Menu
+                SERVICE<br/>MENU
               </h2>
               {!isMobile ? (
                 <>
                   <p
-                    className="font-sans text-white mt-8 text-lg sm:text-lg md:text-xl xl:text-2xl text-center mx-10"
-                    style={{
-                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.99)",
-                    }}
+                    className="font-sans text-black mt-8 text-lg sm:text-lg md:text-xl xl:text-2xl text-center mx-10"
                   >
                     Experience a fusion of art and beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
@@ -118,10 +102,7 @@ const Services = () => {
               ) : (
                 <>
                   <p
-                    className="font-sans text-center p-4 mb-4 rounded-xl text-white md:text-lg sm:px-4"
-                    style={{
-                      textShadow: "2px 2px 3px rgba(0, 0, 0, 0.99)",
-                    }}
+                    className="font-sans text-center p-4 mb-4 rounded-xl text-black md:text-lg sm:px-4"
                   >
                     Experience a fusion of art and beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
@@ -147,8 +128,8 @@ const Services = () => {
                   <img src={browIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
-              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-4xl">
-                <span className="inline-block ml-2 text-white">
+              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-black sm:text-4xl">
+                <span className="inline-block ml-2 text-black">
                   Eyebrow Services
                 </span>
               </h2>
@@ -156,10 +137,10 @@ const Services = () => {
             {!isMobile && <BookingModal />}
           </div>
           <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
-            <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
+            <p className="mb-1 text-xs text-black font-semibold tracking-wide uppercase md:mb-2 text-center">
               <hr className="max-w-full my-8 border-gray-300 text-center" />
             </p>
-            <p className="font-sans text-zinc-200 md:text-lg">
+            <p className="font-sans text-zinc-700 md:text-lg">
               Eyebrows are such an important focal point that frame our face and
               can drastically affect the way we look. For this reason it is
               important we tailor each pair of eyebrows to the individual, their
@@ -223,8 +204,8 @@ const Services = () => {
                   <img src={lashIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
-              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-4xl">
-                <span className="inline-block ml-2 text-white">
+              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-black sm:text-4xl">
+                <span className="inline-block ml-2 text-black">
                   Eyelash Extensions
                 </span>
                 {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
@@ -232,10 +213,10 @@ const Services = () => {
             </div>
           </div>
           <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
-            <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
+            <p className="mb-1 text-xs text-black font-semibold tracking-wide uppercase md:mb-2 text-center">
               <hr className="max-w-full my-8 border-gray-300 text-center" />
             </p>
-            <p className="font-sans text-zinc-200 md:text-lg">
+            <p className="font-sans text-zinc-700 md:text-lg">
               Eyelash extensions are a cosmetic procedure that involves
               attaching synthetic eyelashes to your natural lashes to make them
               appear longer and fuller. Your look can be customized according to
@@ -297,8 +278,8 @@ const Services = () => {
                   <img src={lipIcon} alt="hairIcon" className="rounded-full" />
                 </div>
               </a>
-              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-4xl">
-                <span className="inline-block ml-2 text-white">
+              <h2 className="font-sans text-3xl font-extrabold leading-none tracking-tight text-black sm:text-4xl">
+                <span className="inline-block ml-2 text-black">
                   Other Services
                 </span>
                 {/* <div className="h-1 ml-auto duration-500 origin-left transform bg-zinc-500 scale-x-0 group-hover:scale-x-100" /> */}
@@ -306,23 +287,23 @@ const Services = () => {
             </div>
           </div>
           <div className="max-w-3xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-6xl">
-            <p className="mb-1 text-xs text-white font-semibold tracking-wide uppercase md:mb-2 text-center">
+            <p className="mb-1 text-xs text-black font-semibold tracking-wide uppercase md:mb-2 text-center">
               <hr className="max-w-full mt-8 border-gray-300 text-center" />
             </p>
-            {/* <p className="font-sans text-zinc-200 md:text-lg">
+            {/* <p className="font-sans text-zinc-700 md:text-lg">
               Eyelash extensions are a cosmetic procedure that involves
               attaching synthetic eyelashes to your natural lashes to make them
               appear longer and fuller. Your look can be customized according to
               your preferences, eye shape, and natural lash health.
             </p> */}
-            <div className="relative max-w-full rounded-lg border-x border-zinc-800 shadow bg-black">
+            <div className="relative max-w-full rounded-lg border-x border-zinc-300 shadow bg-white">
               <div className="px-5 sm:px-10 pb-10 pt-5">
                 <a href="#">
-                  <h5 className="font-sans mb-3 text-2xl md:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+                  <h5 className="font-sans mb-3 text-2xl md:text-3xl font-extrabold tracking-tight text-black">
                     Corrections
                   </h5>
                 </a>
-                <p className="font-sans text-zinc-700 dark:text-zinc-400 h-full">
+                <p className="font-sans text-zinc-700 h-full">
                   Color correction may be necessary for some clients with
                   previous permanent makeup. Dissatisfaction with the original
                   color, changes in personal preferences, fading or
