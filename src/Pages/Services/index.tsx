@@ -22,10 +22,10 @@ import lashIcon from "../../assets/images/img9lashed.jpeg";
 import lipIcon from "../../assets/images/img10lashed.jpeg";
 
 const Services = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 1024);
+    setIsMobile(window.innerWidth < 768);
   };
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Services = () => {
     <>
       <motion.section
         className="h-full bg-white select-none"
-        style={{ marginTop: "164px" }}
+        style={{ marginTop: isMobile ? "108px" : "164px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -55,11 +55,7 @@ const Services = () => {
         >
           <div className="px-4 py-16 pb-16 md:pb-20 lg:pb-24 mx-auto md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-screen-lg text-center sm:mx-auto">
-              <a
-                href="/"
-                aria-label="View"
-                className="inline-block sm:mx-auto"
-              >
+              <a href="/" aria-label="View" className="inline-block sm:mx-auto">
                 <div className="flex items-center justify-center rounded-full">
                   {!isMobile ? (
                     <img
@@ -82,16 +78,14 @@ const Services = () => {
                   )}
                 </div>
               </a>
-              <h2
-                className="mb-4 py-2 font-sans text-center tracking-tight text-white text-5xl md:text-6xl lg:text-7xl sm:leading-none"
-              >
-                SERVICE<br/>MENU
+              <h2 className="mb-4 py-2 font-sans text-center tracking-tight text-white text-5xl md:text-6xl lg:text-7xl sm:leading-none">
+                SERVICE
+                <br />
+                MENU
               </h2>
               {!isMobile ? (
                 <>
-                  <p
-                    className="font-sans text-black mt-8 text-lg sm:text-lg md:text-xl xl:text-2xl text-center mx-10"
-                  >
+                  <p className="font-sans text-black mt-8 text-lg sm:text-lg md:text-xl xl:text-2xl text-center mx-10">
                     Experience a fusion of art and beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
                     that enhances your individuality and elevates your
@@ -101,9 +95,7 @@ const Services = () => {
                 </>
               ) : (
                 <>
-                  <p
-                    className="font-sans text-center p-4 mb-4 rounded-xl text-black md:text-lg sm:px-4"
-                  >
+                  <p className="font-sans text-center p-4 mb-4 rounded-xl text-black md:text-lg sm:px-4">
                     Experience a fusion of art and beauty, where skilled hands
                     and a keen eye for detail combine to create a masterpiece
                     that enhances your individuality and elevates your

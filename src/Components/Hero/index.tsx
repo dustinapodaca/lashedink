@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
-import heroBannerMobile from "../../assets/images/marble3.jpg";
+import heroBannerMobile from "../../assets/images/LashedBack9.png";
 import heroBannerDesktop from "../../assets/images/LashedBack12.jpg";
 import lashedInkHero from "../../assets/images/LashedInkHero.svg";
 
@@ -12,10 +12,10 @@ import heroSquare from "../../assets/images/heroSquare.png";
 // import heroImg2 from "../../assets/images/img9lashed.jpeg";
 
 const HeroBanner = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 640);
+    setIsMobile(window.innerWidth < 768);
   };
 
   useEffect(() => {
@@ -36,10 +36,10 @@ const HeroBanner = () => {
 
   return (
     <>
-      <header style={{ marginTop: "168px" }} ref={ref}>
+      <header style={{ marginTop: isMobile ? "108px" : "164px" }} ref={ref}>
         <div
           className="relative overflow-hidden bg-white w-screen mb-10 select-none max-h-[540px]"
-          style={{ height: "56vh" }}
+          style={{ height: isMobile ? "36vh" : "56vh" }}
         >
           {!isMobile ? (
             <motion.div
@@ -58,61 +58,12 @@ const HeroBanner = () => {
               style={{
                 backgroundImage: `url(${heroBannerMobile})`,
                 backgroundPosition: "center",
-                backgroundSize: "cover",
+                backgroundSize: "125%",
                 backgroundRepeat: "no-repeat",
                 y: yPos,
               }}
             />
           )}
-
-          <div className="absolute inset-0 flex flex-col justify-center items-center">
-            {!isMobile ? (
-              <>
-                {/* <div className="border-2 border-pink-200 px-20 pt-10 pb-14 rounded-lg backdrop-blur-md bg-white/60"> */}
-                  {/* <h2 className="font-sanslight text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-pink-300 text-center tracking-tight">
-                    COSMETIC ARTISTRY
-                  </h2> */}
-                  {/* <img
-                    src={lashedInkHero}
-                    alt="Lashed Ink Logo"
-                    className="w-full max-w-lg "
-                  />
-                </div> */}
-
-                {/* <p
-                  className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-2xl xl:text-2xl mt-14 text-center mx-10 md:mx-16"
-                  style={{
-                    textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
-                  }}
-                >
-                  As a permanent makeup artist and eyelash specialist, I am
-                  passionate about helping you look and feel your best.
-                  <br />
-                  <br />
-                  From impeccably voluminous lashes to meticulously crafted
-                  brows, I am here to enhance your natural beauty and give you
-                  the confidence you deserve.
-                </p> */}
-              </>
-            ) : (
-              <div
-                style={{
-                  position: "absolute",
-                  top: "30%",
-                  width: "200px",
-                  height: "200px",
-                  backgroundImage: `url(${heroSquare})`,
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundColor: "#fff",
-                  boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.6)",
-                  padding: "0",
-                  margin: "auto",
-                }}
-              />
-            )}
-          </div>
         </div>
       </header>
 
@@ -171,12 +122,7 @@ const HeroBanner = () => {
           {/* <h3 className="pt-1 pb-12 px-10 text-center mx-auto text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
             "Enhance Your Look with Expert Touches"
           </h3> */}
-          <p
-            className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-xl xl:text-2xl mb-36  text-center mx-10"
-            style={{
-              textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
-            }}
-          >
+          <p className="max-w-5xl font-sans font-normal text-black text-lg sm:text-lg md:text-xl xl:text-2xl mb-36  text-center mx-10">
             As a permanent makeup artist and eyelash specialist, I am passionate
             about helping you look and feel your best.
             <br />
@@ -270,7 +216,7 @@ export default HeroBanner;
             Embrace the Artistry
           </h2>
           <p
-            className="max-w-5xl font-sans font-normal text-white text-lg sm:text-lg md:text-2xl xl:text-2xl mt-14 text-center mx-10 md:mx-16"
+            className="max-w-5xl font-sans font-normal text-black text-lg sm:text-lg md:text-2xl xl:text-2xl mt-14 text-center mx-10 md:mx-16"
             style={{
               textShadow: "2px 2px 3px rgba(0, 0, 0, 0.95)",
             }}

@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <>
       <motion.section
-        style={{ marginTop: "140px" }}
+        style={{ marginTop: isMobile ? "108px" : "140px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

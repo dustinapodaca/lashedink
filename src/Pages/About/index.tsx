@@ -23,7 +23,7 @@ const About = () => {
     <>
       <motion.section
         className="pt-2 overflow-hidden bg-white md:pt-10 sm:pt-16 2xl:pt-16"
-        style={{ marginTop: "164px" }}
+        style={{ marginTop: isMobile ? "108px" : "164px" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -32,9 +32,19 @@ const About = () => {
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
               {isMobile ? (
-                <div className="relative">
+                <div className="relative mb-6">
                   <img
-                    className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-lg"
+                    className="relative w-full mx-auto max-w-sm xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-lg"
+                    style={{
+                      backgroundColor: "hsla(0,0%,100%,1)",
+                      backgroundImage: `radial-gradient(at 36% 91%, hsla(323,84%,91%,1) 0px, transparent 50%),
+                      radial-gradient(at 19% 20%, hsla(345,100%,96%,1) 0px, transparent 50%),
+                      radial-gradient(at 98% 82%, hsla(321,100%,95%,1) 0px, transparent 50%),
+                      radial-gradient(at 72% 21%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 10% 63%, hsla(276,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 97% 34%, hsla(272,67%,80%,1) 0px, transparent 50%),
+                      radial-gradient(at 64% 75%, hsla(288,59%,89%,1) 0px, transparent 50%)`,
+                    }}
                     src={aboutPic}
                     alt=""
                   />
@@ -42,19 +52,13 @@ const About = () => {
               ) : (
                 <></>
               )}
-              {/* <p className="text-2xl italic font-bold mb-1 text-pink-500 sm:text-4xl lg:text-5xl text-left indent-24 sm:indent-28 md:indent-32 md:text-left">
-                My name is <br />
-              </p>
-              <h2 className="-mt-4 font-sans tracking-tighter text-pink-500 text-center text-5xl md:text-6xl lg:text-6xl">
-                Tatiana Herran
-              </h2> */}
               <img
                 className="relative w-full xl:max-w-md xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-lg"
                 src={aboutText}
                 alt=""
               />
               <div className="w-full font-sans">
-                <p className="max-w-xl mt-2 text-lg leading-relaxed text-black md:mt-8">
+                <p className="max-w-xl mt-6 px-6 md:px-0 text-lg leading-relaxed text-black md:mt-8">
                   I am a licensed esthetician specializing in permanent makeup
                   and eyelash extensions in Denver, CO. My dedication to
                   flawless results and client satisfaction has earned me
@@ -68,8 +72,6 @@ const About = () => {
                   to bold and dramatic. When you book an appointment with me,
                   you can expect a personalized experience that enhances your
                   natural beauty and accentuates your unique features. <br />
-                  {/* Feel free to reach out to me and let's embark on a journey of
-                  self-transformation and rediscovery together! */}
                 </p>
               </div>
               <p className="font-sans mt-10 text-xl text-black md:mt-8">
@@ -89,29 +91,25 @@ const About = () => {
                 !
               </p>
             </div>
-            {isMobile ? (
-              <></>
-            ) : (
-              <div
-                className="relative border rounded-xl bg-pink-100 mx-10"
-                style={{
-                  backgroundColor: "hsla(0,0%,100%,1)",
-                  backgroundImage: `radial-gradient(at 36% 91%, hsla(323,84%,91%,1) 0px, transparent 50%),
-                      radial-gradient(at 19% 20%, hsla(345,100%,96%,1) 0px, transparent 50%),
-                      radial-gradient(at 98% 82%, hsla(321,100%,95%,1) 0px, transparent 50%),
-                      radial-gradient(at 72% 21%, hsla(100,0%,100%,1) 0px, transparent 50%),
-                      radial-gradient(at 10% 63%, hsla(276,0%,100%,1) 0px, transparent 50%),
-                      radial-gradient(at 97% 34%, hsla(272,67%,80%,1) 0px, transparent 50%),
-                      radial-gradient(at 64% 75%, hsla(288,59%,89%,1) 0px, transparent 50%)`,
-                }}
-              >
-                <img
-                  className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-xl"
-                  src={aboutPic}
-                  alt=""
-                />
-              </div>
-            )}
+            <div
+              className="relative border rounded-xl bg-pink-100 mx-10"
+              style={{
+                backgroundColor: "hsla(0,0%,100%,1)",
+                backgroundImage: `radial-gradient(at 36% 91%, hsla(323,84%,91%,1) 0px, transparent 50%),
+                    radial-gradient(at 19% 20%, hsla(345,100%,96%,1) 0px, transparent 50%),
+                    radial-gradient(at 98% 82%, hsla(321,100%,95%,1) 0px, transparent 50%),
+                    radial-gradient(at 72% 21%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                    radial-gradient(at 10% 63%, hsla(276,0%,100%,1) 0px, transparent 50%),
+                    radial-gradient(at 97% 34%, hsla(272,67%,80%,1) 0px, transparent 50%),
+                    radial-gradient(at 64% 75%, hsla(288,59%,89%,1) 0px, transparent 50%)`,
+              }}
+            >
+              <img
+                className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-xl"
+                src={aboutPic}
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </motion.section>

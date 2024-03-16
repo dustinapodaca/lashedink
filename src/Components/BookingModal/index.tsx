@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const BookingModal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 1024);
+    setIsMobile(window.innerWidth < 768);
   };
 
   useEffect(() => {

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import lashedBanner from '../../assets/images/LashedCenter.png';
 
 const LayoutNav = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
@@ -24,7 +24,7 @@ const LayoutNav = () => {
   };
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 1024);
+    setIsMobile(window.innerWidth < 768);
   };
 
   useEffect(() => {
@@ -44,9 +44,7 @@ const LayoutNav = () => {
 
   return (
     <>
-      <nav
-        className="fixed top-0 left-0 right-0 z-50 px-3 py-10 border-b border-zinc-300 backdrop-blur-lg bg-white/70"
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 px-3 py-8 md:py-10 border-b border-zinc-300 backdrop-blur-lg bg-white/70">
         {!isMobile ? (
           <div className="flex flex-row justify-evenly items-center font-sanslight tracking-tight max-w-[1400px] mx-auto">
             <div>
@@ -149,72 +147,88 @@ const LayoutNav = () => {
             </div>
           </div>
         ) : (
-          <button
-            className="focus:outline-none pr-3 pt-1"
-            onClick={() => toggleOpen()}
-          >
-            <motion.svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <motion.path
-                d="M 2 2.5 L 20 2.5"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                variants={{
-                  open: { d: "M 3 16.5 L 17 2.5" },
-                }}
-                animate={isOpen ? "open" : "closed"}
-                transition={{ duration: 0.2 }}
-              />
-              <motion.path
-                d="M 2 9.423 L 20 9.423"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                variants={{
-                  closed: { opacity: 1 },
-                  open: { opacity: 0 },
-                }}
-                animate={isOpen ? "open" : "closed"}
-                transition={{ duration: 0.2 }}
-              />
-              <motion.path
-                d="M 2 16.346 L 20 16.346"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                variants={{
-                  open: { d: "M 3 2.5 L 17 16.346" },
-                }}
-                animate={isOpen ? "open" : "closed"}
-                transition={{ duration: 0.2 }}
-              />
-            </motion.svg>
-          </button>
+          <>
+            <div className="flex flex-row justify-between pl-7 pr-4">
+              <motion.button
+                whileHover={{ scale: [null, 1.1, 1.1] }}
+                transition={{ duration: 0.3 }}
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              >
+                <Link to="/">
+                  <img src={lashedBanner} alt="Lashed.Ink" className="w-24" />
+                </Link>
+              </motion.button>
+              <button
+                className="focus:outline-none pt-1"
+                onClick={() => toggleOpen()}
+              >
+                <motion.svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <motion.path
+                    d="M 2 2.5 L 20 2.5"
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    variants={{
+                      open: { d: "M 3 16.5 L 17 2.5" },
+                    }}
+                    animate={isOpen ? "open" : "closed"}
+                    transition={{ duration: 0.2 }}
+                  />
+                  <motion.path
+                    d="M 2 9.423 L 20 9.423"
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    variants={{
+                      closed: { opacity: 1 },
+                      open: { opacity: 0 },
+                    }}
+                    animate={isOpen ? "open" : "closed"}
+                    transition={{ duration: 0.2 }}
+                  />
+                  <motion.path
+                    d="M 2 16.346 L 20 16.346"
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    variants={{
+                      open: { d: "M 3 2.5 L 17 16.346" },
+                    }}
+                    animate={isOpen ? "open" : "closed"}
+                    transition={{ duration: 0.2 }}
+                  />
+                </motion.svg>
+              </button>
+            </div>
+          </>
         )}
         {/* <MenuToggle toggle={() => toggleOpen()} /> */}
       </nav>
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* DARK BACKGROUND */}
+            {/* BLUR BACKGROUND */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black top-[90px]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.9 }}
-              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 backdrop-blur-lg"
+              initial={{ opacity: 0, y: "-100%" }}
+              animate={{
+                opacity: 0.99,
+                backgroundColor: "rgba(255, 255, 255, 0.7)",
+                y: 0,
+              }}
+              exit={{ opacity: 0, y: "-100%" }}
               transition={{ duration: 0.2 }}
               onClick={() => toggleOpen()} // Close the menu when the background is clicked
             />
             {/* MENU CONTENT */}
             <motion.div
-              className="font-sans tracking-tight rounded-b-lg p-10 pt-6 px-6 h-screen z-50 fixed left-0 right-0"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
+              className="font-sans tracking-tight rounded-b-lg p-10 pt-8 px-6 h-screen z-50 fixed left-0 right-0"
               variants={{
                 open: {
                   y: 0,
@@ -243,7 +257,7 @@ const LayoutNav = () => {
               exit="closed"
             >
               <motion.nav
-                className="flex justify-evenly pb-5 items-center w-full"
+                className="flex justify-between pb-5 w-full"
                 variants={{
                   open: {
                     y: 0,
@@ -273,17 +287,17 @@ const LayoutNav = () => {
               >
                 <Link to="/" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-black text-lg px-10 rounded-full"
-                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    className="tracking-tight font-sanslight text-black text-lg px-10 rounded-full"
+                    whileHover={{ scale: [null, 1.1, 1.1] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
-                    Home
+                    HOME
                   </motion.button>
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-5 items-center w-full pt-3"
+                className="flex justify-between pb-5 w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -311,19 +325,19 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <Link to="/about" onClick={handleClickLink}>
+                <Link to="/services" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-black text-lg px-10 rounded-full"
-                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    className="tracking-tight font-sanslight text-black text-lg px-10 rounded-full"
+                    whileHover={{ scale: [null, 1.1, 1.1] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
-                    About
+                    SERVICES
                   </motion.button>
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-5 items-center w-full pt-3"
+                className="flex justify-between pb-5 w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -351,19 +365,18 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <Link to="/services" onClick={handleClickLink}>
-                  <motion.button
-                    className="tracking-normal font-sans text-black text-lg px-10 rounded-full"
-                    whileHover={{ scale: [null, 1.4, 1.3] }}
-                    transition={{ duration: 0.3 }}
-                    // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-                  >
-                    Services
-                  </motion.button>
-                </Link>
+                <motion.button
+                  className="tracking-tight font-sanslight text-black text-lg px-10 rounded-full"
+                  whileHover={{ scale: [null, 1.1, 1.1] }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => toggleOpenBooking()}
+                  // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                >
+                  BOOK
+                </motion.button>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-5 items-center w-full pt-3"
+                className="flex justify-between pb-5 w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -391,19 +404,19 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <Link to="/contact" onClick={handleClickLink}>
+                <Link to="/about" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-black text-lg px-10 rounded-full"
-                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    className="tracking-tight font-sanslight text-black text-lg px-10 rounded-full"
+                    whileHover={{ scale: [null, 1.1, 1.1] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
-                    Contact
+                    ABOUT
                   </motion.button>
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-5 items-center w-full pt-3"
+                className="flex justify-between pb-5 w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -431,19 +444,19 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <Link to="/faq" onClick={handleClickLink}>
+                <Link to="/contact" onClick={handleClickLink}>
                   <motion.button
-                    className="tracking-normal font-sans text-black text-lg px-10 rounded-full"
-                    whileHover={{ scale: [null, 1.4, 1.3] }}
+                    className="tracking-tight font-sanslight text-black text-lg px-10 rounded-full"
+                    whileHover={{ scale: [null, 1.1, 1.1] }}
                     transition={{ duration: 0.3 }}
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
-                    FAQ
+                    CONTACT
                   </motion.button>
                 </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-5 items-center w-full pt-3"
+                className="flex justify-between pb-5 w-full pt-3"
                 variants={{
                   open: {
                     y: 0,
@@ -471,33 +484,19 @@ const LayoutNav = () => {
                 ref={containerRef}
                 exit="closed"
               >
-                <motion.button
-                  className="mx-auto bg-white text-black ml-8 mr-6 px-6 pt-2 font-cursive text-2xl rounded-lg shadow-lg hover:bg-pink-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
-                  style={{
-                    textShadow: "0.75px 0.75px 1.25px rgba(255, 20, 147, 0.5)",
-                  }}
-                  initial={{ backgroundColor: "white", color: "black" }}
-                  whileHover={{
-                    // backgroundColor: "pink",
-                    // color: "white",
-                    scale: 1.15,
-                    transition: {
-                      duration: 0.2,
-                      ease: "easeInOut",
-                      delay: 0,
-                      backgroundColor: "pink",
-                      color: "white",
-                    },
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                  onClick={() => toggleOpenBooking()}
-                >
-                  Book Now
-                </motion.button>
+                <Link to="/faq" onClick={handleClickLink}>
+                  <motion.button
+                    className="tracking-tight font-sanslight text-black text-lg px-10 rounded-full"
+                    whileHover={{ scale: [null, 1.1, 1.1] }}
+                    transition={{ duration: 0.3 }}
+                    // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                  >
+                    FAQ
+                  </motion.button>
+                </Link>
               </motion.nav>
               <motion.nav
-                className="flex justify-evenly pb-5 items-center w-full"
+                className="flex justify-between pt-1 pl-8 w-full"
                 variants={{
                   open: {
                     y: 0,

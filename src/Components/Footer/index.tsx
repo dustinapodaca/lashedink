@@ -11,12 +11,12 @@ export default function Footer () {
         style={{
           backgroundColor: "hsla(0,0%,100%,1)",
           backgroundImage: `radial-gradient(at 50% 48%, hsla(0,0%,100%,1) 0px, transparent 50%),
-                      radial-gradient(at 86% 3%, hsla(188,100%,97%,1) 0px, transparent 50%),
-                      radial-gradient(at 0% 50%, hsla(185,100%,99%,1) 0px, transparent 50%),
-                      radial-gradient(at 100% 45%, hsla(339,100%,96%,1) 0px, transparent 50%),
-                      radial-gradient(at 0% 100%, hsla(333,100%,97%,1) 0px, transparent 50%),
-                      radial-gradient(at 72% 98%, hsla(240,100%,97%,1) 0px, transparent 50%),
-                      radial-gradient(at 0% 0%, hsla(340,100%,96%,1) 0px, transparent 50%)`,
+            radial-gradient(at 86% 3%, hsla(188,100%,97%,1) 0px, transparent 50%),
+            radial-gradient(at 0% 50%, hsla(185,100%,99%,1) 0px, transparent 50%),
+            radial-gradient(at 100% 45%, hsla(339,100%,96%,1) 0px, transparent 50%),
+            radial-gradient(at 0% 100%, hsla(333,100%,97%,1) 0px, transparent 50%),
+            radial-gradient(at 72% 98%, hsla(240,100%,97%,1) 0px, transparent 50%),
+            radial-gradient(at 0% 0%, hsla(340,100%,96%,1) 0px, transparent 50%)`,
         }}
       >
         {/* <svg
