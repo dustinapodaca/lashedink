@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
-import heroBannerMobile from "../../assets/images/LashedBack9.png";
+import heroBannerMobile from "../../assets/images/LashedBack7.jpg";
 import heroBannerDesktop from "../../assets/images/LashedBack12.jpg";
 import lashedInkHero from "../../assets/images/LashedInkHero.svg";
 
@@ -38,7 +38,7 @@ const HeroBanner = () => {
     <>
       <header style={{ marginTop: isMobile ? "108px" : "164px" }} ref={ref}>
         <div
-          className="relative overflow-hidden bg-white w-screen mb-10 select-none max-h-[540px]"
+          className="relative overflow-hidden bg-white w-screen mb-10 select-none min-h-[260px] max-h-[540px]"
           style={{ height: isMobile ? "36vh" : "56vh" }}
         >
           {!isMobile ? (
@@ -58,7 +58,7 @@ const HeroBanner = () => {
               style={{
                 backgroundImage: `url(${heroBannerMobile})`,
                 backgroundPosition: "center",
-                backgroundSize: "125%",
+                backgroundSize: "110%",
                 backgroundRepeat: "no-repeat",
                 y: yPos,
               }}
@@ -122,9 +122,10 @@ const HeroBanner = () => {
           {/* <h3 className="pt-1 pb-12 px-10 text-center mx-auto text-xl font-light tracking-tight leading-none md:text-2xl lg:text-3xl xl:text-4xl text-pink-200 italic">
             "Enhance Your Look with Expert Touches"
           </h3> */}
-          <p className="max-w-5xl font-sans font-normal text-black text-lg sm:text-lg md:text-xl xl:text-2xl mb-36  text-center mx-10">
+          <p className="max-w-5xl font-sanslight font-normal text-black text-lg sm:text-lg md:text-xl xl:text-2xl mb-16 text-center mx-10">
             As a permanent makeup artist and eyelash specialist, I am passionate
             about helping you look and feel your best.
+            <br />
             <br />
             <br />
             From impeccably voluminous lashes to meticulously crafted brows, I

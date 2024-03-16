@@ -32,9 +32,9 @@ const About = () => {
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
               {isMobile ? (
-                <div className="relative mb-6">
+                <div className="relative mb-6 mx-6 mt-6">
                   <img
-                    className="relative w-full mx-auto max-w-sm xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-lg"
+                    className="relative w-full mx-auto max-w-sm rounded-lg"
                     style={{
                       backgroundColor: "hsla(0,0%,100%,1)",
                       backgroundImage: `radial-gradient(at 36% 91%, hsla(323,84%,91%,1) 0px, transparent 50%),
@@ -53,7 +53,7 @@ const About = () => {
                 <></>
               )}
               <img
-                className="relative w-full xl:max-w-md xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-lg"
+                className="relative px-6 md:px-0 w-full xl:max-w-md xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-lg"
                 src={aboutText}
                 alt=""
               />
@@ -74,7 +74,7 @@ const About = () => {
                   natural beauty and accentuates your unique features. <br />
                 </p>
               </div>
-              <p className="font-sans mt-10 text-xl text-black md:mt-8">
+              <p className="font-sans px-6 md:px-0 mt-10 text-xl text-black md:mt-8">
                 <span className="relative inline-block">
                   <span className="absolute inline-block w-full top-6 h-1 bg-pink-500"></span>
                   <span className="relative"> Have a question? </span>
@@ -91,25 +91,29 @@ const About = () => {
                 !
               </p>
             </div>
-            <div
-              className="relative border rounded-xl bg-pink-100 mx-10"
-              style={{
-                backgroundColor: "hsla(0,0%,100%,1)",
-                backgroundImage: `radial-gradient(at 36% 91%, hsla(323,84%,91%,1) 0px, transparent 50%),
-                    radial-gradient(at 19% 20%, hsla(345,100%,96%,1) 0px, transparent 50%),
-                    radial-gradient(at 98% 82%, hsla(321,100%,95%,1) 0px, transparent 50%),
-                    radial-gradient(at 72% 21%, hsla(100,0%,100%,1) 0px, transparent 50%),
-                    radial-gradient(at 10% 63%, hsla(276,0%,100%,1) 0px, transparent 50%),
-                    radial-gradient(at 97% 34%, hsla(272,67%,80%,1) 0px, transparent 50%),
-                    radial-gradient(at 64% 75%, hsla(288,59%,89%,1) 0px, transparent 50%)`,
-              }}
-            >
-              <img
-                className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-xl"
-                src={aboutPic}
-                alt=""
-              />
-            </div>
+            {!isMobile ? (
+              <div
+                className="relative border rounded-xl bg-pink-100 mx-10"
+                style={{
+                  backgroundColor: "hsla(0,0%,100%,1)",
+                  backgroundImage: `radial-gradient(at 36% 91%, hsla(323,84%,91%,1) 0px, transparent 50%),
+                      radial-gradient(at 19% 20%, hsla(345,100%,96%,1) 0px, transparent 50%),
+                      radial-gradient(at 98% 82%, hsla(321,100%,95%,1) 0px, transparent 50%),
+                      radial-gradient(at 72% 21%, hsla(100,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 10% 63%, hsla(276,0%,100%,1) 0px, transparent 50%),
+                      radial-gradient(at 97% 34%, hsla(272,67%,80%,1) 0px, transparent 50%),
+                      radial-gradient(at 64% 75%, hsla(288,59%,89%,1) 0px, transparent 50%)`,
+                }}
+              >
+                <img
+                  className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-100 rounded-xl"
+                  src={aboutPic}
+                  alt=""
+                />
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </motion.section>

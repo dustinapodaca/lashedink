@@ -65,7 +65,7 @@ type ReviewProps = {
 
 const Review = ({ review, isActive }: ReviewProps) => (
   <div className={`min-w-full ${isActive ? "active" : ""}`}>
-    <div className="flex h-full flex-col justify-between bg-white border-2 border-pink-200 rounded-xl p-10 px-16 select-none">
+    <div className="flex h-full flex-col justify-between bg-white border-2 border-pink-200 rounded-xl p-10 px-12 md:px-16 select-none">
       <div>
         <div className="flex gap-0.5 text-pink-300 mb-6">
           <motion.span
@@ -123,7 +123,7 @@ const Review = ({ review, isActive }: ReviewProps) => (
             exit={{ scale: 0.7, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
           >
-            <p className="mt-4 font-sans text-lg md:text-xl leading-relaxed text-zinc-500">
+            <p className="mt-4 font-sanslight text-lg md:text-xl leading-relaxed text-zinc-500">
               {review.content}
             </p>
           </motion.div>
@@ -178,7 +178,7 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
                   animate={{ opacity: 0.7 }}
                   exit={{ opacity: 0, pointerEvents: "none" }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute left-4 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
+                  className="absolute left-2 md:left-4 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
                   onClick={() => setIndex(index - 1)}
                 >
                   <ChevronLeftIcon className="h-8 w-8 text-black" />
@@ -193,7 +193,7 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
                   animate={{ opacity: 0.7 }}
                   exit={{ opacity: 0, pointerEvents: "none" }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute right-4 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
+                  className="absolute right-2 md:right-4 top-1/2 -mt-4 flex h-8 w-8 items-center justify-center rounded-full opacity-0 focus:outline-none"
                   onClick={() => setIndex(index + 1)}
                 >
                   <ChevronRightIcon className="h-8 w-8 text-black" />
@@ -210,7 +210,7 @@ const ReviewCarousel = ({ reviews }: CarouselProps) => {
 const ReviewViewer = () => {
   return (
     <section className="bg-white mt-4 md:mt-3 select-none">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
+      <div className="mx-auto max-w-7xl px-6 py-0 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
         <div className="items-center grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
           <div className="text-black text-center ltr:sm:text-left rtl:sm:text-right">
             <p className="text-3xl font-sans font-extrabold tracking-tight sm:text-4xl md:text-4xl lg:text-5xl px-6 pt-0 lg:pt-6 ">

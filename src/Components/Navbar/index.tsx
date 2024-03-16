@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import lashedBanner from '../../assets/images/LashedCenter.png';
+import lashedBannerMobile from '../../assets/images/LashedNav.png';
 
 const LayoutNav = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -148,14 +149,14 @@ const LayoutNav = () => {
           </div>
         ) : (
           <>
-            <div className="flex flex-row justify-between pl-7 pr-4">
+            <div className="flex flex-row justify-between px-5">
               <motion.button
                 whileHover={{ scale: [null, 1.1, 1.1] }}
                 transition={{ duration: 0.3 }}
                 // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
               >
                 <Link to="/">
-                  <img src={lashedBanner} alt="Lashed.Ink" className="w-24" />
+                  <img src={lashedBannerMobile} alt="Lashed.Ink" className="w-36" />
                 </Link>
               </motion.button>
               <button
@@ -215,7 +216,7 @@ const LayoutNav = () => {
           <>
             {/* BLUR BACKGROUND */}
             <motion.div
-              className="fixed inset-0 z-40 backdrop-blur-lg"
+              className="fixed inset-0 z-40 backdrop-blur-xl"
               initial={{ opacity: 0, y: "-100%" }}
               animate={{
                 opacity: 0.99,

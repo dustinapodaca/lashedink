@@ -47,7 +47,7 @@ export default function Footer () {
             </Link>
           </div>
 
-          <ul className="mt-6 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-14">
+          <ul className="mt-6 flex flex-wrap justify-center gap-8 md:gap-8 lg:gap-14 font-sanslight">
             <li>
               <Link to="/services">
                 <motion.button
@@ -101,9 +101,9 @@ export default function Footer () {
             </li>
           </ul>
 
-          <hr className="max-w-xs md:max-w-xl lg:max-w-3xl xl:max-w-6xl mx-auto mt-4 pb-1 border-gray-500" />
+          <hr className="max-w-xs md:max-w-xl lg:max-w-3xl xl:max-w-6xl mx-auto mt-4 pb-1 border-zinc-400" />
           <SocialLinks />
-          <div>
+          <div className='font-sanslight'>
             <p className="mx-auto mt-10 max-w-xl text-center leading-relaxed text-zinc-600 text-sm">
               © Copyright 2023 Lashed.Ink. <br /> All rights reserved.
             </p>
